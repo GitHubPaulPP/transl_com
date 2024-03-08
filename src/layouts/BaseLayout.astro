@@ -14,8 +14,12 @@ const pageTitle = "Home Page";
         <title>{pageTitle}</title>
     </head>
     <body>
+        <div class="body-grid">
         <Header />
+        <main> 
         <slot />
+        </main>
         <Footer />
+        </div>
     </body>
 </html>

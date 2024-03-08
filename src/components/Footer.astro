@@ -14,20 +14,25 @@
             We're social, so if you're ready to discuss your translation needs,
             get in touch.
         </p>
-        <p>
+        <div class="social">
             Whatsapp Viber Signal Telegram LinkedIn Twitter Facebook Instagram
-        </p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p><a href="#aboutus">About us</a></p>
+        <p><a href="#aboutus">Our core values</a></p>
+        <p><a href="#aboutus">Services</a></p>
+        <p><a href="#aboutus">Services</a></p>
+        <p><a href="#aboutus">Contact us</a></p>
     </div>
 </footer>
-
-<footer class="bottom">
-    <div>
-        <span>Privacy Policy</span>
-        <span>Terms of Service</span>
-        <span>Cookies policy</span>
-        <span>Copyright © 2024 EngRusTranslate.</span>
-        <span></span>
-    </div></footer>
+<div class="bottom">
+    <span><a href="#aboutus">Privacy Policy</a></span>
+    <span><a href="#aboutus">Terms of Service</a></span>
+    <span><a href="#aboutus">Cookies policy</a></span>
+    <span>Copyright © 2024 EngRusTranslate.</span>
+    <span></span>
+</div>
 
 <style>
     .footer {
@@ -35,11 +40,16 @@
         background-color: beige;
     }
     .footer-left {
+        display: flex;
+        flex-direction: column;
         background-color: azure;
         width: 35%;
+        padding-left: 5px;
     }
 
-    .footer-center{
+    .footer-center {
+        display: flex;
+        flex-direction: column;
         background-color: aquamarine;
         width: 35%;
     }
@@ -48,9 +58,17 @@
         font-weight: bold;
     }
 
-    .bottom{
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+    }
+    .social {
         display: flex;
         flex-direction: row;
-        align-items: center;
     }
 </style>
