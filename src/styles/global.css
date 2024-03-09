@@ -11,7 +11,9 @@
 
 body {
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Inter, sans-serif;
+    /* min-height: 100%; */
+
 }
 
 /* css grid */
@@ -22,7 +24,7 @@ body {
         "main"
         "footer";
     grid-template-rows: auto 1fr auto;
-    /* min-height: 100vh; */
+    min-height: 100vh;
 }
 
 header {
@@ -63,3 +65,96 @@ a:active {
         max-width: 50%;
     }
 }
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    /* Stacks children vertically by default */
+}
+
+.one_container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+        /* Ensures each container takes the full width of its parent */
+}
+
+.elevate {
+    border: 2px ridge;
+    border-image: linear-gradient(#fde68a, #fca5a5) 30;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 0.10em;
+    text-align: center;
+    font-size: x-large;
+    line-height: 1.15;
+    flex: 1 1 50%;
+
+}
+
+.uvp {
+    border: 2px ridge;
+    border-image: linear-gradient(#fde68a, #fca5a5) 30;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: large;
+    line-height: 1.15;
+    flex: 1 1 50%;
+
+}
+
+.init {
+    text-align: center;
+}
+
+.uvp ul {
+    list-style: none;
+}
+
+.uvp li:before {
+    content: "";
+    display: inline-block;
+    height: 1.25em;
+    width: 1.25em;
+    vertical-align: middle;
+    background-image: url(tickmark.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+
+}
+
+.unordered {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: stretch;
+
+
+
+}
+
+.quote_button {
+    border: 2px ridge;
+    border-image: linear-gradient(#fde68a, #fca5a5) 30;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.quote {
+    font-weight: bold;
+    background-color: dodgerblue;
+    color: antiquewhite;
+    font-size: large;
+}
+
+.two_container {
+    width: 100%;
+        /* Ensures each container takes the full width of its parent */
+
+}
+
