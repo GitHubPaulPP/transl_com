@@ -1,42 +1,50 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description = "EngRusTranslate provides English-Russian translation services to help you reach your global clients.";
 ---
 
-<BaseLayout title="Professional English-Russian Translation Service">
-	<main> 
-	<section>
-		<h1>Welcome to EngRusTranslate!</h1>
-		<h3>Your Professional English-Russian Translation Service</h3>
+<BaseLayout description={description} title={title}>
+	<link slot="head" rel="preload" href="hero_image.svg" as="image" />
+	<main>
+		<section>
+			<h1>Welcome to EngRusTranslate!</h1>
+			<h3>Your Professional English-Russian Translation Service</h3>
 
-		<div class="container_hero">
-			<div>
-				<p>
-					Elevate your global reach with our bespoke translation
-					services
-				</p>
+			<div class="container_hero">
+				<div>
+					<p>
+						Elevate your global reach with our bespoke translation
+						services
+					</p>
+				</div>
+
+				<div>
+					<p>What's in it for you?</p>
+					<ul>
+						<li>Bespoke Solutions</li>
+						<li>Direct Expert Access</li>
+						<li>Specialized Expertise</li>
+						<li>Quality and Accuracy</li>
+						<li>Timeliness and Reliability</li>
+						<li>Confidentiality and security</li>
+					</ul>
+				</div>
+
+				<div>
+					<button class="quote" type="button"
+						>Get Instant Quote</button
+					>
+				</div>
+
+				<div>
+					<img
+						src="hero_image.svg"
+						alt="Vector illustration of elevating global reach for hero section"
+						style="max-width: 100%; height: auto;"
+					/> 
+				</div> 
 			</div>
-
-			<div>
-				<p>What's in it for you?</p>
-				<ul>
-					<li>Bespoke Solutions</li>
-					<li>Direct Expert Access</li>
-					<li>Specialized Expertise</li>
-					<li>Quality and Accuracy</li>
-					<li>Timeliness and Reliability</li>
-					<li>Confidentiality and security</li>
-				</ul>
-			</div>
-
-			<div>
-				<button class="quote" type="button">Get Instant Quote</button>
-			</div>
-
-			<div>
-				<img src="/hero_image.svg" alt="Vector illustration of elevating global reach for hero section" style="max-width: 100%; height: auto;">
-			</div>
-		</div>
-	</section>
-
+		</section>
 	</main>
 </BaseLayout>
