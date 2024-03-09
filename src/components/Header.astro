@@ -2,107 +2,146 @@
 
 ---
 
-<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-/>
-
 <header>
     <div class="topnav">
         <div class="logo">
-            <a href="/home" aria-label="EngRusTranslate logo"></a>
-            <img src="/header_logo.svg" alt="Logo" />
+            <a href="/home" aria-label="EngRusTranslate logo">
+                <img src="/header_logo.svg" alt="Logo" /></a
+            >
         </div>
+
         <div class="slogan">Proudly owned by translators</div>
-        <nav>
-            <div id="myLinks">
-                <a href="#aboutus">About us</a>
-                <a href="#ourcorevalues">Our core values</a>
-                <a href="#services">Services</a>
-                <a href="#blog">Blog</a>
-                <a href="#contactus">Contact us</a>
+
+        <nav class="menu" id="main-menu">
+            <button class="menu-toggle" id="toggle-menu"> toggle menu</button>
+
+            <div class="menu-dropdown">
+                <ul class="nav-menu">
+                    <li><a href="#aboutus">About us</a></li>
+                    <li><a href="#ourcorevalues">Our core values</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contactus">Contact us</a></li>
+                </ul>
             </div>
-            <a href="javascript:void(0);" class="icon hamburger">
-                <i class="fa fa-bars"></i>
-            </a>
         </nav>
     </div>
-</header>  
+</header>
 
 <style>
     .topnav {
         overflow: hidden;
-        background-color:snow;
+        background-color: snow;
         position: relative;
     }
-    /* Hide the links inside the navigation menu (except for logo/home) */
-    .topnav #myLinks {
-        display: none;
-    }
 
-    /* Style navigation menu links */
-    .topnav a {
-        color: blue;
-        padding: 5px;
-        text-decoration: none;
-        font-size: 16px;
-        display: block;
-    }
-    /* Style the hamburger menu */
-    /* Align the icon with the logo by adjusting the top property accordingly */
-    /* Style the hamburger menu without dynamic vertical centering */
-    .topnav a.icon {
-        background: dodgerblue;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0; /* Keep it aligned to the top */
-        padding: 10px 15px; /* Increase padding to enlarge the clickable area */
-    }
-
-    /* Increase the font size of the icon for larger display */
-    .topnav a.icon .fa {
-        font-size: 24px; /* Adjust font size for larger icon */
-    }
-
-    /* Add a grey background color on mouse-over */
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-    /* Style the active link (or home/logo) */
-    .active {
-        background-color: #04aa6d;
-        color: white;
-    }
     .slogan {
-        color:crimson;
+        color: crimson;
         font-size: 0.7em;
         margin: 0;
         font-weight: bold;
         margin-left: 5px;
         padding: 2px;
     }
-</style>
-<script type="module">
-    document.addEventListener("DOMContentLoaded", () => {
-        const hamburger = document.querySelector(".hamburger");
-        const myLinks = document.getElementById("myLinks");
 
-        if (hamburger) {
-            hamburger.addEventListener("click", () => {
-                // Use computed style to get the actual display value
-                const displayStyle = window.getComputedStyle(myLinks).display;
+    .menu {
+        position: relative;
+    }
 
-                if (displayStyle === "block") {
-                    myLinks.style.display = "none";
-                } else {
-                    myLinks.style.display = "block";
-                }
-            });
-        } else {
-            console.error("Hamburger button not found");
+    .menu-toggle {
+        position: absolute;
+        top: -1.2em;
+        right: 0.1em;
+
+        border: 0;
+        background-color: transparent;
+
+        font-size: 3em;
+        width: 1em;
+        height: 1em;
+        line-height: 0.4;
+        text-indent: 5em;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .menu-toggle::after {
+        position: absolute;
+        top: 0.2em;
+        left: 0.2em;
+        display: block;
+        content: "\2261";
+        text-indent: 0;
+    }
+
+    .menu-dropdown {
+        display: none;
+        right: 0;
+        left: 0;
+        margin: 0;
+    }
+
+    .menu.is-open .menu-dropdown {
+        display: block;
+    }
+
+    .nav-menu {
+        margin: 0;
+        padding-left: 0;
+        border: 1px solid #ccc;
+        list-style: none;
+        background-color: snow;
+        color: #fff;
+    }
+
+    .nav-menu > li + li {
+        border-top: 1px solid #ccc;
+    }
+
+    .nav-menu > li > a {
+        display: block;
+        padding: 0.8em 1em;
+        color: darkblue;
+        font-weight: bold;
+    }
+
+    @media (min-width: 35em) {
+        .menu-toggle {
+            display: none;
         }
-    });
+        .menu-dropdown {
+            display: block;
+            position: static;
+        }
+    }
+
+    @media (min-width: 35em) {
+        .nav-menu {
+            display: flex;
+            border: 0;
+            padding: 0 1em;
+        }
+
+        .nav-menu > li {
+            flex: 1;
+        }
+        .nav-menu > li + li {
+            border: 0;
+        }
+        .nav-menu > li > a {
+            padding: 0.3em;
+            text-align: center;
+        }
+    }
+</style>
+
+<script type="text/javascript">
+    (function () {
+        var button = document.getElementById("toggle-menu");
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("is-open");
+        });
+    })();
 </script>

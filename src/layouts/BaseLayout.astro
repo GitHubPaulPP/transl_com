@@ -2,24 +2,23 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import "../styles/global.css";
-const pageTitle = "Home Page";
+const { title } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon1.svg" />
-        <meta name="viewport" content="width=device-width" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon1.svg" />
+        <title>{ title }</title>
     </head>
     <body>
         <div class="body-grid">
-        <Header />
-        <main> 
-        <slot />
-        </main>
-        <Footer />
+            <Header />
+                <slot />
+            <Footer />
         </div>
     </body>
 </html>

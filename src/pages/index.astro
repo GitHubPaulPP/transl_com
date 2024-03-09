@@ -1,36 +1,51 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "Home Page";
 ---
 
-<BaseLayout>
-	<section> 
-	<h1>Welcome to EngRusTranslate!</h1>
-	<h3>Your Professional English-Russian Translation Service</h3>
-	<div>
-		<p>Elevate your global reach with our bespoke translation services</p>
-	</div>
+<BaseLayout title="Professional English-Russian Translation Service">
+	<main> 
+	<section>
+		<h1>Welcome to EngRusTranslate!</h1>
+		<h3>Your Professional English-Russian Translation Service</h3>
 
-	<div>
-		<p>What's in it for you?</p>
-		<ul>
-			<li>Bespoke Solutions</li>
-			<li>Direct Expert Access</li>
-			<li>Specialized Expertise</li>
-			<li>Quality and Accuracy</li>
-			<li>Timeliness and Reliability</li>
-			<li>Confidentiality and security</li>
-		</ul>
-	</div>
+		<div class="container_hero">
+			<div>
+				<p>
+					Elevate your global reach with our bespoke translation
+					services
+				</p>
+			</div>
 
-	<div>
-		 <button class="quote" type="button">Get Instant Quote</button>
-	</div>
+			<div>
+				<p>What's in it for you?</p>
+				<ul>
+					<li>Bespoke Solutions</li>
+					<li>Direct Expert Access</li>
+					<li>Specialized Expertise</li>
+					<li>Quality and Accuracy</li>
+					<li>Timeliness and Reliability</li>
+					<li>Confidentiality and security</li>
+				</ul>
+			</div>
 
+			<div>
+				<button class="quote" type="button">Get Instant Quote</button>
+			</div>
 
-
-
+			<div>
+				<!-- <picture>
+					<source
+						srcset="/media/cc0-images/surfer-240-200.jpg"
+						media="(orientation: portrait)"
+					/>
+					<img
+						src="/media/cc0-images/painted-hand-298-332.jpg"
+						alt=""
+					/>
+				</picture> -->
+			</div>
+		</div>
 	</section>
-	
 
+	</main>
 </BaseLayout>
