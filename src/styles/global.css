@@ -54,3 +54,12 @@ a:hover {
 a:active {
     color: #b81414;
 }
+
+
+@media (min-width: 35em) {
+
+    svg,
+    img {
+        max-width: 50%;
+    }
+}
