@@ -77,12 +77,11 @@ a:active {
     flex-flow: column nowrap;
     align-items: center;
     width: 100%;
-        /* Ensures each container takes the full width of its parent */
+    /* Ensures each container takes the full width of its parent */
 }
 
 .elevate {
-    border: 2px ridge;
-    border-image: linear-gradient(#fde68a, #fca5a5) 30;
+    /* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
     margin-top: 1em;
     margin-left: 1em;
     margin-right: 1em;
@@ -96,8 +95,7 @@ a:active {
 }
 
 .uvp {
-    border: 2px ridge;
-    border-image: linear-gradient(#fde68a, #fca5a5) 30;
+    /* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
     /* margin: 0.5em; */
     padding: 0.5em;
     font-weight: bold;
@@ -110,6 +108,7 @@ a:active {
 
 .init {
     text-align: center;
+    text-transform: uppercase;
 }
 
 .uvp ul {
@@ -145,7 +144,7 @@ a:active {
 
 .quote {
     font-weight: bold;
-    background-color:darkblue;
+    background-color: darkblue;
     color: antiquewhite;
     font-size: large;
 }
@@ -155,7 +154,7 @@ a:active {
     margin-bottom: 2em;
 
     width: 100%;
-        /* Ensures each container takes the full width of its parent */
+    /* Ensures each container takes the full width of its parent */
 
 
 
@@ -230,31 +229,32 @@ a:active {
     }
 }
 
-.set_apart{
-display: flex;
-flex-flow: column;
-align-items: center;
-justify-content: space-between;
-margin: 1em;
-padding: 0.5em;
-border-image: linear-gradient(#fde68a, #fca5a5) 30;
+.set_apart {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em;
+    padding: 0.5em;
+    border-image: linear-gradient(#fde68a, #fca5a5) 30;
 }
 
 .heading {
     display: flex;
-    flex-flow: column wrap;
-    width: 1 1 100px;
-    margin: 1em;
+    flex-flow: column;
     padding: 0.5em;
     line-height: 2em;
+    font-size: large;
+    text-transform: uppercase;
 }
 
-.intro_para{
+.intro_para {
     margin: 2em;
     padding: 0.5em;
-    font-weight: 500;
-    text-align:justify;
+    font-weight: bold;
+    text-align: justify;
     line-height: 2em;
+    font-size: medium;
 
 }
 
@@ -262,22 +262,24 @@ border-image: linear-gradient(#fde68a, #fca5a5) 30;
     display: flex;
     flex-flow: column;
     list-style: none;
-    justify-content:space-evenly;
-    align-items:center;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+    font-size: medium;
 }
 
-li{
+li {
     display: block;
     margin-bottom: 1.5em;
     padding: 0.5em;
-    text-align:justify;
+    text-align: justify;
     margin-right: 2.5em;
 }
 
 
 .list_values li:before {
     content: "";
-    display:inline-block;
+    display: inline-block;
     height: 1.25em;
     width: 1.25em;
     vertical-align: middle;
@@ -288,3 +290,149 @@ li{
     margin-bottom: 1em;
 }
 
+.serv {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.serv li {
+    display: flex;
+    /* flex-flow: ; */
+    list-style: none;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+
+
+.serv .serv-1:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(doc_serv.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-2:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(pin_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-3:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(glob_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-4:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(menu_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-5:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(cd_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-6:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(browse_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-7:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(share_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-8:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(pen_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv .serv-9:before {
+    content: "";
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    background-image: url(pers_icon.svg);
+    vertical-align: middle;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+.serv>h2{
+    font-size:x-large;
+    text-transform: uppercase;
+    font-weight: bold
+
+}
