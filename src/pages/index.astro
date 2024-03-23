@@ -109,20 +109,136 @@ const description =
 		<section>
 			<div class="serv">
 				<h2>Services Overview</h2>
-				<ul>
-					<li class="serv serv-1">Translation</li>
-					<li class="serv serv-2">Revision</li>
-					<li class="serv serv-3">Proofreading</li>
-					<li class="serv serv-4">Localization</li>
-					<li class="serv serv-5">Translation Quality Assessment</li>
-					<li class="serv serv-6">Terminology Research</li>
-					<li class="serv serv-7">Transcription</li>
-					<li class="serv serv-8">
-						On-page SEO for Localized Websites
-					</li>
-					<li class="serv serv-9">Russian Language Tutoring</li>
+				<ul class="serv_ul">
+					<li class="serv-1">Translation</li>
+					<li class="serv-2">Revision</li>
+					<li class="serv-3">Proofreading</li>
+					<li class="serv-4">Localization</li>
+					<li class="serv-5">Translation Quality Assessment</li>
+					<li class="serv-6">Terminology Research</li>
+					<li class="serv-7">Transcription</li>
+					<li class="serv-8">On-page SEO for Localized Websites</li>
+					<li class="serv-9">Russian Language Tutoring</li>
 				</ul>
 			</div>
 		</section>
+
+		<section>
+			<div class="fields">
+				<h2>Industry Expertise</h2>
+				<ul class="fields_exp">
+					<li>Legal</li>
+					<li>Marketing</li>
+					<li>Business/ E-Commerce</li>
+					<li>Finance/Taxes/ Accounting</li>
+					<li>Investment/ Securities</li>
+					<li>Blockchain and Cryptocurrency</li>
+					<li>Government / Politics</li>
+					<li>Information Technology</li>
+				</ul>
+			</div>
+		</section>
+
+		<div class="testimonials-wrapper">
+			<h2 class="tes_head">Our Clients Say</h2>
+			<section class="testimonials">
+				<div class="testimonials_container">
+					<div class="testimonial active">
+						<img
+							src="translated_srl.svg"
+							alt="Praising professional translation services"
+							class="tes-image-1"
+						/>
+
+						<figure>
+							<blockquote
+								cite="https://www.proz.com/feedback-card/803573"
+							>
+								<q
+									>Pavel has worked with us as a professional
+									freelance translator from EN to RU in
+									various subject fields. Our team has had
+									positive experiences from this
+									collaboration, and Pavel has become a
+									valuable member of our staff of freelance
+									translators.</q
+								>
+							</blockquote>
+
+							<figcaption>—TRANSLATED SRL</figcaption>
+						</figure>
+					</div>
+				</div>
+				<div class="testimonial">
+					<img
+						src="tlex.svg"
+						alt="Praising professional translation services"
+						class="tes-image-2"
+					/>
+
+					<figure>
+						<blockquote
+							cite="https://www.proz.com/feedback-card/803573"
+						>
+							<q
+								>We are very satisfied with the translations
+								Pavel made for us and we'll continue working
+								with him in the future.</q
+							>
+						</blockquote>
+						<figcaption>—TLex</figcaption>
+					</figure>
+				</div>
+				<div class="testimonial">
+					<img
+						src="motaword.svg"
+						alt="Praising professional translation services"
+						class="tes-image-3"
+					/>
+
+					<figure>
+						<blockquote
+							cite="https://www.proz.com/feedback-card/803573"
+						>
+							<q>Yes. We are willing to collaborate again.</q>
+						</blockquote>
+						<figcaption>—MotaWord</figcaption>
+					</figure>
+				</div>
+				<!-- Add more testimonials as needed -->
+			</section>
+		</div>
 	</main>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			let testimonials = document.querySelectorAll(".testimonial");
+			let currentTestimonialIndex = 0;
+
+			// Initially display the first testimonial
+			(
+				testimonials[currentTestimonialIndex] as HTMLElement
+			).style.opacity = "1";
+			testimonials[currentTestimonialIndex].classList.add("active");
+
+			setInterval(function () {
+				// Remove the active class and hide the current testimonial
+				(
+					testimonials[currentTestimonialIndex] as HTMLElement
+				).style.opacity = "0";
+				testimonials[currentTestimonialIndex].classList.remove(
+					"active",
+				);
+
+				// Move to the next testimonial, or loop back to the first if at the end
+				currentTestimonialIndex =
+					(currentTestimonialIndex + 1) % testimonials.length;
+
+				// Add the active class and display the next testimonial
+				(
+					testimonials[currentTestimonialIndex] as HTMLElement
+				).style.opacity = "1";
+				testimonials[currentTestimonialIndex].classList.add("active");
+			}, 5000); // Change testimonial every 5 seconds
+		});
+	</script>
 </BaseLayout>
