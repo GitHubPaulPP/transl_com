@@ -35,5 +35,11 @@ const { description, title }: Props = Astro.props;
             <slot />
             <Footer />
         </div>
+        <!-- Cloudflare Web Analytics -->
+        <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "91761719b6324ded8ec7c0be3bce880b"}'
+        ></script><!-- End Cloudflare Web Analytics -->
     </body>
 </html>
