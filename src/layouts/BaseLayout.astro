@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
+
 export interface Props {
     title: string;
     description: string;
@@ -30,11 +31,11 @@ const { description, title }: Props = Astro.props;
         <slot name="head" />
     </head>
     <body>
-        <div class="body-grid">
+        
             <Header />
-            <slot />
+            <slot/> 
             <Footer />
-        </div>
+       
         <!-- Cloudflare Web Analytics -->
         <script
             defer

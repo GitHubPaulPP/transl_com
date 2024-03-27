@@ -1,65 +1,55 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
 const title = "Professional English-Russian Translation Service	| Homepage";
 const description =
 	"EngRusTranslate provides English-Russian translation services to help you reach your global clients.";
 ---
 
 <BaseLayout description={description} title={title}>
-	<link slot="head" rel="preload" href="hero_image.svg" as="image" />
+	<!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
 	<main>
-		<section>
-			<div class="main_container">
-				<div class="one_container">
-					<div class="elevate">
-						<h1>
-							Expand your global reach and increase sales
-							with English to Russian professional translation services
-						</h1>
-						<p>
-							Crafted by experts, powered by technology, delivered
-							in a timely manner
-						</p>
-					</div>
+		<section class="main_container">
+			<div class="elevate">
+				<h1>
+					Expand your global reach and increase sales with English to
+					Russian professional translation services
+				</h1>
+				<p class="crafted">
+					Crafted by experts, powered by technology, delivered in a
+					timely manner
+				</p>
+			</div>
 
-					<div class="container">
-						<div class="arrow"></div>
-						<div class="arrow"></div>
-						<div class="arrow"></div>
-					</div>
+			<div class="vector">
+				<img
+					class="hero-image"
+					src="hero_image.svg"
+					alt="Vector illustration of elevating global reach for hero section"
+				/>
+			</div>
+		</section>
 
-					<div class="uvp">
-						<h2 class="init">What's in it for you?</h2>
-						<ul class="unordered">
-							<li>Direct Expert Access</li>
-							<li>Specialized Expertise</li>
-							<li>Quality and Accuracy</li>
-							<li>Timeliness and Reliability</li>
-							<li>Confidentiality and Security</li>
-						</ul>
-					</div>
+		<section class="sec_container">
+			<div class="uvp">
+				<h2 class="init">What's in it for you?</h2>
+				<ul class="unordered">
+					<li>Direct Expert Access</li>
+					<li>Specialized Expertise</li>
+					<li>Quality and Accuracy</li>
+					<li>Timeliness and Reliability</li>
+					<li>Confidentiality and Security</li>
+				</ul>
+			</div>
 
-					<div class="container">
-						<div class="arrow"></div>
-						<div class="arrow"></div>
-						<div class="arrow"></div>
-					</div>
+			<div class="container">
+				<div class="arrow"></div>
+				<div class="arrow"></div>
+				<div class="arrow"></div>
+			</div>
 
-					<div class="quote_button">
-						<button class="quote" type="button"
-							>Get Instant Quote</button
-						>
-					</div>
-				</div>
-				<div class="two_container">
-					<div class="vector">
-						<img
-							src="hero_image.svg"
-							alt="Vector illustration of elevating global reach for hero section"
-							style="max-width: 100%; height: auto;"
-						/>
-					</div>
-				</div>
+			<div class="quote_button">
+				<button class="quote" type="button">Get Instant Quote</button>
 			</div>
 		</section>
 
@@ -209,36 +199,669 @@ const description =
 			</section>
 		</div>
 	</main>
-	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			let testimonials = document.querySelectorAll(".testimonial");
-			let currentTestimonialIndex = 0;
+</BaseLayout>
 
-			// Initially display the first testimonial
+<style>
+	.main_container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		/* Stacks children vertically by default */
+	}
+
+	.elevate {
+		/* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
+		margin-top: 1em;
+		margin-left: 1em;
+		margin-right: 1em;
+		padding: 0.1em;
+		text-align: center;
+		font-size: large;
+		line-height: 1.15;
+	}
+
+	.vector {
+		margin-top: 2em;
+		margin-bottom: 2em;
+		width: 90%;
+		/* Ensures each container takes the full width of its parent */
+	}
+
+	.sec_container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.uvp {
+		/* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
+		/* margin: 0.5em; */
+		padding: 0.5em;
+		font-weight: bold;
+		font-size: large;
+		line-height: 1.15;
+	}
+
+	.init {
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.uvp ul {
+		list-style: none;
+	}
+
+	.uvp li:before {
+		content: "";
+		display: flex;
+		height: 1em;
+		width: 1em;
+		background-image: url(/checked.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: 0.3em;
+	}
+
+	.unordered li {
+		display: flex;
+		flex-flow: row;
+		align-items: center;
+		margin: 0.5em;
+		padding: 0.5em;
+		margin-right: 1em;
+	}
+
+	.quote_button {
+		border: 2px ridge;
+		border-image: linear-gradient(#fde68a, #fca5a5) 30;
+		margin: 0.5em;
+		padding: 0.5em;
+	}
+
+	.quote {
+		font-weight: bold;
+		background-color: darkblue;
+		color: antiquewhite;
+		font-size: large;
+	}
+
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		/* height: 100vh; */
+		margin-bottom: 5em;
+	}
+
+	.arrow {
+		position: absolute;
+		width: 2.1rem;
+		height: 0.48rem;
+		opacity: 0;
+		transform: scale(0.3);
+		animation: move-arrow 3s ease-out infinite;
+	}
+
+	.arrow:first-child {
+		animation: move-arrow 3s ease-out 1s infinite;
+	}
+
+	.arrow:nth-child(2) {
+		animation: move-arrow 3s ease-out 2s infinite;
+	}
+
+	.arrow:before,
+	.arrow:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 50%;
+		background: red;
+	}
+
+	.arrow:before {
+		left: 0;
+		transform: skewY(30deg);
+	}
+
+	.arrow:after {
+		right: 0;
+		width: 50%;
+		transform: skewY(-30deg);
+	}
+
+	@keyframes move-arrow {
+		25% {
+			opacity: 1;
+		}
+
+		33.3% {
+			opacity: 1;
+			transform: translateY(2.28rem);
+		}
+
+		66.6% {
+			opacity: 1;
+			transform: translateY(3.12rem);
+		}
+
+		100% {
+			opacity: 0;
+			transform: translateY(4.8rem) scale(0.5);
+		}
+	}
+
+	@media (min-width: 35em) {
+		main {
+			margin: 0;
+		}
+
+		section {
+			margin: 0;
+		}
+		/* section expand reach */
+		.main_container {
+			display: flex;
+			flex-direction: row;
+			/* justify-content: space-between; */
+			/* Stacks children vertically by default */
+		}
+
+		.elevate {
+			margin: 0;
+			margin-right: 0.5em;
+			text-align: left;
+			line-height: 1.15;
+			flex: 1.2;
+			text-align: center;
+		}
+
+		.elevate>h1{
+			font-size:xx-large;
+			padding: 0.5em;
+		}
+
+		.crafted{
+			padding-left: 2em;
+			padding-right: 2em;
+			font-size:large
+		}
+
+		.vector {
+			flex: 1.2;
+			margin: 1em;
+			/* end of section expand reach */
+		}
+
+		
+
+		.uvp {
+			/* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
+			/* margin: 0.5em; */
+
+			font-weight: bold;
+			font-size: medium;
+			line-height: 1.15;
+		}
+
+		.init {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.uvp ul {
+			list-style: none;
+		}
+
+		.uvp > h2 {
+			font-size: medium;
+		}
+
+		.uvp li:before {
+			content: "";
+			display: block;
+			height: 0.5em;
+			width: 1em;
+			background-image: url(/checked.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.unordered li {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			margin: 0.5em;
+			padding: 0.5em;
+		}
+
+		.quote {
+			font-weight: bold;
+			background-color: darkblue;
+			color: antiquewhite;
+			font-size: medium;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			/* width: 100%; */
+			/* height: 100vh; */
+			margin-bottom: 3em;
+		}
+
+		.arrow {
+			position: absolute;
+			width: 1rem;
+			height: 0.3rem;
+			opacity: 0;
+			transform: scale(0.1);
+			animation: move-arrow 3s ease-out infinite;
+		}
+
+		.arrow:first-child {
+			animation: move-arrow 3s ease-out 1s infinite;
+		}
+
+		.arrow:nth-child(2) {
+			animation: move-arrow 3s ease-out 2s infinite;
+		}
+
+		.arrow:before,
+		.arrow:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 50%;
+			background: red;
+		}
+
+		.arrow:before {
+			left: 0;
+			transform: skewY(30deg);
+		}
+
+		.arrow:after {
+			right: 0;
+			width: 50%;
+			transform: skewY(-30deg);
+		}
+
+		@keyframes move-arrow {
+			25% {
+				opacity: 1;
+			}
+
+			33.3% {
+				opacity: 1;
+				transform: translateY(2.28rem);
+			}
+
+			66.6% {
+				opacity: 1;
+				transform: translateY(3.12rem);
+			}
+
+			100% {
+				opacity: 0;
+				transform: translateY(4.8rem) scale(0.5);
+			}
+		}
+
+		.vector {
+			display: flex;
+			flex-flow: column;
+			flex: 1;
+			object-fit: cover;
+		}
+	}
+
+	/*next section  */
+
+	.set_apart {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.heading {
+		display: flex;
+		flex-flow: column;
+		padding: 0.5em;
+		line-height: 2em;
+		font-size: large;
+		text-transform: uppercase;
+	}
+
+	.intro_para {
+		margin: 1em;
+		padding: 0.5em;
+		font-weight: bold;
+		text-align: center;
+		line-height: 2em;
+		font-size: medium;
+	}
+
+	.ul_style li {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		padding: 0.9em;
+		margin-right: 1.5em;
+		text-align: center;
+		font-weight: 500;
+		font-size: medium;
+		line-height: 1.5em;
+	}
+
+	.list_values li:before {
+		content: "";
+		display: inline-block;
+		height: 1.25em;
+		width: 1.25em;
+		vertical-align: middle;
+		background-image: url(/check-tick.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-right: 0.5em;
+		margin-bottom: 1em;
+	}
+
+	.serv {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.serv_ul li {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		padding: 1em;
+		margin-right: 1.5em;
+		font-weight: 600;
+		font-size: larger;
+		text-align: center;
+	}
+
+	.serv-1:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/doc_serv.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-2:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/pin_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-3:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/glob_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-4:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/menu_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-5:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/cd_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-6:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/browse_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-7:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/share_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-8:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/pen_icon.svg);
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv-9:before {
+		content: "";
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		background-image: url(/pers_icon.svg);
+		/* Note the slash at the beginning */
+		vertical-align: middle;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.serv > h2 {
+		padding: 1em;
+		font-size: x-large;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.fields_exp li {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		padding: 1em;
+		margin-right: 1.5em;
+		font-weight: 600;
+		font-size: larger;
+		text-align: center;
+	}
+
+	.fields > h2 {
+		padding: 1em;
+		text-align: center;
+		font-size: x-large;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.fields_exp li:before {
+		content: "";
+		display: inline-block;
+		height: 1.25em;
+		width: 1.25em;
+		vertical-align: middle;
+		background-image: url(/check-tick.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 1em;
+	}
+
+	.testimonials {
+		width: 90%;
+		/* Responsive width */
+		margin: 2rem auto;
+		/* Responsive vertical margin */
+		/* padding: 1rem; */
+		/* Responsive padding */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		position: relative;
+		border-radius: 10px;
+		/* Adds rounded corners */
+		background: #f9f9f9;
+		/* Light background color */
+	}
+
+	.testimonials_container {
+		position: relative;
+	}
+
+	.testimonial {
+		display: none;
+		/* Initially hides all testimonials */
+		text-align: center;
+		/* Centers the text */
+		/* padding: 1rem; */
+		/* Responsive padding */
+		font-size: 1rem;
+		/* Base font size */
+	}
+
+	.testimonial.active {
+		display: block;
+		/* Only the active testimonial is displayed */
+		opacity: 0;
+		/* Start with the testimonial being invisible */
+		transition: opacity 1s ease-in-out;
+		/* Smooth transition for the opacity */
+		font-size: 1.1rem;
+		/* Slightly larger font for active testimonial */
+	}
+
+	/* Responsive adjustments */
+	@media (min-width: 768px) {
+		.testimonial {
+			font-size: 1.2rem;
+			/* Larger font size on tablets and above */
+		}
+	}
+
+	.tes-image-1 {
+		width: 50%;
+		/* Fills the container width */
+		height: auto;
+		/* Adjusts height automatically */
+	}
+
+	.tes-image-2 {
+		width: 30%;
+		/* Fills the container width */
+		height: auto;
+		/* Adjusts height automatically */
+	}
+
+	.tes-image-3 {
+		width: 30%;
+		/* Fills the container width */
+		height: auto;
+		/* Adjusts height automatically */
+	}
+
+	blockquote {
+		font-size: small;
+		font-weight: 500;
+		text-align: justify;
+	}
+
+	blockquote {
+		border-left: 5px solid rgb(211, 43, 14);
+		margin: 0 0 1em 0;
+		padding: 2em 1em;
+	}
+
+	figcaption {
+		font-size: small;
+		margin: 1em;
+		padding: 1em;
+	}
+
+	.tes_head {
+		padding: 1em;
+		text-align: center;
+		font-size: x-large;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+</style>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		let testimonials = document.querySelectorAll(".testimonial");
+		let currentTestimonialIndex = 0;
+
+		// Initially display the first testimonial
+		(testimonials[currentTestimonialIndex] as HTMLElement).style.opacity =
+			"1";
+		testimonials[currentTestimonialIndex].classList.add("active");
+
+		setInterval(function () {
+			// Remove the active class and hide the current testimonial
+			(
+				testimonials[currentTestimonialIndex] as HTMLElement
+			).style.opacity = "0";
+			testimonials[currentTestimonialIndex].classList.remove("active");
+
+			// Move to the next testimonial, or loop back to the first if at the end
+			currentTestimonialIndex =
+				(currentTestimonialIndex + 1) % testimonials.length;
+
+			// Add the active class and display the next testimonial
 			(
 				testimonials[currentTestimonialIndex] as HTMLElement
 			).style.opacity = "1";
 			testimonials[currentTestimonialIndex].classList.add("active");
-
-			setInterval(function () {
-				// Remove the active class and hide the current testimonial
-				(
-					testimonials[currentTestimonialIndex] as HTMLElement
-				).style.opacity = "0";
-				testimonials[currentTestimonialIndex].classList.remove(
-					"active",
-				);
-
-				// Move to the next testimonial, or loop back to the first if at the end
-				currentTestimonialIndex =
-					(currentTestimonialIndex + 1) % testimonials.length;
-
-				// Add the active class and display the next testimonial
-				(
-					testimonials[currentTestimonialIndex] as HTMLElement
-				).style.opacity = "1";
-				testimonials[currentTestimonialIndex].classList.add("active");
-			}, 5000); // Change testimonial every 5 seconds
-		});
-	</script>
-</BaseLayout>
+		}, 5000); // Change testimonial every 5 seconds
+	});
+</script>
