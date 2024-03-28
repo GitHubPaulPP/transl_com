@@ -42,12 +42,6 @@ const description =
 				</ul>
 			</div>
 
-			<div class="container">
-				<div class="arrow"></div>
-				<div class="arrow"></div>
-				<div class="arrow"></div>
-			</div>
-
 			<div class="quote_button">
 				<button class="quote" type="button">Get Instant Quote</button>
 			</div>
@@ -283,246 +277,6 @@ const description =
 		background-color: darkblue;
 		color: antiquewhite;
 		font-size: large;
-	}
-
-	.container {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		/* height: 100vh; */
-		margin-bottom: 5em;
-	}
-
-	.arrow {
-		position: absolute;
-		width: 2.1rem;
-		height: 0.48rem;
-		opacity: 0;
-		transform: scale(0.3);
-		animation: move-arrow 3s ease-out infinite;
-	}
-
-	.arrow:first-child {
-		animation: move-arrow 3s ease-out 1s infinite;
-	}
-
-	.arrow:nth-child(2) {
-		animation: move-arrow 3s ease-out 2s infinite;
-	}
-
-	.arrow:before,
-	.arrow:after {
-		content: "";
-		position: absolute;
-		top: 0;
-		height: 100%;
-		width: 50%;
-		background: red;
-	}
-
-	.arrow:before {
-		left: 0;
-		transform: skewY(30deg);
-	}
-
-	.arrow:after {
-		right: 0;
-		width: 50%;
-		transform: skewY(-30deg);
-	}
-
-	@keyframes move-arrow {
-		25% {
-			opacity: 1;
-		}
-
-		33.3% {
-			opacity: 1;
-			transform: translateY(2.28rem);
-		}
-
-		66.6% {
-			opacity: 1;
-			transform: translateY(3.12rem);
-		}
-
-		100% {
-			opacity: 0;
-			transform: translateY(4.8rem) scale(0.5);
-		}
-	}
-
-	@media (min-width: 35em) {
-		main {
-			margin: 0;
-		}
-
-		section {
-			margin: 0;
-		}
-		/* section expand reach */
-		.main_container {
-			display: flex;
-			flex-direction: row;
-			margin-top: 2em;
-			
-		}
-
-		.elevate {
-			display: flex;
-			flex-flow: column;
-			margin: 0;
-			margin-right: 0.5em;
-			text-align: left;
-			line-height: 1.15;
-			flex: 1.2;
-			text-align: center;
-		
-		}
-
-		.elevate > h1 {
-			font-size: xx-large;
-			padding: 0.5em;
-			color: aqua
-		}
-
-		.crafted {
-			padding-left: 2em;
-			padding-right: 2em;
-			font-size: large;
-		}
-
-		.vector {
-			flex: 1.2;
-			margin: 1em;
-			/* end of section expand reach */
-		}
-
-
-		/* start of section whats in it */
-		.sec_container {
-			display: flex;
-			flex-flow: row;
-			padding: 1em;
-			margin: 3em;
-		}
-
-		.uvp {
-			font-weight: bold;
-			font-size: medium;
-			line-height: 1.15;
-		}
-
-		.init {
-			text-align: center;
-			text-transform: uppercase;
-		}
-
-		.uvp ul {
-			list-style: none;
-		}
-
-		.uvp > h2 {
-			font-size: medium;
-		}
-
-		.uvp li:before {
-			content: "";
-			display: block;
-			height: 1.28em;
-			width: 2em;
-			background-image: url(/checked.svg);
-			background-size: contain;
-			background-repeat: no-repeat;
-		}
-
-		.unordered li {
-			display: flex;
-			flex-flow: row;
-			align-items: center;
-			margin: 0.5em;
-			padding: 0.5em;
-		}
-
-		.quote {
-			font-weight: bold;
-			background-color: darkblue;
-			color: antiquewhite;
-			font-size: medium;
-			margin: 0;
-			padding: 0;
-		}
-
-		.container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			/* width: 100%; */
-			/* height: 100vh; */
-			margin-bottom: 3em;
-		}
-
-		.arrow {
-			position: absolute;
-			width: 1rem;
-			height: 0.3rem;
-			opacity: 0;
-			transform: scale(0.1);
-			animation: move-arrow 3s ease-out infinite;
-		}
-
-		.arrow:first-child {
-			animation: move-arrow 3s ease-out 1s infinite;
-		}
-
-		.arrow:nth-child(2) {
-			animation: move-arrow 3s ease-out 2s infinite;
-		}
-
-		.arrow:before,
-		.arrow:after {
-			content: "";
-			position: absolute;
-			top: 0;
-			height: 100%;
-			width: 50%;
-			background: red;
-		}
-
-		.arrow:before {
-			left: 0;
-			transform: skewY(30deg);
-		}
-
-		.arrow:after {
-			right: 0;
-			width: 50%;
-			transform: skewY(-30deg);
-		}
-
-		@keyframes move-arrow {
-			25% {
-				opacity: 1;
-			}
-
-			33.3% {
-				opacity: 1;
-				transform: translateY(2.28rem);
-			}
-
-			66.6% {
-				opacity: 1;
-				transform: translateY(3.12rem);
-			}
-
-			100% {
-				opacity: 0;
-				transform: translateY(4.8rem) scale(0.5);
-			}
-		}
-
-	
 	}
 
 	/*next section  */
@@ -836,6 +590,114 @@ const description =
 		font-size: x-large;
 		text-transform: uppercase;
 		font-weight: bold;
+	}
+
+	/* media queries start here */
+	@media (min-width: 35em) {
+		main {
+			margin: 0;
+		}
+
+		section {
+			margin: 0;
+		}
+		/* section expand reach */
+		.main_container {
+			display: flex;
+			flex-direction: row;
+			margin-top: 2em;
+		}
+
+		.elevate {
+			display: flex;
+			flex-flow: column;
+			margin: 0;
+			margin-right: 0.5em;
+			text-align: left;
+			line-height: 1.15;
+			flex: 1.2;
+			text-align: center;
+		}
+
+		.elevate > h1 {
+			font-size: xx-large;
+			padding: 0.5em;
+		}
+
+		.crafted {
+			padding-left: 2em;
+			padding-right: 2em;
+			font-size: large;
+		}
+
+		.vector {
+			flex: 1.2;
+			margin: 1em;
+			/* end of section expand reach */
+		}
+
+		/* start of section whats in it */
+		.sec_container {
+			display: flex;
+			flex-flow: row;
+			padding: 1em;
+			/* margin: 3em; */
+		}
+
+		.uvp {
+			font-weight: bold;
+			font-size: medium;
+			line-height: 1.15;
+			flex: 1;
+		}
+
+		.init {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.uvp ul {
+			list-style: none;
+		}
+
+		.uvp > h2 {
+			font-size: medium;
+		}
+
+		.uvp li:before {
+			content: "";
+			display: block;
+			height: 1.28em;
+			width: 2em;
+			background-image: url(/checked.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		.unordered li {
+			display: flex;
+			flex-flow: row;
+			align-items: center;
+			margin: 0.5em;
+			padding: 0.5em;
+		}
+
+		.quote_button {
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+			flex: 1;
+			width: 100%;
+		}
+
+		.quote {
+			font-weight: bold;
+			background-color: darkblue;
+			color: antiquewhite;
+			font-size: medium;
+			margin: 0;
+			padding: 0;
+		}
 	}
 </style>
 
