@@ -12,8 +12,8 @@ const description =
 		<section class="main_container">
 			<div class="elevate">
 				<h1>
-					Expand your global reach with English to
-					Russian professional translation
+					Expand your global reach with English to Russian
+					professional translation
 				</h1>
 				<p class="crafted">
 					Crafted by experts, powered by technology, delivered in a
@@ -365,28 +365,31 @@ const description =
 		.main_container {
 			display: flex;
 			flex-direction: row;
-			/* justify-content: space-between; */
-			/* Stacks children vertically by default */
+			margin-top: 2em;
+			
 		}
 
 		.elevate {
+			display: flex;
+			flex-flow: column;
 			margin: 0;
 			margin-right: 0.5em;
 			text-align: left;
 			line-height: 1.15;
 			flex: 1.2;
 			text-align: center;
+		
 		}
 
-		.elevate>h1{
-			font-size:xx-large;
+		.elevate > h1 {
+			font-size: xx-large;
 			padding: 0.5em;
 		}
 
-		.crafted{
+		.crafted {
 			padding-left: 2em;
 			padding-right: 2em;
-			font-size:large
+			font-size: large;
 		}
 
 		.vector {
@@ -395,12 +398,16 @@ const description =
 			/* end of section expand reach */
 		}
 
-		
+
+		/* start of section whats in it */
+		.sec_container {
+			display: flex;
+			flex-flow: row;
+			padding: 1em;
+			margin: 3em;
+		}
 
 		.uvp {
-			/* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
-			/* margin: 0.5em; */
-
 			font-weight: bold;
 			font-size: medium;
 			line-height: 1.15;
@@ -422,8 +429,8 @@ const description =
 		.uvp li:before {
 			content: "";
 			display: block;
-			height: 0.5em;
-			width: 1em;
+			height: 1.28em;
+			width: 2em;
 			background-image: url(/checked.svg);
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -514,12 +521,7 @@ const description =
 			}
 		}
 
-		.vector {
-			display: flex;
-			flex-flow: column;
-			flex: 1;
-			object-fit: cover;
-		}
+	
 	}
 
 	/*next section  */
