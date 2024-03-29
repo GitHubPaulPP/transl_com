@@ -8,9 +8,15 @@
             <a href="/" aria-label="EngRusTranslate logo">
                 <img src="/header_logo.svg" alt="Logo" /></a
             >
+            <div class="compname">
+                <h1>
+                    ENG RUS TRANSLATE
+                    <span>English to Russian Translation</span>
+                </h1>
+            </div>
         </div>
 
-        <div class="slogan">Proudly owned by translators</div>
+        <div class="slogan">Owned by translators</div>
 
         <nav class="menu" id="main-menu">
             <button class="menu-toggle" id="toggle-menu"> toggle menu</button>
@@ -33,6 +39,10 @@
         overflow: hidden;
         /* background-color: snow; */
         position: relative;
+    }
+
+    .compname {
+        display: none;
     }
 
     .slogan {
@@ -116,20 +126,91 @@
     }
 
     @media (min-width: 35em) {
+
+       .logo{
+        display: flex;
+        align-items: center;
+        
+       }
+
+
+
+        h1 {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            font-weight: 300;
+            /* font-size: 2.5em; */
+            color: #080808;
+            -webkit-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 0.5em;
+            line-height: 1.3;
+        }
+        h1 em {
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .compname{
+            display:inline-block
+        }
+        
+        .compname h1 {
+            text-align: center;
+            color: #222;
+            font-size: 1.7em;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #e12828;
+        }
+        .compname h1 span {
+            line-height: 2em;
+            /* padding-bottom: 15px; */
+            text-transform: none;
+            font-size: 0.7em;
+            font-weight: normal;
+            font-style: italic;
+            color: #999;
+        }
+        
+        .compname h1:after,
+        .compname h1:before {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 45px;
+            height: 4px;
+            content: "";
+            right: 45px;
+            margin: auto;
+            background-color: #ccc;
+        }
+        .compname h1:before {
+            background-color: #d78b8b;
+            left: 45px;
+            width: 90px;
+        }
+
         .nav-menu {
             display: flex;
+            flex-flow: row;
+            justify-content: flex-end;
             border: 0;
             padding: 0 1em;
         }
 
-        .nav-menu > li {
-            flex: 1;
-        }
         .nav-menu > li + li {
             border: 0;
         }
         .nav-menu > li > a {
             padding: 0.3em;
+            margin: 0.5em;
             text-align: center;
         }
     }
