@@ -3,98 +3,110 @@
 ---
 
 <!-- HTML -->
-<footer class="footer">
-    <div class="footer left">
-        <p class="title_com">EngRusTranslate</p>
-        <p>Address:</p>
-        <p>2 Mite Ružića, Fl. 2, Unit 3 Novi Sad 21000 Serbia</p>
-        <p>Tel.:</p>
-        <p>Email:</p>
-    </div>
-    <div class="footer center">
-        <p class="discuss">
-            We're social, so if you're ready to discuss your translation needs,
-            get in touch.
-        </p>
-        <div class="social">
-            <span>Whatsapp</span>
-            <span>Viber</span>
-            <span>Signal</span>
-            <span>Telegram</span>
-            <span>LinkedIn</span>
-            <span>Twitter</span>
-            <span>Facebook</span>
-            <span>Instagram</span>
+<footer class="footer-section">
+    <div class="footer-content">
+        <div class="footer-left">
+            <p class="title_com">EngRusTranslate</p>
+            <p>Address:</p>
+            <p>2 Mite Ružića, Fl. 2, Unit 3 Novi Sad 21000 Serbia</p>
+            <p>Tel.:</p>
+            <p>Email:</p>
+        </div>
+        <div class="footer-center">
+            <p class="discuss">
+                We're social, so if you're ready to discuss your translation
+                needs, get in touch.
+            </p>
+            <div class="social">
+                <span>Whatsapp</span>
+                <span>Viber</span>
+                <span>Signal</span>
+                <span>Telegram</span>
+                <span>LinkedIn</span>
+                <span>Twitter</span>
+                <span>Facebook</span>
+                <span>Instagram</span>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p><a href="/about/">About us</a></p>
+            <p><a href="#aboutus">Our core values</a></p>
+            <p><a href="#aboutus">Services</a></p>
+            <p><a href="#aboutus">Blog</a></p>
+            <p><a href="#aboutus">Contact us</a></p>
         </div>
     </div>
-    <div class="footer right">
-        <p><a href="/about/">About us</a></p>
-        <p><a href="#aboutus">Our core values</a></p>
-        <p><a href="#aboutus">Services</a></p>
-        <p><a href="#aboutus">Blog</a></p>
-        <p><a href="#aboutus">Contact us</a></p>
+    <div class="bottom">
+        <p><a href="#aboutus">Privacy Policy</a></p>
+        <p><a href="#aboutus">Terms of Service</a></p>
+        <p><a href="#aboutus">Cookies policy</a></p>
+        <p>Copyright © 2024 EngRusTranslate.</p>
     </div>
 </footer>
 
-<div class="bottom">
-    <p><a href="#aboutus">Privacy Policy</a></p>
-    <p><a href="#aboutus">Terms of Service</a></p>
-    <p><a href="#aboutus">Cookies policy</a></p>
-    <p>Copyright © 2024 EngRusTranslate.</p>
-</div>
-
 <!-- CSS -->
 <style>
-    .footer {
-        display: flex;
-        flex-direction: row;
-    }
-    .left {
+    .footer-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
         background-color: azure;
-        flex: 1;
-        padding-left: 0.5em;
     }
 
-    .center {
+    .footer-content {
         display: flex;
         flex-direction: column;
-        background-color: azure;
-        flex: 1;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Ensures the footer content uses the full width */
     }
 
-    .title_com {
-        font-weight: bold;
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        padding: 0.5em;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column; /* Stacks items vertically */
+        align-items: center; /* Centers items horizontally within the container */
+        padding: 0.5em;
+    }
+
+    .social span {
+        padding: 0.2em;
     }
 
     .bottom {
-        text-align: center;
         background-color: azure;
         padding: 0.9em;
-        line-height: normal;
-        font-size: small;
-    }
-    .right {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        background-color: azure;
-        flex: 1;
-        padding-left: 0.5em;
-        font-weight: bold;
-    }
-    .social {
-        display: flex;
-        flex-direction: column;
-        padding: 0.5em;
         align-items: center;
-    }
-    .discuss {
         text-align: center;
-        padding: 0 1em 0 1em;
-        font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+        /* Adjust according to your breakpoint */
+        .footer-content {
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex: 1; /* Makes each section take equal width */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers the content vertically */
+            padding: 20px; /* Adjust padding as necessary */
+        }
+        .bottom {
+            order: 2; /* Ensures the .bottom section stays at the bottom */
+            width: 100%;
+        }
     }
 </style>
