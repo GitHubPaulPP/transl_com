@@ -5,8 +5,8 @@
 <!-- HTML -->
 <footer class="footer-section">
     <div class="footer-content">
+        <p class="title_com">Eng Rus Translate</p>
         <div class="footer-left">
-            <p class="title_com">Eng Rus Translate</p>
             <div class="address">
                 <img src="address.svg" alt="address svg" />
                 <p>2 Mite Ružića, Novi Sad 21000, Serbia</p>
@@ -46,7 +46,7 @@
         <p><a href="#aboutus">Privacy Policy</a></p>
         <p><a href="#aboutus">Terms of Service</a></p>
         <p><a href="#aboutus">Cookies policy</a></p>
-        <p>Copyright © 2024 EngRusTranslate.</p>
+        <p class="copyr">Copyright © 2024 EngRusTranslate.</p>
     </div>
 </footer>
 
@@ -72,13 +72,15 @@
         text-transform: uppercase;
         font-size: larger;
         margin-bottom: 0;
+        text-align: center;
+        color: crimson;
     }
 
     .footer-left {
         display: flex;
         flex-flow: column;
-        /* align-items: center; */
-        /* justify-content: center; */
+        align-items: flex-start;
+        justify-content: center;
         width: 100%;
         padding: 1em;
     }
@@ -111,16 +113,16 @@
     }
 
     .phone img {
-        flex: 0.5;
-        width: 0.5em;
-        margin-left: 1.3em;
+        flex: 1;
+        width: 2em;
+        margin-left: 1.2em;
         margin-right: 0.5em;
     }
 
     .phone > span {
         flex: 3;
         font-weight: 600;
-        margin: 1em;
+        margin-left: 0.8em;
         text-align: start;
     }
 
@@ -133,10 +135,10 @@
     }
 
     .email img {
-        flex: 0.5;
-        width: 0.5em;
-        margin-left: 1.3em;
-        margin-right: 0.5em;
+        flex: 1;
+        width: 2.1em;
+        margin-left: 1.1em;
+        margin-right: 0.4em;
     }
 
     .email > p {
@@ -177,14 +179,35 @@
         font-weight: 500;
     }
 
+    .footer-right {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        margin-bottom: 2em;
+    }
+
+    .footer-right > p {
+        margin: 0.5em;
+        font-size: small;
+    }
+
     .bottom {
-        background-color: azure;
-        padding: 0.9em;
-        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 0.9em;
+        margin: 0;
+    }
+
+    .bottom > p {
+        margin: 0.5em;
+        font-size: x-small;
+    }
+
+    .copyr {
+        font-weight: 800;
+        color: rebeccapurple;
     }
 
     @media (min-width: 35em) {
