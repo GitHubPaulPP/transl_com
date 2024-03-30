@@ -5,8 +5,8 @@
 <!-- HTML -->
 <footer class="footer-section">
     <div class="footer-content">
-        <p class="title_com">Eng Rus Translate</p>
         <div class="footer-left">
+            <p class="title_com">Eng Rus Translate</p>
             <div class="address">
                 <img src="/address.svg" alt="address svg" />
                 <p>2 Mite Ružića, Novi Sad 21000, Serbia</p>
@@ -46,7 +46,7 @@
         <p><a href="#aboutus">Privacy Policy</a></p>
         <p><a href="#aboutus">Terms of Service</a></p>
         <p><a href="#aboutus">Cookies policy</a></p>
-        <p class="copyr">Copyright © 2024 EngRusTranslate.</p>
+        <p class="copyr">Copyright © 2024 Eng Rus Translate.</p>
     </div>
 </footer>
 
@@ -67,15 +67,6 @@
         width: 100%; /* Ensures the footer content uses the full width */
     }
 
-    .title_com {
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: larger;
-        margin-bottom: 0;
-        text-align: center;
-        color: crimson;
-    }
-
     .footer-left {
         display: flex;
         flex-flow: column;
@@ -83,6 +74,16 @@
         justify-content: center;
         width: 100%;
         padding: 1em;
+    }
+
+    .title_com {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: larger;
+        margin-bottom: 0;
+        text-align: center;
+        color: crimson;
+        width: 100%;
     }
 
     .address {
@@ -210,25 +211,149 @@
         color: rebeccapurple;
     }
 
+    /* Media queries */
+
     @media (min-width: 35em) {
-        /* Adjust according to your breakpoint */
         .footer-content {
+            display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
             align-items: flex-start;
+            text-align: center;
+            width: 100%;
         }
-        .footer-left,
-        .footer-center,
+
+        .footer-left {
+            display: flex;
+            flex-flow: column;
+            align-items:flex-start;
+            justify-content: center;
+            padding: 0;
+            flex: 1;
+        }
+
+        .title_com {
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: medium;
+            text-align:center;
+            color: crimson;
+            margin: 0;
+            margin-top: 1em;
+            padding: 0;
+        }
+
+        .address {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0.5em;
+        }
+
+        .address img {
+            width: 1.5em;
+        }
+
+        .address > p {
+            font-weight: 500;
+            text-align: start;
+            font-size: small;
+        }
+
+        .phone {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0.2em;
+        }
+
+        .phone img {
+            width: 1.5em;
+        }
+
+        .phone > span {
+            font-weight: 500;
+            text-align: start;
+            font-size: small;
+        }
+
+        .email {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0.3em;
+        }
+
+        .email img {
+            width: 1.5em;
+        }
+
+        .email > p {
+            font-weight: 500;
+            text-align: start;
+            font-size: smaller;
+        }
+
+        .footer-center {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2em;
+            padding: 1em;
+            flex: 1;
+        }
+
+        .discuss {
+            font-weight: 600;
+            font-size: small;
+            margin: 0;
+            text-align: center;
+            padding: 0;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5em;
+            margin-top: 1em;
+        }
+
+        .social img {
+            width: 2em;
+            padding: 0.3em;
+        }
+
         .footer-right {
-            flex: 1; /* Makes each section take equal width */
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            flex: 1;
+            margin-bottom: 0;
+            margin-top: 0.6em;
+        }
+
+        .footer-right > p {
+            margin: 0.5em;
+            font-size: small;
+        }
+
+        .bottom {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centers the content vertically */
-            padding: 20px; /* Adjust padding as necessary */
-        }
-        .bottom {
-            order: 2; /* Ensures the .bottom section stays at the bottom */
+            align-items: center;
+            justify-content: center;
             width: 100%;
+        }
+
+        .bottom > p {
+            margin: 0.5em 0;
         }
     }
 </style>
