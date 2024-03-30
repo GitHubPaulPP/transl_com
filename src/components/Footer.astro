@@ -8,15 +8,17 @@
         <div class="footer-left">
             <p class="title_com">Eng Rus Translate</p>
             <div class="address">
-                <img src="/address.svg" alt="address svg" />
-                <p>2 Mite Ružića, Novi Sad 21000, Serbia</p>
+                <img src="/addr.svg" alt="address svg" />
+                <p>2 Mite Ružića,</p>
+                <p>Novi Sad 21000,</p>
+                <p>Serbia</p>
             </div>
             <div class="phone">
                 <img src="/phone.svg" alt="phone svg" />
-                <span>+381643953417</span>
+                <p>+381643953417</p>
             </div>
             <div class="email">
-                <img src="/email.svg" alt="email svg" />
+                <img src="/email3.svg" alt="email svg" />
                 <p>info@engrustranslate.com</p>
             </div>
         </div>
@@ -73,14 +75,13 @@
         align-items: flex-start;
         justify-content: center;
         width: 100%;
-        padding: 1em;
+        padding-left: 1em;
     }
 
     .title_com {
         font-weight: 600;
         text-transform: uppercase;
         font-size: larger;
-        margin-bottom: 0;
         text-align: center;
         color: crimson;
         width: 100%;
@@ -89,39 +90,39 @@
     .address {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-        padding: 1em;
+        margin-bottom: 0.5em;
+        margin-top: 1em;
+        width: 100%;
     }
 
     .address img {
-        flex: 1;
-        width: 0.3em;
+        width: 2.5em;
     }
 
     .address > p {
-        flex: 3;
         font-weight: 600;
         text-align: start;
+        margin-left: 0.8em;
     }
 
     .phone {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
-        padding: 1em;
+        margin-bottom: 0.5em;
+        width: 100%;
     }
 
     .phone img {
-        flex: 1;
-        width: 2em;
-        margin-left: 1.2em;
-        margin-right: 0.5em;
+        width: 2.3em;
+        /* margin-left: 1.2em; */
+        /* margin-right: 0.5em; */
     }
 
-    .phone > span {
-        flex: 3;
+    .phone > p {
         font-weight: 600;
         margin-left: 0.8em;
         text-align: start;
@@ -130,23 +131,19 @@
     .email {
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        padding: 1em;
+        width: 100%;
     }
 
     .email img {
-        flex: 1;
-        width: 2.1em;
-        margin-left: 1.1em;
-        margin-right: 0.4em;
+        width: 2.7em;
     }
 
     .email > p {
-        flex: 3;
         font-weight: 600;
-        margin: 1em;
         text-align: start;
+        margin-left: 0.7em;
     }
 
     .discuss {
@@ -213,7 +210,7 @@
 
     /* Media queries */
 
-    @media (min-width: 35em) {
+    @media (min-width: 36em) {
         .footer-content {
             display: flex;
             flex-direction: row;
@@ -225,56 +222,57 @@
         .footer-left {
             display: flex;
             flex-flow: column;
-            align-items:flex-start;
+            align-items: flex-start;
             justify-content: center;
-            padding: 0;
+            width: 100%;
+            padding-left: 1em;
             flex: 1;
         }
 
         .title_com {
             font-weight: 600;
             text-transform: uppercase;
-            font-size: medium;
-            text-align:center;
+            font-size: larger;
+            margin-bottom: 0;
+            text-align: center;
             color: crimson;
-            margin: 0;
-            margin-top: 1em;
-            padding: 0;
+            width: 100%;
         }
 
         .address {
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            flex-flow: column wrap;
+            justify-content: space-around;
             align-items: center;
-            padding: 0;
-            margin: 0.5em;
+            margin-bottom: 2em;
+            width: 100%;
         }
 
         .address img {
-            width: 1.5em;
+            width: 2em;
         }
 
         .address > p {
             font-weight: 500;
-            text-align: start;
+            /* text-align: start; */
             font-size: small;
+            margin: 0;
         }
 
         .phone {
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            flex-flow: column wrap;
+            justify-content: space-around;
             align-items: center;
-            padding: 0;
-            margin: 0.2em;
+            margin-bottom: 1em;
+            width: 100%;
         }
 
         .phone img {
             width: 1.5em;
         }
 
-        .phone > span {
+        .phone > p {
             font-weight: 500;
             text-align: start;
             font-size: small;
@@ -282,22 +280,20 @@
 
         .email {
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            flex-flow: column wrap;
+            justify-content: flex-start;
             align-items: center;
-            padding: 0;
-            margin: 0.3em;
+            width: 100%;
         }
 
         .email img {
-            flex: none;
             width: 1.5em;
         }
 
         .email > p {
             font-weight: 500;
             text-align: start;
-            font-size: smaller;
+            font-size: small;
         }
 
         .footer-center {
