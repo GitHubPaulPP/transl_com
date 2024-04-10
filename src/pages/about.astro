@@ -9,10 +9,9 @@ const description =
 <BaseLayout description={description} title={title}>
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
     <main class="about-main">
-        <img src="/sideview profile.jpg" class="about-img" alt="about us" />
-
         <section>
-            <h1>About us</h1>
+            <img src="/sideview profile.jpg" class="about-img" alt="about us" />
+            <h1>Our story</h1>
             <p>
                 Hi there! I'm Pavel, the person behind [Your Firm's Name].
                 Thanks for stopping by.
@@ -146,5 +145,19 @@ const description =
     }
     p {
         padding: 0.5em;
+    }
+
+    @media (min-width: 36em) {
+        .about-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            margin: 0.5em;
+            padding: 0.5em;
+        }
+
+        .about-img {
+            width: 100%;
+        }
     }
 </style>
