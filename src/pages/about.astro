@@ -9,9 +9,11 @@ const description =
 <BaseLayout description={description} title={title}>
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
     <main class="about-main">
-        <section>
+        <section class="story">
             <img src="/sideview profile.jpg" class="about-img" alt="about us" />
-            <h1>Our story</h1>
+
+            <h2><span>Our story</span></h2>
+
             <p>
                 Hi there! I'm Pavel, the person behind [Your Firm's Name].
                 Thanks for stopping by.
@@ -41,8 +43,8 @@ const description =
             </p>
         </section>
 
-        <section>
-            <h1>What we do</h1>
+        <section class="wedo">
+            <h2><span>What we do</span></h2>
             <p>
                 Our focus is clear: <strong>
                     expert translation, proofreading, revision and localization
@@ -61,9 +63,11 @@ const description =
                 in the most culturally-relevant way.
             </p>
             <p>
-                We also offer post-editing of machine translation output,
-                bilingual review of third-party translations as an external
-                quality assurance partner.
+                We also offer
+                <strong> bilingual review of third-party translations</strong> as
+                an external quality assurance partner and <strong
+                    >Russian language tutoring</strong
+                >.
             </p>
             <p>
                 Our clients include translation agencies and leading language
@@ -71,8 +75,8 @@ const description =
             </p>
         </section>
 
-        <section>
-            <h1>What makes us different</h1>
+        <section class="usdiff">
+            <h2><span> What makes us different</span></h2>
             <p>
                 <strong> Specialized Expertise:</strong> We're not generalists. Our
                 work in the English - Russian language pair means you get translations
@@ -109,8 +113,8 @@ const description =
             </p>
         </section>
 
-        <section>
-            <h1>A bit more info</h1>
+        <section class="more-info">
+            <h2><span> A bit more info </span></h2>
             <p>
                 [Your Firm's Name] is not just a business, but as <strong>
                     a commitment to quality, efficiency, and service.</strong
@@ -147,17 +151,87 @@ const description =
         padding: 0.5em;
     }
 
+    h2 {
+        font-size: 1.3em;
+        margin-left: 0.5em;
+        position: relative;
+        display: inline-block;
+        white-space: nowrap;
+        color: #333; /* Dark grey text color for better antique look */
+    }
+
+    h2 span {
+        background-color: white;
+        padding-right: 10px;
+    }
+
+    h2::after {
+        content: "✦✦✦";
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        white-space: nowrap;
+        color: black; /* Line color */
+        font-size: 1em; /* Adjust size to match the h1 font size if necessary */
+        transform: translateY(-50%);
+        font-family: "Arial", sans-serif; /* Optional: Use a font that supports the decorative glyphs */
+    }
+
     @media (min-width: 36em) {
         .about-main {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: repeat(3, 1fr); */
             gap: 1em;
             margin: 0.5em;
             padding: 0.5em;
         }
 
         .about-img {
-            width: 100%;
+            width: 40%;
+            float: left;
+            margin: 1em;
+        }
+        .story {
+            grid-column: 1/4;
+            grid-row: 1/1;
+            padding: 1em;
+            height: fit-content;
+        }
+
+        .wedo {
+            grid-column: 1/4;
+        }
+
+        .usdiff {
+            grid-column: 1/4;
+        }
+
+        .more-info {
+            grid-column: 1/4;
+        }
+
+        h2 {
+            position: relative;
+            display: inline-block;
+            white-space: nowrap;
+            color: #333; /* Dark grey text color for better antique look */
+        }
+
+        h2 span {
+            background-color: white;
+            padding-right: 0.5em;
+        }
+
+        h2::after {
+            content: "✦✦✦";
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            white-space: nowrap;
+            color: rgb(242, 242, 105); /* Line color */
+            font-size: 1em; /* Adjust size to match the h1 font size if necessary */
+            transform: translateY(-50%);
         }
     }
 </style>
