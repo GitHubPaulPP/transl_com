@@ -21,6 +21,13 @@
                 <img src="/email3.svg" alt="email svg" />
                 <p>info@engrustranslate.com</p>
             </div>
+            <div class="working-hours">
+                <img src="/clock.svg" alt="clock svg" />
+                <p>Working Hours:</p>
+                <p>Mon - Fri,</p>
+                <p>09:00 - 20:00.</p>
+                <p id="localTime">Local time now: <span id="time"></span></p>
+            </div>
         </div>
 
         <div class="footer-center">
@@ -92,8 +99,8 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 0.5em;
-        margin-top: 1em;
+        margin-bottom: 0.7em;
+        /* margin-top: 1em; */
         width: 100%;
     }
 
@@ -112,7 +119,7 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.7em;
         width: 100%;
     }
 
@@ -131,6 +138,7 @@
         flex-flow: row wrap;
         justify-content: flex-start;
         align-items: center;
+        margin-bottom: 0.7em;
         width: 100%;
     }
 
@@ -141,6 +149,25 @@
     .email > p {
         font-weight: 600;
         margin-left: 0.7em;
+        font-size: small;
+    }
+
+    .working-hours {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0.7em;
+        width: 90%;
+    }
+
+    .working-hours img {
+        width: 2.3em;
+    }
+
+    .working-hours > p {
+        font-weight: 600;
+        margin-left: 0.9em;
         font-size: small;
     }
 
@@ -351,3 +378,46 @@
         }
     }
 </style>
+<script>
+    function updateLocalTime() {
+        var now = new Date();
+        var utc = now.getTime() + now.getTimezoneOffset() * 60000;
+
+        // Serbia is UTC+1 and UTC+2 in daylight saving time
+        var serbiaOffset = 1; // Serbia's time offset from UTC is +1 hour
+        var dst = isDST(now); // Check if current date is in daylight saving time
+        var serbiaTime = new Date(
+            utc + 3600000 * (serbiaOffset + (dst ? 1 : 0)),
+        );
+
+        var days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ];
+        var day = days[serbiaTime.getDay()]; // Get the day of the week
+        var hours = serbiaTime.getHours();
+        var minutes = serbiaTime.getMinutes();
+        var formattedMinutes =
+            minutes < 10 ? "0" + minutes : minutes.toString(); // Ensuring minutes is treated as a string
+
+        var strTime = day + ", " + hours + ":" + formattedMinutes; // Correctly formatted time string with comma
+
+        document.getElementById("time").textContent = strTime;
+    }
+
+    function isDST(date) {
+        var jan = new Date(date.getFullYear(), 0, 1); // Jan 1st of current year
+        var jul = new Date(date.getFullYear(), 6, 1); // Jul 1st of current year
+        return (
+            date.getTimezoneOffset() <
+            Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset())
+        );
+    }
+
+    setInterval(updateLocalTime, 1000); // Update the time display every second
+</script>

@@ -144,6 +144,9 @@ const description =
 					<img src="/pers_icon.svg" alt="Tutoring icon" />Russian
 					Language Tutoring
 				</div>
+				<div class="button_serv">
+					<a href="/services/">Learn more </a>
+				</div>
 			</div>
 		</section>
 
@@ -198,6 +201,11 @@ const description =
 		</section>
 
 		<h2 class="tes_head">Our Clients Say</h2>
+		<p class="feedback-card">
+			You can also view the original testimonials on <a
+				href="https://www.proz.com/feedback-card/803573">Proz.com</a
+			>, a platform independent of our website.
+		</p>
 
 		<div class="testimonials-wrapper">
 			<section class="testimonials">
@@ -265,8 +273,20 @@ const description =
 					</figure>
 				</div>
 				<!-- Add more testimonials as needed -->
+				<p></p>
 			</section>
+			<p class="disclaimer">
+				Understandably, many of our clients prefer confidentiality and
+				choose not to have their names published on any public resource.
+				We respect this choice and adhere strictly to Non-Disclosure
+				Agreements (NDAs). Therefore, we only publish testimonials with
+				explicit consent from our clients, and will never do so in the
+				absence of such consent.
+			</p>
 		</div>
+		<form class="top" action="#top">
+			<button class="top1" type="submit">Back to Top</button>
+		</form>
 	</main>
 </BaseLayout>
 
@@ -429,8 +449,7 @@ const description =
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		text-align: center;
-		width: 50em; /* Adjust based on your preference */
+		width: 20em;
 		font-weight: 600;
 		font-size: large;
 	}
@@ -439,6 +458,11 @@ const description =
 		margin-bottom: 1em; /* Space between icon and text */
 		width: 3em; /* Adjust based on your icon size */
 		height: auto;
+	}
+
+	.button_serv {
+		margin: 2em;
+		border: 1px solid blue;
 	}
 
 	.industry {
@@ -566,6 +590,31 @@ const description =
 		font-size: x-large;
 		text-transform: uppercase;
 		font-weight: bold;
+	}
+
+	.disclaimer {
+		font-size: small;
+		padding: 2em;
+		margin: 2em;
+		text-align: justify;
+	}
+
+	.feedback-card {
+		font-size: small;
+		padding: 2em;
+		margin: 2em;
+		text-align: center;
+	}
+
+	.top {
+		text-align: center;
+		margin: 1em;
+	}
+
+	.top1 {
+		background-color: rgb(8, 20, 187);
+		color: #f9f9f9;
+		font-weight: 600;
 	}
 
 	/* media queries start here */
@@ -790,6 +839,30 @@ const description =
 			font-size: x-large;
 			text-transform: uppercase;
 			margin-top: 3em;
+		}
+
+		.disclaimer {
+			font-size: small;
+			padding: 2em;
+			margin: 1em;
+			text-align: justify;
+		}
+
+		.feedback-card {
+			font-size: small;
+			padding: 1em;
+			margin: 1em;
+			text-align: center;
+		}
+		.top {
+			text-align: center;
+			margin: 1em;
+		}
+
+		.top1 {
+			background-color: rgb(8, 20, 187);
+			color: #f9f9f9;
+			font-weight: 600;
 		}
 	}
 </style>

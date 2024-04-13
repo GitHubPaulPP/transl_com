@@ -3,6 +3,26 @@
 ---
 
 <header>
+    <div class="above-logo">
+        <div class="phone">
+            <p>+381643953417</p>
+        </div>
+        <div class="email">
+            <p>info@engrustranslate.com</p>
+        </div>
+        <div class="working-hours1">
+            <p>Working Hours:</p>
+            <p>Mon - Fri,</p>
+            <p>09:00 - 20:00.</p>
+            <p id="localTime1">Local time now: <span id="time1"></span></p>
+        </div>
+
+        <div class="social">
+            <img src="/linkedin.svg" alt="linkedin svg" />
+            <img src="/twitter.svg" alt="twitter svg" />
+            <img src="/facebook.svg" alt="facebook svg" />
+        </div>
+    </div>
     <div class="topnav">
         <div class="logo">
             <a href="/" aria-label="EngRusTranslate logo">
@@ -35,6 +55,38 @@
 </header>
 
 <style>
+    .above-logo {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        line-height: 0.3;
+        font-size: x-small;
+        font-weight: 600;
+        padding: 1em;
+        background-color: rgb(248, 242, 242);
+    }
+
+    .phone {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .email {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .working-hours1 {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        text-align: end;
+    }
+
+
+    .social img {
+        width: 1.5em;
+        padding: 0.3em;
+    }
+
     .topnav {
         overflow: hidden;
         /* background-color: snow; */
@@ -126,14 +178,10 @@
     }
 
     @media (min-width: 36em) {
-
-       .logo{
-        display: flex;
-        align-items: center;
-        
-       }
-
-
+        .logo {
+            display: flex;
+            align-items: center;
+        }
 
         h1 {
             position: relative;
@@ -157,10 +205,10 @@
             font-weight: 600;
         }
 
-        .compname{
-            display:inline-block
+        .compname {
+            display: inline-block;
         }
-        
+
         .compname h1 {
             text-align: center;
             color: #222;
@@ -178,7 +226,7 @@
             font-style: italic;
             color: #999;
         }
-        
+
         .compname h1:after,
         .compname h1:before {
             position: absolute;
@@ -217,6 +265,48 @@
 </style>
 
 <script type="text/javascript">
+    function updateLocalTime() {
+        var now = new Date();
+        var utc = now.getTime() + now.getTimezoneOffset() * 60000;
+
+        // Serbia is UTC+1 and UTC+2 in daylight saving time
+        var serbiaOffset = 1; // Serbia's time offset from UTC is +1 hour
+        var dst = isDST(now); // Check if current date is in daylight saving time
+        var serbiaTime = new Date(
+            utc + 3600000 * (serbiaOffset + (dst ? 1 : 0)),
+        );
+
+        var days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ];
+        var day = days[serbiaTime.getDay()]; // Get the day of the week
+        var hours = serbiaTime.getHours();
+        var minutes = serbiaTime.getMinutes();
+        var formattedMinutes =
+            minutes < 10 ? "0" + minutes : minutes.toString(); // Ensuring minutes is treated as a string
+
+        var strTime = day + ", " + hours + ":" + formattedMinutes; // Correctly formatted time string with comma
+
+        document.getElementById("time1").textContent = strTime;
+    }
+
+    function isDST(date) {
+        var jan = new Date(date.getFullYear(), 0, 1); // Jan 1st of current year
+        var jul = new Date(date.getFullYear(), 6, 1); // Jul 1st of current year
+        return (
+            date.getTimezoneOffset() <
+            Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset())
+        );
+    }
+
+    setInterval(updateLocalTime, 1000); // Update the time display every second
+
     (function () {
         var button = document.getElementById("toggle-menu");
         button.addEventListener("click", function (event) {
