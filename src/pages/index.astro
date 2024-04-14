@@ -64,7 +64,7 @@ const description =
 		</h3>
 
 		<section class="set_apart">
-			<div>
+			<div class="not-agency">
 				<img src="/setapart.svg" alt="checked svg" />
 				<p>
 					<strong>Not an agency.</strong> There are no middlemen. This
@@ -72,7 +72,7 @@ const description =
 					of your needs.
 				</p>
 			</div>
-			<div>
+			<div class="laser">
 				<img src="/setapart.svg" alt="checked svg" />
 				<p>
 					<strong>Laser-focused specialization</strong>
@@ -82,7 +82,7 @@ const description =
 					accuracy.
 				</p>
 			</div>
-			<div>
+			<div class="registr">
 				<img src="/setapart.svg" alt="checked svg" />
 				<p>
 					<strong>Registered and Reliable:</strong>
@@ -90,7 +90,7 @@ const description =
 					of your projects.
 				</p>
 			</div>
-			<div>
+			<div class="native">
 				<img src="/setapart.svg" alt="checked svg" />
 				<p>
 					We are <strong> native speakers of Russian</strong> based in
@@ -98,7 +98,7 @@ const description =
 					experience.
 				</p>
 			</div>
-			<div>
+			<div class="in-depth">
 				<img src="/setapart.svg" alt="checked svg" />
 				<p>
 					<strong>In-depth knowledge</strong> of our areas of expertise
@@ -140,10 +140,12 @@ const description =
 					/>Translation Quality Assessment
 				</div>
 
-				<div class="serv-9">
+				<div class="serv-6">
 					<img src="/pers_icon.svg" alt="Tutoring icon" />Russian
 					Language Tutoring
 				</div>
+			</div>
+			<div class="align_button">
 				<div class="button_serv">
 					<a href="/services/">Learn more </a>
 				</div>
@@ -295,29 +297,36 @@ const description =
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* Stacks children vertically by default */
 	}
 
 	.elevate {
-		/* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
-		margin-top: 1em;
-		margin-left: 1em;
-		margin-right: 1em;
-		padding: 0.1em;
+		margin: 1em;
+		padding: 0.5em;
 		text-align: center;
 		font-size: large;
 		line-height: 1.15;
+	}
+
+	.elevate > h1 {
+		font-size: xx-large;
+		padding: 0.5em;
+	}
+
+	.crafted {
+		padding-left: 2em;
+		padding-right: 2em;
+		font-size: large;
 	}
 
 	.vector {
 		margin-top: 2em;
 		margin-bottom: 2em;
 		width: 90%;
-		/* Ensures each container takes the full width of its parent */
 	}
 
 	.vector img {
-		border-radius: 50%;
+		border-radius: 30%;
+		width: 100%;
 	}
 
 	.init {
@@ -332,9 +341,6 @@ const description =
 	}
 
 	.uvp {
-		/* border-image: linear-gradient(#fde68a, #fca5a5) 30; */
-		/* margin: 0.5em; */
-		padding: 0.5em;
 		font-weight: bold;
 		font-size: large;
 		line-height: 1.15;
@@ -359,9 +365,9 @@ const description =
 		display: flex;
 		flex-flow: row;
 		align-items: center;
-		margin: 0.5em;
+		/* margin: 0.5em; */
 		padding: 0.5em;
-		margin-right: 1em;
+		/* margin-right: 1em; */
 	}
 
 	.quote_button {
@@ -379,7 +385,7 @@ const description =
 	}
 
 	.button_about {
-		margin: 2em;
+		margin: 1em;
 		border: 1px solid blue;
 		width: 9em;
 		font-size: large;
@@ -409,26 +415,22 @@ const description =
 
 	.set_apart {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+		flex-flow: column;
 		align-items: center;
-		gap: 1em;
+		justify-content: center;
+		margin-bottom: 2em;
 	}
 
 	.set_apart > div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-align: start;
-		width: 15em;
+		text-align: center;
 		font-weight: 600;
 		font-size: large;
+		padding: 2em;
 	}
 
 	.set_apart > div img {
-		margin-bottom: 1em; /* Space between icon and text */
-		width: 2em; /* Adjust based on your icon size */
-		height: auto;
+		margin-bottom: 1em;
+		width: 2em;
 	}
 
 	.serv_overview {
@@ -439,30 +441,37 @@ const description =
 
 	.serv_ul {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around; /* Distributes space around items */
-		align-items: center; /* Vertically centers items in their flex container */
-		gap: 2em; /* Adds space between flex items */
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
 	}
 
 	.serv_ul > div {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 20em;
 		font-weight: 600;
 		font-size: large;
+		padding: 1em;
 	}
 
 	.serv_ul > div img {
-		margin-bottom: 1em; /* Space between icon and text */
-		width: 3em; /* Adjust based on your icon size */
-		height: auto;
+		margin-bottom: 1em;
+		width: 3em;
+	}
+
+	.align_button {
+		display: flex;
+		flex-flow: row;
+		justify-content: center;
 	}
 
 	.button_serv {
 		margin: 2em;
 		border: 1px solid blue;
+		width: 30%;
+		text-align: center;
 	}
 
 	.industry {
@@ -474,10 +483,11 @@ const description =
 
 	.fields {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around; /* Distributes space around items */
-		align-items: center; /* Vertically centers items in their flex container */
-		gap: 2em; /* Adds space between flex items */
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		margin-bottom: 3em;
 	}
 
 	.fields > div {
@@ -485,15 +495,13 @@ const description =
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
-		width: 50em; /* Adjust based on your preference */
 		font-weight: 600;
 		font-size: large;
 	}
 
 	.fields > div img {
-		margin-bottom: 1em; /* Space between icon and text */
-		width: 2em; /* Adjust based on your icon size */
-		height: auto;
+		margin-bottom: 1em;
+		width: 2em;
 	}
 
 	.testimonials {
@@ -538,7 +546,7 @@ const description =
 	}
 
 	/* Responsive adjustments */
-	@media (min-width: 36em) {
+	@media (min-width: 36em) and (max-width: 50em) {
 		.testimonial {
 			font-size: 1.2rem;
 			/* Larger font size on tablets and above */
@@ -618,7 +626,7 @@ const description =
 	}
 
 	/* media queries start here */
-	@media (min-width: 36em) {
+	@media (min-width: 36em){
 		main {
 			margin: 0;
 		}
@@ -628,21 +636,19 @@ const description =
 		}
 		/* section expand reach */
 		.main_container {
-			display: flex;
-			flex-direction: row;
-			margin-top: 2em;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 			margin-bottom: 3em;
+			padding: 1em;
 		}
 
 		.elevate {
 			display: flex;
 			flex-flow: column;
-			margin: 0;
+			align-items: center;
 			margin-right: 0.5em;
-			text-align: left;
 			line-height: 1.15;
-			flex: 1.2;
-			text-align: center;
+			max-width: 50em;
 		}
 
 		.elevate > h1 {
@@ -657,13 +663,14 @@ const description =
 		}
 
 		.vector {
-			flex: 1.2;
-			margin: 1em;
-			/* end of section expand reach */
+			padding: 0.5em;
+			margin-left: 1.8em;
+			max-width: 50em;
 		}
 
 		.vector img {
-			border-radius: 50%;
+			border-radius: 30%;
+			width: 100%;
 		}
 
 		/* start of section whats in it */
@@ -672,9 +679,24 @@ const description =
 			text-transform: uppercase;
 		}
 		.sec_container {
-			display: flex;
-			flex-flow: row;
-			padding: 1em;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			margin: 0.5em;
+		}
+
+		.unordered {
+			grid-column: 1/2;
+			grid-row: 1/2;
+		}
+
+		.quote_button {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+
+		.button_about {
+			grid-column: 3/4;
+			grid-row: 1/2;
 		}
 
 		.uvp {
@@ -702,19 +724,10 @@ const description =
 			background-repeat: no-repeat;
 		}
 
-		.unordered li {
-			display: flex;
-			flex-flow: row;
-			align-items: center;
-			margin: 0.5em;
-			padding: 0.5em;
-		}
-
 		.quote_button {
 			display: flex;
 			flex-flow: row;
 			justify-content: center;
-			flex: 1;
 		}
 
 		.quote {
@@ -747,28 +760,42 @@ const description =
 		}
 
 		.set_apart {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: center;
-			gap: 1em;
-			margin-bottom: 3em;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 0.5em;
 		}
 
-		.set_apart > div {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			width: 20em;
-			font-weight: 600;
-			font-size: medium;
+		.not-agency {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			height: 100%;
+		}
+		.laser {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			height: 100%;
+		}
+
+		.registr {
+			grid-column: 3/4;
+			grid-row: 1/2;
+			height: 100%;
+		}
+
+		.native {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			height: 100%;
+		}
+
+		.in-depth {
+			grid-column: 2/3;
+			grid-row: 2/3;
+			height: 100%;
 		}
 
 		.set_apart > div img {
-			margin-bottom: 1em; /* Space between icon and text */
-			width: 2em; /* Adjust based on your icon size */
-			height: auto;
+			width: 1.5em;
 		}
 
 		.serv_overview {
@@ -779,27 +806,62 @@ const description =
 		}
 
 		.serv_ul {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around; /* Distributes space around items */
-			align-items: center; /* Vertically centers items in their flex container */
-			gap: 2em; /* Adds space between flex items */
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 0.5em;
 		}
 
-		.serv_ul > div {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			width: 10em; /* Adjust based on your preference */
-			font-weight: 600;
-			font-size: large;
+		.serv-1 {
+			grid-column: 1/2;
+			grid-row: 1/2;
+			height: 100%;
+		}
+
+		.serv-2 {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			height: 100%;
+		}
+
+		.serv-3 {
+			grid-column: 3/4;
+			grid-row: 1/2;
+			height: 100%;
+		}
+
+		.serv-4 {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			height: 100%;
+		}
+
+		.serv-5 {
+			grid-column: 2/3;
+			grid-row: 2/3;
+			height: 100%;
+		}
+		.serv-6 {
+			grid-column: 3/4;
+			grid-row: 2/3;
+			height: 100%;
 		}
 
 		.serv_ul > div img {
 			margin-bottom: 1em; /* Space between icon and text */
 			width: 3em; /* Adjust based on your icon size */
-			height: auto;
+		}
+
+		.align_button {
+			display: flex;
+			flex-flow: row;
+			justify-content: center;
+		}
+
+		.button_serv {
+			margin: 2em;
+			border: 1px solid blue;
+			width: 15%;
+			text-align: center;
 		}
 
 		.industry {
@@ -810,28 +872,14 @@ const description =
 		}
 
 		.fields {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: center;
-			gap: 2em;
-			margin-top: 2em;
-		}
-
-		.fields > div {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			text-align: center;
-			width: 15em; /* Adjust based on your preference */
-			font-weight: 600;
-			font-size: large;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			padding: 1.3em;
 		}
 
 		.fields > div img {
-			margin-bottom: 1em; /* Space between icon and text */
-			width: 2em; /* Adjust based on your icon size */
-			height: auto;
+			margin-bottom: 1em;
+			width: 2em;
 		}
 
 		.tes_head {
