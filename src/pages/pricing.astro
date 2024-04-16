@@ -1,0 +1,369 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description =
+    "EngRusTranslate provides English-Russian translation services to help you reach your global clients.";
+---
+
+<BaseLayout description={description} title={title}>
+    <div class="all-contain">
+        <header class="choose-service">
+            <h1>Choose the perfect translation service to meet your needs</h1>
+            <p>
+                Explore our tiered services designed to cater to all content
+                types, from basic communications to complex, SEO-driven content.
+            </p>
+        </header>
+
+        <main>
+            <section class="pricing-tier1">
+                <div class="basic">
+                    <h3>BASIC</h3>
+                </div>
+                <p class="price1">€0.06</p>
+                <span class="word1"><sub>/word</sub></span>
+                <div class="bestfor1">
+                    <p>
+                        Best for non-critical, everyday content where basic
+                        correctness and readability are sufficient:
+                    </p>
+                </div>
+                <div class="best-list1">
+                    <p>Internal communication</p>
+                    <p>Social media posts</p>
+                    <p>User reviews</p>
+                    <p>Emails and letters</p>
+                    <p>General subject texts</p>
+                </div>
+
+                <div class="services1">
+                    <h4>Services include:</h4>
+                    <p>Professional translation</p>
+                    <p>Proofreading (by a translator)</p>
+                    <p>Computer-assisted quality assurance</p>
+                </div>
+                <div class="cta-b1">
+                    <button class="cta-button1">ORDER NOW</button>
+                </div>
+            </section>
+
+            <section class="pricing-tier2">
+                <div class="business">
+                    <h3>BUSINESS</h3>
+                </div>
+                <p class="price2">€0.10</p>
+                <span class="word2"><sub>/word</sub></span>
+                <div class="bestfor2">
+                    <p>
+                        Ideal for professional-grade content where detail and
+                        precision are key:
+                    </p>
+                </div>
+                <div class="best-list2">
+                    <p>Business presentations</p>
+                    <p>Reports</p>
+                    <p>Mobile apps</p>
+                    <p>Website localization (without SEO translation)</p>
+                    <p>
+                        Legal, financial, marketing, investment-related
+                        documents
+                    </p>
+                </div>
+
+                <div class="services2">
+                    <h4>Services include:</h4>
+                    <p>
+                        Professional translation with industry-specific
+                        terminology
+                    </p>
+                    <p>Proofreading by specialized linguists</p>
+                    <p>Computer-assisted quality assurance</p>
+                    <p>Desktop publishing and formatting</p>
+                </div>
+                <div class="cta-b2">
+                    <button class="cta-button2">ORDER NOW</button>
+                </div>
+            </section>
+
+            <section class="pricing-tier3">
+                <div class="exclu">
+                    <h3>EXCLUSIVE</h3>
+                </div>
+                <p class="price3">€0.12</p>
+                <span class="word3"><sub>/word</sub></span>
+                <div class="bestfor3">
+                    <p>
+                        Ideal for content that requires SEO translation and
+                        keyword research to maximize online visibility:
+                    </p>
+                </div>
+                <div class="best-list3">
+                    <p>Websites, landing pages, blogs, and online articles</p>
+                    <p>Online PR articles</p>
+                </div>
+
+                <div class="services3">
+                    <h4>Services include:</h4>
+                    <p>On-page SEO to enhance online visibility</p>
+                    <p>Expert translation</p>
+                    <p>Rigorous proofreading</p>
+                    <p>Precision quality assurance process</p>
+                </div>
+                <div class="cta-b3">
+                    <button class="cta-button3">ORDER NOW</button>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <!-- Satisfaction Guarantee -->
+            <h3>Satisfaction Guaranteed</h3>
+            <p>
+                If you are not completely satisfied with our services, we
+                promise to make it right or offer a full refund.
+            </p>
+        </aside>
+        <form class="top" action="#top">
+            <button class="top1" type="submit">Back to Top</button>
+        </form>
+    </div>
+</BaseLayout>
+
+<style>
+    .all-contain {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        width: 100%;
+    }
+
+    .choose-service {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        width: 100%;
+        text-align: center;
+    }
+    /* 1st tier card */
+    .pricing-tier1 {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        /* padding: 0.5em; */
+        margin: 1em;
+        background-color: white;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    .basic {
+        background-color: darkcyan;
+        margin-top: 2em;
+        width: 50%;
+        text-align: center;
+        border-radius: 5%;
+        color: white;
+    }
+
+    .price1 {
+        font-size: 3em;
+        color: cornflowerblue;
+        margin-bottom: 0;
+    }
+
+    .bestfor1 {
+        text-align: center;
+        background-color: azure;
+        font-weight: 500;
+        margin-top: 2em;
+        padding: 1em;
+    }
+
+    .word1 {
+        color: cornflowerblue;
+    }
+
+    .best-list1 {
+        background-color: aliceblue;
+        width: 100%;
+        text-align: center;
+        font-size: small;
+        font-weight: 500;
+    }
+
+    .services1 {
+        background-color: rgb(213, 233, 249);
+        width: 100%;
+        text-align: center;
+        font-size: smaller;
+        font-weight: 500;
+    }
+
+    .cta-b1 {
+        margin: 1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-button1 {
+        background-color: snow;
+        font-weight: 600;
+        width: 50%;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    /* 2nd tier card */
+
+    .pricing-tier2 {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        /* padding: 0.5em; */
+        margin: 1em;
+        background-color: white;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    .business {
+        background-color: royalblue;
+        margin-top: 2em;
+        width: 50%;
+        text-align: center;
+        border-radius: 5%;
+        color: azure;
+    }
+
+    .price2 {
+        font-size: 3em;
+        color: cornflowerblue;
+        margin-bottom: 0;
+    }
+
+    .bestfor2 {
+        text-align: center;
+        background-color: azure;
+        font-weight: 500;
+        margin-top: 2em;
+        padding: 1em;
+    }
+
+    .word2 {
+        color: cornflowerblue;
+    }
+
+    .best-list2 {
+        background-color: aliceblue;
+        width: 100%;
+        text-align: center;
+        font-size: small;
+        font-weight: 500;
+    }
+
+    .services2 {
+        background-color: rgb(213, 233, 249);
+        width: 100%;
+        text-align: center;
+        font-size: smaller;
+        font-weight: 500;
+    }
+
+    .cta-b2 {
+        margin: 1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-button2 {
+        background-color: snow;
+        font-weight: 600;
+        width: 50%;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    /* 3rd tier card */
+
+    .pricing-tier3 {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        /* padding: 0.5em; */
+        margin: 1em;
+        background-color: white;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    .exclu {
+        background-color: rgb(10, 47, 158);
+        margin-top: 2em;
+        width: 50%;
+        text-align: center;
+        border-radius: 5%;
+        color: azure;
+    }
+
+    .price3 {
+        font-size: 3em;
+        color: cornflowerblue;
+        margin-bottom: 0;
+    }
+
+    .bestfor3 {
+        text-align: center;
+        background-color: azure;
+        font-weight: 500;
+        margin-top: 2em;
+        padding: 1em;
+    }
+
+    .word3 {
+        color: cornflowerblue;
+    }
+
+    .best-list3 {
+        background-color: aliceblue;
+        width: 100%;
+        text-align: center;
+        font-size: small;
+        font-weight: 500;
+    }
+
+    .services3 {
+        background-color: rgb(213, 233, 249);
+        width: 100%;
+        text-align: center;
+        font-size: smaller;
+        font-weight: 500;
+    }
+
+    .cta-b3 {
+        margin: 1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-button3 {
+        background-color: snow;
+        font-weight: 600;
+        width: 50%;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+</style>
