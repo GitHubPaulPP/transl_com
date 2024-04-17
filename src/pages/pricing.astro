@@ -177,8 +177,60 @@ const description =
                 </p>
             </div>
         </aside>
-    </div>
 
+        <aside>
+            <h2 class="process-h2">Our Process</h2>
+        </aside>
+
+        <div class="process">
+            <img src="/start.svg" alt="start svg" />
+            <h3>Project Initiation</h3>
+            <p>
+                You reach out with your translation needs. We respond to gather
+                all necessary details, including document types, target
+                languages, and desired turnaround times. You also provide any
+                other special requirements you want us to adhere to (glossaries,
+                style guides, if any).
+            </p>
+        </div>
+
+        <div class="process">
+            <img src="/teamwork.svg" alt="work svg" />
+            <h3>Translation Process</h3>
+            <p>
+                We work diligently to render your documents accurately in the
+                Russian language. The translation undergoes a series of reviews
+                and revisions to correct any nuances and ensure the translation
+                meets the specific industry and cultural standards. We perform
+                final quality assurance checks to ensure top-quality, error-free
+                deliverables.
+            </p>
+        </div>
+
+        <div class="process">
+            <img src="/delivery.svg" alt="delivery svg" />
+            <h3>Delivery</h3>
+            <p>
+                The completed translation is delivered to you via your chosen
+                method. You review the deliverable and provide feedback. If
+                revisions are required, we promptly make the necessary
+                adjustments and resend the revised document at no additional
+                cost.
+            </p>
+        </div>
+
+        <div class="process">
+            <img src="/finish.svg" alt="finish svg" />
+            <h3>Project Completion</h3>
+            <p>
+                Once you are fully satisfied with the translations, the project
+                is considered complete. We appreciate and welcome your feedback
+                to continuously improve our services. We are just an email or
+                phone call away.
+            </p>
+        </div>
+    </div>
+    
     <form class="top" action="#top">
         <button class="top1" type="submit">Back to Top</button>
     </form>
@@ -234,6 +286,7 @@ const description =
         font-weight: 500;
         margin-top: 2em;
         padding: 1em;
+        width: 100%;
     }
 
     .word1 {
@@ -306,6 +359,7 @@ const description =
         font-weight: 500;
         margin-top: 2em;
         padding: 1em;
+        width: 100%;
     }
 
     .word2 {
@@ -378,6 +432,7 @@ const description =
         font-weight: 500;
         margin-top: 2em;
         padding: 1em;
+        width: 100%;
     }
 
     .word3 {
@@ -438,12 +493,24 @@ const description =
         display: flex;
         flex-flow: column;
         align-items: center;
-        text-align: center;
+        text-align: justify;
         padding: 2em;
     }
 
     img {
         width: 2em;
+    }
+
+    .process-h2 {
+        text-align: center;
+    }
+
+    .process {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: justify;
+        padding: 2em;
     }
 
     .top {
@@ -455,5 +522,96 @@ const description =
         background-color: rgb(8, 20, 187);
         color: #f9f9f9;
         font-weight: 600;
+    }
+
+    /* Media queries for larger layout */
+    @media (min-width: 36em) {
+        .all-contain {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1em;
+            width: 100%;
+        }
+
+        header {
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        main {
+            grid-column: 2/3;
+        }
+
+        aside {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+
+    @media (min-width: 62em) {
+        .all-contain {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            width: 100%;
+        }
+
+        header {
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+
+        main {
+            grid-column: 1/4;
+            grid-row: 2/3;
+        }
+
+        aside {
+            grid-column: 1/4;
+            grid-row: 3/4;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        aside {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .bestfor1 {
+            height: 96px;
+        }
+        .bestfor2 {
+            height: 96px;
+        }
+
+        .bestfor3 {
+            height: 96px;
+        }
+
+        .best-list1 {
+            height: 170px;
+        }
+        .best-list2 {
+            height: 170px;
+        }
+
+        .best-list3 {
+            height: 170px;
+        }
+
+        .services1 {
+            height: 170px;
+        }
+
+        .services2 {
+            height: 170px;
+        }
+        .services3 {
+            height: 170px;
+        }
     }
 </style>
