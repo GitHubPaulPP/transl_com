@@ -1,0 +1,282 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description =
+    "EngRusTranslate provides English-Russian translation services to help you reach your global clients.";
+---
+
+<BaseLayout description={description} title={title}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+    <main>
+        <h1>Our professional services</h1>
+
+        <section class="services">
+            <div class="icon">
+                <img src="/translation.svg" alt="svg image" />
+            </div>
+
+            <div class="content">
+                <h3><a href="#">Translation</a></h3>
+                <p>
+                    In the global marketplace, precision in language translation
+                    is not just a preference—it's a necessity.
+                </p>
+                <p>
+                    Our translation services are designed with your business
+                    needs in mind ensuring that every word we translate upholds
+                    the integrity of your original message while being perfectly
+                    attuned to the cultural nuances of your target audience.
+                </p>
+                <p>
+                    We go beyond mere text translation by preserving the tone,
+                    style, and brand voice that define your corporate identity
+                    ensuring consistency across translated texts.
+                    <a href="#">Learn more</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="icon">
+                <img src="/edit.svg" alt="svg image" />
+            </div>
+            <div class="content">
+                <h3><a href="">Proofreading (monolingual editing)</a></h3>
+                <p>
+                    Defined by ISO 17000 as the process of reviewing and
+                    correcting the revised content before printing, proofreading
+                    is a critical step in maintaining the highest standards of
+                    linguistic quality.
+                </p>
+                <p>
+                    Our proofreading services ensure your content is error-free
+                    and publication-ready.
+                </p>
+                <p>
+                    We focus on grammar, punctuation, and spelling to deliver
+                    polished, clear communication that reflects your brand's
+                    excellence.
+                    <a href="#">Learn more</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="icon">
+                <img src="/revision.svg" alt="svg image" />
+            </div>
+
+            <div class="content">
+                <h3><a href="">Revision (bilingual editing)</a></h3>
+                <p>
+                    Revision is a careful comparison of the translated text
+                    against the original source to ensure that the message and
+                    tone of voice have been effectively communicated in the
+                    target language.
+                </p>
+                <p>
+                    The term bilingual editing is sometimes used as a synonym
+                    for revision. Our revision services are specifically
+                    tailored for businesses seeking to refine and perfect their
+                    translated content.
+                </p>
+
+                <p>
+                    With an expert eye for detail, we meticulously review and
+                    enhance translations ensuring they not only match but
+                    surpass the quality of the original text.
+                </p>
+                <p>
+                    Leveraging our deep understanding of both source and target
+                    languages, we focus on accuracy, consistency, and cultural
+                    relevance, making adjustments that elevate the final
+                    product. <a href="#">Learn more</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="icon">
+                <img src="/localization.svg" alt="svg image" />
+            </div>
+            <div class="content">
+                <h3><a href="">Localization (websites and apps)</a></h3>
+                <p>
+                    Our localization services extend beyond mere translation
+                    adapting your websites and apps to resonate culturally with
+                    global audiences.
+                </p>
+                <p>
+                    This process ensures that your digital presence not only
+                    speaks the language of your users but also reflects their
+                    cultural preferences and nuances.
+                </p>
+                <p>
+                    From user interface elements to help menus and legal
+                    disclaimers, we tailor every aspect to feel local and
+                    intuitive. <a href="#">Learn more</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="icon">
+                <img src="/quality.svg" alt="svg image" />
+            </div>
+            <div class="content">
+                <h3><a href="">Translation Quality Assessment</a></h3>
+                <p>
+                    Our Translation Quality Assessment is essential for
+                    businesses looking to validate the effectiveness of
+                    translations from other sources.
+                </p>
+                <p>
+                    Tailored for businesses scrutinizing work from other
+                    translators or agencies, our linguistic quality matrix
+                    benchmarks translations against our stringent criteria:
+                    translation errors (mistranslations, additions, omissions),
+                    terminology consistency, language quality (grammar,
+                    punctuation, spelling), and style (readability, tone).
+                </p>
+                <p>
+                    We also evaluate localization-specific elements like tag
+                    issues (mismatches, whitespaces).
+                </p>
+                <p>
+                    Ideal for verifying the value of your translation
+                    investments, our assessment delivers the clarity and
+                    confidence needed for successful global market navigation. <a
+                        href="#">Learn more</a
+                    >
+                </p>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="icon">
+                <img src="/tutor.svg" alt="svg image" />
+            </div>
+
+            <div class="content">
+                <h3>
+                    <a href=""> Russian language tutoring</a>
+                </h3>
+                <!-- Learn or practice Russian by
+                        chatting with a native Russian speaker -->
+                <p>
+                    Our Russian Language Tutoring service offers personalized,
+                    one-on-one sessions tailored to your specific needs and
+                    goals.
+                </p>
+                <p>
+                    Unlike traditional teaching, which often follows a set
+                    curriculum, our tutoring is focused on enhancing your
+                    existing Russian language skills through practice,
+                    conversation, and targeted exercises.
+                </p>
+                <p>
+                    Conducted via Zoom or Google Meet, these sessions provide
+                    the flexibility and convenience of learning from anywhere
+                    matched with the personalized attention necessary to advance
+                    your proficiency. <a href="#">Learn more</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
+<style>
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    h1 {
+        padding: 1em;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 2em;
+    }
+
+    .services {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: justify;
+        width: 100%;
+    }
+
+    .icon img {
+        width: 3em;
+    }
+
+    .content {
+        padding: 2em;
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    /* Media queries for tablets */
+
+     @media (min-width: 36em) {
+
+        main{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            width: 100%;
+        }
+
+        h1{
+            grid-column: 1/3;
+            grid-row: 1/2;
+        }
+
+        .icon img{
+            margin-top: 1em;
+        }
+
+        .services{
+            background-color: aliceblue;
+            border-radius: 20%;
+            
+       
+        }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+     }
+
+
+
+
+
+
+
+</style>
