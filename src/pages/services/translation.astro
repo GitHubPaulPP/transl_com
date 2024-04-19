@@ -1,0 +1,141 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description =
+    "EngRusTranslate provides English-Russian translation services to help you reach your global clients.";
+---
+
+<BaseLayout description={description} title={title}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+
+    <header>
+        <img src="/transl.jpg" alt="" />
+        <h1>Translation Services</h1>
+    </header>
+
+    <main>
+        <p>
+            Connect your Russian-speaking customers to your products and
+            services through documentation in the Russian language. Our thorough
+            translation process, from project analysis to production and
+            post-production as well as our certifications ensure the highest
+            level of accuracy.
+        </p>
+        <p>
+            Translation extends beyond mere words—it encompasses a deep
+            understanding of context, audience, and specific client needs. At
+            EngRusTranslate, we dedicate time to grasp fully the nuances of each
+            client's content, recognizing that effective global communication
+            requires informed, firsthand knowledge to ensure accuracy and
+            relevance.
+        </p>
+
+        <p class="promise">Our quality promise to you at a glance:</p>
+        <ul class="custom-list">
+            <li>
+                Only <strong>native-speaker professional translators</strong> translate
+                your documents.
+            </li>
+            <li>
+                We translate only <strong>into our native language</strong>.
+            </li>
+            <li>You get personal service with permanent contact persons.</li>
+            <li>
+                We offer <strong
+                    >absolute discretion and confidential treatment</strong
+                > of documents.
+            </li>
+            <li>
+                <strong>100% human translation</strong> to ensure precision and contextual
+                accuracy in every project.
+            </li>
+        </ul>
+
+        <p>Kindly note that we specialize in the following industries:</p>
+        <ul>
+            <li>Legal</li>
+            <li>Marketing</li>
+            <li>Business/E-Commerce</li>
+            <li>Finance/Taxes/Accounting</li>
+            <li>Investment/Securities</li>
+            <li>Blockchain and Cryptocurrency</li>
+            <li>Government/Politics</li>
+            <li>Information Technology</li>
+            <li></li>
+            <li></li>
+        </ul>
+    </main>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
+<style>
+    header {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        background-color: rgba(100, 148, 237, 0.327);
+        padding: 1em;
+        margin: 1em;
+    }
+
+    header img {
+        width: 10em;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 0.5em;
+    }
+
+    p {
+        padding: 1em;
+        text-align: justify;
+    }
+
+    .promise {
+        color: darkblue;
+        font-weight: 600;
+    }
+
+    .custom-list {
+        list-style: none;
+        margin-bottom: 2em; /* Ensures the list has no default margin */
+        padding-left: 1em; /* Removes default padding from the list */
+    }
+
+    .custom-list li {
+        position: relative;
+        padding-left: 2.3em; /* Provides space for the checkmark, scalable with font size */
+        margin-bottom: 1em; /* Optional: adds space between items */
+    }
+
+    .custom-list li::before {
+        content: "";
+        position: absolute;
+        left: 0; /* Positions the SVG at the beginning of the list item */
+        top: 50%; /* Centers the SVG vertically relative to the line height */
+        transform: translateY(
+            -50%
+        ); /* Ensures the SVG is perfectly centered no matter the line height */
+        width: 1.5em; /* Relative size to font makes it scalable */
+        height: 1.5em; /* Maintains aspect ratio */
+        background-image: url("/checklist.svg"); /* Uses SVG as a background image */
+        background-size: contain; /* Ensures the SVG fits the content box, adjust as 'cover' or 'contain' based on need */
+        background-repeat: no-repeat; /* Makes sure the SVG doesn't repeat */
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+</style>
