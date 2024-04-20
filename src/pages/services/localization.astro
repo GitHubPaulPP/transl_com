@@ -10,51 +10,73 @@ const description =
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
 
     <header>
-        <img src="/transl.jpg" alt="translation svg" />
-        <h1>Translation Services</h1>
+        <img src="/localize.jpg" alt="" />
+        <h1>Localization Services</h1>
     </header>
 
     <main>
         <p>
-            Connect your Russian-speaking customers to your products and
-            services through documentation in the Russian language. Our thorough
-            translation process, from project analysis to production and
-            post-production as well as our certifications ensure the highest
-            level of accuracy.
+            Translating your website opens the door to thousands of new visitors
+            and potential clients, dramatically expanding your online presence.
+            By offering your products or services to an international audience,
+            you not only increase exposure but also unlock significant growth
+            opportunities for your business.
         </p>
         <p>
-            Translation extends beyond mere words—it encompasses a deep
-            understanding of context, audience, and specific client needs. At
-            EngRusTranslate, we dedicate time to grasp fully the nuances of each
-            client's content, recognizing that effective global communication
-            requires informed, firsthand knowledge to ensure accuracy and
-            relevance.
+            A study by <a
+                href="https://csa-research.com/Blogs-Events/CSA-in-the-Media/Press-Releases/Consumers-Prefer-their-Own-Language"
+                >CSA Research</a
+            > highlights the importance of language in user preference and purchasing
+            behavior: 76% of consumers prefer to access information in their native
+            language on websites and e-commerce platforms, and 40% will not purchase
+            from a site if it is not in their native language.
         </p>
+
+        <ul class="check-list">
+            <li>E-commerce websites</li>
+            <li>Blogs</li>
+            <li>Information websites</li>
+            <li>Personal websites</li>
+            <li>Product descriptions</li>
+            <li>Community-building websites</li>
+            <li>Press releases</li>
+        </ul>
+
+        <ul class="check-list">
+            <li>Static web applications</li>
+            <li>Dynamic web applications</li>
+            <li>Online stores or e-commerce</li>
+            <li>Portal web app</li>
+            <li>Animated web application</li>
+            <li>CMS (Wordpress, Joomla)</li>
+            <li>Google Ads</li>
+        </ul>
 
         <p class="promise">Our quality promise to you at a glance:</p>
         <ul class="custom-list">
             <li>
-                Only <strong>native-speaker professional translators</strong> translate
-                your documents.
+                Only <strong>native-speaker professional translators</strong> localize
+                your content.
             </li>
             <li>
-                We translate only <strong>into our native language</strong>.
+                We localize only <strong>into our native language</strong>.
             </li>
-            <li>You get personal service with permanent contact persons.</li>
+            <li>
+                You get <strong>personal service</strong> with permanent contact
+                persons.
+            </li>
             <li>
                 We offer <strong
                     >absolute discretion and confidential treatment</strong
-                > of documents.
+                > of content.
             </li>
             <li>
-                <strong>100% human translation</strong> to ensure precision and contextual
-                accuracy in every project.
+                <strong>100% human localization</strong> to ensure precision and
+                contextual accuracy in every project.
             </li>
         </ul>
 
-        <p class="note">
-            We specialize in the following industries:
-        </p>
+        <p class="note">We specialize in the following industries:</p>
         <ul>
             <li>Legal</li>
             <li>Marketing</li>
@@ -133,6 +155,33 @@ const description =
         background-repeat: no-repeat; /* Makes sure the SVG doesn't repeat */
     }
 
+    .check-list {
+        list-style: none;
+        margin-bottom: 2em; /* Ensures the list has no default margin */
+        padding-left: 1em; /* Removes default padding from the list */
+    }
+
+    .check-list li {
+        position: relative;
+        padding-left: 2.3em; /* Provides space for the checkmark, scalable with font size */
+        margin-bottom: 1em; /* Optional: adds space between items */
+    }
+
+    .check-list li::before {
+        content: "";
+        position: absolute;
+        left: 0; /* Positions the SVG at the beginning of the list item */
+        top: 50%; /* Centers the SVG vertically relative to the line height */
+        transform: translateY(
+            -50%
+        ); /* Ensures the SVG is perfectly centered no matter the line height */
+        width: 1.5em; /* Relative size to font makes it scalable */
+        height: 1.5em; /* Maintains aspect ratio */
+        background-image: url("/checkmark1.svg"); /* Uses SVG as a background image */
+        background-size: contain; /* Ensures the SVG fits the content box, adjust as 'cover' or 'contain' based on need */
+        background-repeat: no-repeat; /* Makes sure the SVG doesn't repeat */
+    }
+
     .top {
         text-align: center;
         margin: 1em;
@@ -159,7 +208,7 @@ const description =
         header {
             display: flex;
             flex-flow: row;
-            justify-content:space-between;
+            justify-content: space-between;
             align-items: center;
             background-color: rgba(100, 148, 237, 0.327);
             padding: 1em;

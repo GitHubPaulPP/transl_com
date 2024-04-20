@@ -1,0 +1,112 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description =
+    "EngRusTranslate provides English-Russian translation services to help you reach your global clients.";
+---
+
+<BaseLayout description={description} title={title}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+    <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <button class="faq-question"
+                >What payment methods do you accept?</button
+            >
+            <div class="faq-answer">
+                <p>
+                    We accept a variety of payment methods including Visa,
+                    MasterCard, and PayPal.
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="faq-question">How long does shipping take?</button>
+            <div class="faq-answer">
+                <p>
+                    Shipping times vary by location. Typically, it takes 5-7
+                    business days.
+                </p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="faq-question">Do you offer technical support?</button
+            >
+            <div class="faq-answer">
+                <p>
+                    Yes, we offer 24/7 technical support. You can contact us
+                    anytime via our support page.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
+<style>
+    .faq-container {
+        width: 75%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .faq-question {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .faq-question:hover,
+    .faq-question:focus {
+        background-color: #0056b3;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 20px;
+        margin-top: 5px;
+        background-color: #f8f9fa;
+        border-left: 3px solid #007bff;
+    }
+
+    .faq-answer p {
+        margin: 0;
+    }
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    @media (min-width: 36em) {
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".faq-question").forEach((item) => {
+            item.addEventListener("click", function () {
+                const answer = this.nextElementSibling;
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+    });
+</script>
