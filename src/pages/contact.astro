@@ -65,8 +65,8 @@ const description =
             allow="geolocation; microphone; camera; fullscreen"
             src="https://form.jotform.com/241143507676053"
             frameborder="0"
-            style="min-width:100%;max-width:100%;height:700px;border:none;"
-            scrolling="yes"
+            style="min-width:100%;max-width:100%;height:1530px;border:none;"
+            scrolling="no"
         >
         </iframe>
         <script
@@ -241,9 +241,12 @@ const description =
         }
 
         .pricing-tier1 {
-            grid-column: 2/3;
+            grid-column: 1/3;
             grid-row: 2/3;
-            margin-top: 4.5em;
+        }
+
+        iframe {
+            grid-column: 1/3;
         }
     }
 </style>
