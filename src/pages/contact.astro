@@ -1,0 +1,215 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description =
+    "EnRu Translations provides English-Russian translation services to help you reach your global clients.";
+---
+
+<BaseLayout description={description} title={title}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+    <main>
+        <div class="heading-contact">
+            <h1>Ready to get started? Just get in touch.</h1>
+
+            <p>
+                You can send us a message through the secure contact form below
+                and upload your file for translation.
+            </p>
+            <p>You can also reach us via phone, email, and social media.</p>
+        </div>
+
+        <section class="pricing-tier1">
+            <div class="footer-left">
+                <p class="title_com">EnRu Translations</p>
+                <div class="address">
+                    <img src="/addr.svg" alt="address svg" />
+                    <p>2 Mite Ružića,</p>
+                    <p>Novi Sad 21000,</p>
+                    <p>Serbia</p>
+                </div>
+                <div class="phone">
+                    <img src="/phone.svg" alt="phone svg" />
+                    <p>+381643953417</p>
+                </div>
+                <div class="email">
+                    <img src="/email3.svg" alt="email svg" />
+                    <p>info@enrutransl.com</p>
+                </div>
+
+                <div class="social">
+                    <img src="/whatsapp.svg" alt="whatsapp svg" />
+                    <img src="/telegram.svg" alt="telegram svg" />
+                    <img src="/linkedin.svg" alt="linkedin svg" />
+                    <img src="/twitter.svg" alt="twitter svg" />
+                    <img src="/facebook.svg" alt="facebook svg" />
+                </div>
+
+                <div class="working-hours">
+                    <img src="/clock.svg" alt="clock svg" />
+                    <p>Working Hours:</p>
+                    <p>Mon - Fri,</p>
+                    <p>09:00 - 20:00.</p>
+                    <p class="localtime" id="localTime">
+                        Local time now: <span id="time"></span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <script
+            type="text/javascript"
+            src="https://form.jotform.com/jsform/241143507676053"></script>
+    </main>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
+<style>
+    .heading-contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1.5em;
+        width: 100%;
+    }
+
+    .pricing-tier1 {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin: 1em;
+        margin-top: 2em;
+        background-color: white;
+        border: 1px solid rgb(0, 255, 200);
+        border-radius: 3%;
+    }
+
+    .footer-left {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 1em;
+    }
+
+    .title_com {
+        font-weight: 900;
+        font-size: larger;
+        margin-bottom: 1em;
+        text-align: center;
+        color: darkblue;
+        width: 100%;
+    }
+
+    .address {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .address img {
+        width: 2em;
+    }
+
+    .address > p {
+        font-weight: 600;
+        /* text-align: start; */
+        font-size: small;
+        margin: 0;
+    }
+
+    .phone {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    .phone img {
+        width: 1.5em;
+    }
+
+    .phone > p {
+        font-weight: 600;
+        text-align: start;
+        font-size: small;
+    }
+
+    .email {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .email img {
+        width: 2em;
+    }
+
+    .email > p {
+        font-weight: 600;
+        text-align: start;
+        font-size: small;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5em;
+        margin-bottom: 2em;
+    }
+
+    .social img {
+        width: 2em;
+        padding: 0.3em;
+        font-weight: 500;
+        margin: 0.7em;
+    }
+
+    .working-hours {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 0.7em;
+        width: 100%;
+        line-height: 0.5;
+    }
+
+    .working-hours img {
+        width: 1.5em;
+    }
+
+    .working-hours > p {
+        font-weight: 600;
+        margin-left: 0.9em;
+        font-size: small;
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+        margin-top: 2em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    /* Media queries for tablets */
+
+    @media (min-width: 36em) {
+    }
+</style>
