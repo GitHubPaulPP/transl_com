@@ -10,7 +10,12 @@ const description =
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
     <main class="about-main">
         <section class="story">
-            <img src="/sideview profile.jpg" class="about-img" alt="about us" loading="eager" />
+            <img
+                src="/sideview profile.jpg"
+                class="about-img"
+                alt="about us"
+                loading="eager"
+            />
 
             <h2><span>Our story</span></h2>
 
@@ -127,7 +132,26 @@ const description =
                 hear from you!
             </p>
         </section>
+
+        <div class="contactus">
+            <h1>
+                Ready to discuss your project or have any questions? Just get in
+                touch.
+            </h1>
+            <div class="social">
+                <img src="/whatsapp.svg" alt="whatsapp svg" loading="lazy" />
+                <img src="/telegram.svg" alt="telegram svg" loading="lazy" />
+                <img src="/email3.svg" alt="email svg" loading="lazy" />
+            </div>
+            <p>
+                Or <a href="/contact#JotFormIFrame-241143507676053"
+                    >click here</a
+                > to reach out via our secure contact form, where you can also upload
+                necessary files and describe your project details.
+            </p>
+        </div>
     </main>
+
     <form class="top" action="#top">
         <button class="top1" type="submit">Back to Top</button>
     </form>
@@ -195,6 +219,25 @@ const description =
         font-weight: 600;
     }
 
+    .contactus {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0.5em;
+    }
+
+    .social img {
+        width: 3em;
+        padding: 0.3em;
+        font-weight: 500;
+        margin: 0.7em;
+    }
+
     @media (min-width: 36em) {
         .about-main {
             display: grid;
@@ -250,6 +293,14 @@ const description =
             color: rgb(41, 92, 234); /* Line color */
             font-size: 1em; /* Adjust size to match the h1 font size if necessary */
             transform: translateY(-50%);
+        }
+
+        .contactus {
+            grid-column: 1/4;
+        }
+
+        .contactus > p {
+            padding: 2em;
         }
 
         .top {
