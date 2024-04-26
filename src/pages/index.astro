@@ -63,12 +63,13 @@ const description =
 				<img src="/PayPal.png" alt="paypal-logo" />
 				<img src="/visa_group.svg" alt="visa-svg" />
 			</div>
+			<img src="/payoneer copy.svg" alt="payoneer-svg" />
 		</div>
 
 		<div class="trust-badge2">
-			<img src="/payoneer copy.svg" alt="payoneer-svg" />
 			<img src="/memoq.svg" alt="memoq-svg" />
 			<img src="/matecat.svg" alt="matecat-svg" />
+			<img src="/proz.png" alt="" />
 		</div>
 
 		<h2 class="heading">What Sets Us Apart?</h2>
@@ -404,25 +405,30 @@ const description =
 	}
 
 	.trust-badge1 {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-evenly;
 		width: 100%;
+		margin-top: 5em;
 	}
 
 	.trust-badge1 img {
-		width: 5em;
+		width: 6em;
 		height: 2em;
 		object-fit: contain;
 	}
 
 	.trust-badge2 {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-flow: row;
+		justify-content: space-evenly;
 		width: 100%;
+		margin-top: 2em;
+		margin-bottom: 5em;
 	}
 
 	.trust-badge2 img {
-		width: 5em;
+		width: 6em;
 		height: 2em;
 		object-fit: contain;
 		margin: 1em;
@@ -539,6 +545,34 @@ const description =
 	.set_apart > div img {
 		margin-bottom: 1em;
 		width: 2em;
+	}
+
+	.not-agency > p {
+		font-size: medium;
+		line-height: 1.5;
+	}
+
+	.laser > p {
+		font-size: medium;
+		line-height: 1.5;
+	}
+
+	.registr > p {
+		font-size: medium;
+		line-height: 1.5;
+	}
+
+	.native > p {
+		font-size: medium;
+		line-height: 1.5;
+	}
+	.in-depth > p {
+		font-size: medium;
+		line-height: 1.5;
+	}
+	.human > p {
+		font-size: medium;
+		line-height: 1.5;
 	}
 
 	.serv_overview {
@@ -798,6 +832,14 @@ const description =
 		.vector img {
 			border-radius: 30%;
 			width: 100%;
+		}
+
+		.trust-badge1 {
+			justify-content: space-around;
+		}
+
+		.trust-badge2 {
+			justify-content: space-around;
 		}
 
 		/* start of section whats in it */
