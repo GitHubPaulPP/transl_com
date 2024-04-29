@@ -1,0 +1,58 @@
+---
+// CookieConsent.astro
+// No external dependencies or TypeScript specific adjustments needed here.
+---
+
+<div id="cookieConsentContainer" class="cookie-consent-container">
+    <p>
+        This website may use cookies to enhance user experience. By using our
+        website, you consent to all cookies in accordance with our <a href="/cookie/"
+            >Cookie Policy</a
+        >.
+    </p>
+    <button type="button" onclick="handleConsent(true)">Accept</button>
+    <button type="button" onclick="handleConsent(false)">Decline</button>
+</div>
+
+<style>
+    .cookie-consent-container {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        display: block; /* Initially visible */
+    }
+
+    .cookie-consent-container p {
+        margin: 10px;
+    }
+
+    .cookie-consent-container button {
+        padding: 5px 10px;
+        margin: 5px;
+        background-color: darkblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .cookie-consent-container button:hover {
+        background-color: #00796b;
+    }
+</style>
+
+<script type="text/javascript">
+    function handleConsent(accepted) {
+        const consent = accepted ? "accepted" : "declined";
+        localStorage.setItem("cookieConsent", consent);
+        document.getElementById("cookieConsentContainer").style.display =
+            "none";
+    }
+</script>

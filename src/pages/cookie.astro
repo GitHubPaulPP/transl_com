@@ -8,26 +8,187 @@ const description =
 
 <BaseLayout description={description} title={title}>
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
-    <main></main>
+    <main>
+        <section class="tos-section-head">
+            <h1>Cookie Policy for EnRu Translations</h1>
+            <p>
+                At EnRu Translations, we prioritize clarity and openness about
+                how we collect and use data related to you. This policy provides
+                detailed information about how and when we use cookies.
+            </p>
+        </section>
 
-    <form class="top" action="#top">
-        <button class="top1" type="submit">Back to Top</button>
-    </form>
-</BaseLayout>
+        <section class="tos-section">
+            <h3>What are Cookies?</h3>
+            <p>
+                Cookies are small text files that contain a small amount of
+                information, which are sent to and stored on your computer,
+                mobile device, or other devices when you visit our website. They
+                are used to store and receive identifiers and other information
+                on devices, such as mobile phones and computers. Most cookies do
+                not contain sensitive identifiable information about personal
+                data subjects.
+            </p>
+        </section>
 
-<style>
-    .top {
-        text-align: center;
-        margin: 1em;
-    }
+        <section class="tos-section">
+            <h3>Types of Cookies:</h3>
+            <p>
+                <strong> Session Cookies:</strong> Temporarily stored during a website
+                visit and deleted from your device when you close your browser. These
+                cookies help manage and remember your navigation and interactions
+                during the browser session.
+            </p>
+            <p>
+                <strong> Persistent Cookies:</strong> These remain on your device
+                for a set period specified in the cookie and are activated each time
+                you visit the website that created that particular cookie. They are
+                used for various functions, such as remembering your preferences
+                and choices over time.
+            </p>
+        </section>
 
-    .top1 {
-        background-color: rgb(8, 20, 187);
-        color: #f9f9f9;
-        font-weight: 600;
-    }
+        <section class="tos-section">
+            <h3>Use of Cookies:</h3>
+            <p>We use cookies exclusively for the following purposes:</p>
+            <p>
+                <strong> Analytics:</strong> Tools like Google Analytics use cookies
+                to collect information about how visitors use our site. These data
+                are processed on Google's servers in an aggregated form, providing
+                insights such as the number of visitors, where visitors have come
+                from, and the pages they navigated to. This aggregation ensures that
+                no individual user can be identified from the data, helping us improve
+                our website and enhance user experience while maintaining user privacy.
+            </p>
+            <p>
+                <strong> Advertising:</strong> Advertising cookies are used to track
+                the effectiveness of ad campaigns and to display ads that are more
+                relevant to you. These cookies are managed on servers operated by
+                Google and other third-party advertisers, which make decisions about
+                the ads based on data gathered from their cookies. The data used
+                for advertising are processed in an aggregated form, ensuring that
+                they do not personally identify any individual user. These aggregated
+                data help advertisers optimize the relevance and effectiveness of
+                their ads while respecting user privacy.
+            </p>
+            <p>
+                We do not use cookies for purposes other than those listed
+                above. By managing and limiting the use of cookies to these
+                purposes, we ensure your data is used responsibly and
+                transparently.
+            </p>
+        </section>
+        <section class="tos-section">
+            <h3>Managing Cookies:</h3>
+            <p>
+                You have the right to decide whether to accept or reject
+                cookies. You can set your browser to refuse all or some cookies
+                or to alert you when websites set or access cookies. Here are
+                some resources for managing cookies on major browsers:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://support.google.com/chrome/answer/95647"
+                        >Google Chrome</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox"
+                        >Mozilla Firefox</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://support.apple.com/en-is/guide/safari/sfri11471/16.0/mac/11.0"
+                        >Apple Safari</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                        >Microsoft Edge</a
+                    >
+                </li>
+            </ul>
+        </section>
+        <section class="tos-section">
+            <h3>Consent:</h3>
+            <p>
+                By using our website, you consent to our use of cookies as
+                described in this Cookie Policy. We provide a consent management
+                tool on our website, giving you the option to accept or decline
+                non-essential cookies, which is crucial for compliance with the
+                GDPR.
+            </p>
+        </section>
+        <section class="tos-section">
+            <h3>More Information:</h3>
+            <p>
+                For more detailed information about cookies, how they are used,
+                and your choices regarding cookies, visit <a
+                    href="https://allaboutcookies.org/">allaboutcookies.org</a
+                >. For more information on how we use, store, and keep your data
+                secure, see our <a href="/privacy/">Privacy Policy</a>. If you
+                have any questions about our use of cookies, please contact us
+                at <a href="mailto:info@enrutransl.com">info@enrutransl.com</a>.
+            </p>
+        </section>
 
-    @media (min-width: 36em) {
+        <form class="top" action="#top">
+            <button class="top1" type="submit">Back to Top</button>
+        </form>
+    </main>
+
+    <style>
+        main {
+            padding: 1em;
+            margin-top: 2em;
+        }
+
+        .tos-section-head {
+            background-color: #f0f8ff; /* Alice Blue for section backgrounds */
+            border: 1px solid #003366; /* Dark Blue border */
+            padding: 1em;
+            margin-bottom: 1.5em;
+            border-radius: 5%;
+        }
+
+        .tos-section-head h1 {
+            color: #003366; /* Dark Blue for headers */
+            text-align: center;
+        }
+
+        .tos-section-head p {
+            text-align: justify;
+            font-weight: 600;
+        }
+
+        .tos-section {
+            background-color: #f0f8ff; /* Alice Blue for section backgrounds */
+            border: 1px solid #003366; /* Dark Blue border */
+            padding: 1em;
+            margin-bottom: 1.5em;
+            border-radius: 5%;
+        }
+
+        .tos-section h3 {
+            color: #003366; /* Dark Blue for headers */
+            text-align: center;
+        }
+
+        .tos-section p {
+            text-align: justify;
+        }
+
+        a {
+            color: #003366; /* Dark Blue for links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
         .top {
             text-align: center;
             margin: 1em;
@@ -38,5 +199,18 @@ const description =
             color: #f9f9f9;
             font-weight: 600;
         }
-    }
-</style>
+
+        @media (min-width: 36em) {
+            .top {
+                text-align: center;
+                margin: 1em;
+            }
+
+            .top1 {
+                background-color: rgb(8, 20, 187);
+                color: #f9f9f9;
+                font-weight: 600;
+            }
+        }
+    </style>
+</BaseLayout>
