@@ -16,7 +16,10 @@ const description =
                 You can send us a message through the secure contact form below
                 and upload your file for translation.
             </p>
-            <p>You can also reach us via phone, email, and social media.</p>
+            <p>
+                You can also reach us via phone, email, and social media
+                (WhatsApp, Telegram, or Signal).
+            </p>
         </div>
 
         <section class="pricing-tier1">
@@ -34,15 +37,17 @@ const description =
                 </div>
                 <div class="email">
                     <img src="/email3.svg" alt="email svg" />
-                    <p>info@enrutransl.com</p>
+                    <p>
+                        <a href="mailto:info@enrutransl.com"
+                            >info@enrutransl.com</a
+                        >
+                    </p>
                 </div>
 
                 <div class="social">
                     <img src="/whatsapp.svg" alt="whatsapp svg" />
                     <img src="/telegram.svg" alt="telegram svg" />
-                    <img src="/linkedin.svg" alt="linkedin svg" />
-                    <img src="/twitter.svg" alt="twitter svg" />
-                    <img src="/facebook.svg" alt="facebook svg" />
+                    <img src="/signal.png" alt="signal png" />
                 </div>
 
                 <div class="working-hours">
@@ -54,37 +59,52 @@ const description =
                         Local time now: <span id="time"></span>
                     </p>
                 </div>
+
+                <p class="discuss1">Follow us on:</p>
+                <div class="social1">
+                    <img
+                        src="/linkedin.svg"
+                        alt="whatsapp svg"
+                        loading="lazy"
+                    />
+                    <img
+                        src="/facebook.svg"
+                        alt="telegram svg"
+                        loading="lazy"
+                    />
+                    <img src="/x-logo.png" alt="x-logo png" loading="lazy" />
+                </div>
             </div>
         </section>
-
-        <iframe
-            id="JotFormIFrame-241143507676053"
-            title="Contact us"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allow="geolocation; microphone; camera; fullscreen"
-            src="https://form.jotform.com/241143507676053"
-            frameborder="0"
-            style="min-width:100%;max-width:100%;height:1530px;border:none;"
-            scrolling="no"
-            loading="lazy"
-        >
-        </iframe>
-        <script
-            src="https://form.jotform.com/s/umd/latest/for-form-embed-handler.js"
-        ></script>
-        <script>
-            window.jotformEmbedHandler(
-                "iframe[id='JotFormIFrame-241143507676053'",
-                "https://form.jotform.com/",
-            );
-        </script>
     </main>
 
-    <form class="top" action="#top">
-        <button class="top1" type="submit">Back to Top</button>
-    </form>
+    <iframe
+        id="JotFormIFrame-241143507676053"
+        title="Contact us"
+        onload="window.parent.scrollTo(0,0)"
+        allowtransparency="true"
+        allow="geolocation; microphone; camera; fullscreen"
+        src="https://form.jotform.com/241143507676053"
+        frameborder="0"
+        style="min-width:100%;max-width:100%;height:1530px;border:none;"
+        scrolling="no"
+        loading="lazy"
+    >
+    </iframe>
+    <script
+        src="https://form.jotform.com/s/umd/latest/for-form-embed-handler.js"
+    ></script>
+    <script>
+        window.jotformEmbedHandler(
+            "iframe[id='JotFormIFrame-241143507676053'",
+            "https://form.jotform.com/",
+        );
+    </script>
 </BaseLayout>
+
+<form class="top" action="#top">
+    <button class="top1" type="submit">Back to Top</button>
+</form>
 
 <style>
     .heading-contact {
@@ -195,6 +215,30 @@ const description =
         margin: 0.7em;
     }
 
+    .social1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5em;
+        margin: 0;
+    }
+
+    .social1 img {
+        width: 2em;
+        padding: 0.3em;
+        margin: 0.7em;
+    }
+
+    .discuss1 {
+        font-weight: 600;
+        font-size: small;
+        text-align: center;
+        padding: 1em;
+        color: darkblue;
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
     .working-hours {
         display: flex;
         flex-flow: column wrap;
@@ -251,3 +295,56 @@ const description =
         }
     }
 </style>
+
+<script type="text/javascript">
+    function updateLocalTime() {
+        var now = new Date();
+        var utc = now.getTime() + now.getTimezoneOffset() * 60000;
+
+        // Serbia is UTC+1 and UTC+2 in daylight saving time
+        var serbiaOffset = 1; // Serbia's time offset from UTC is +1 hour
+        var dst = isDST(now); // Check if current date is in daylight saving time
+        var serbiaTime = new Date(
+            utc + 3600000 * (serbiaOffset + (dst ? 1 : 0)),
+        );
+
+        var days = [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+        ];
+        var day = days[serbiaTime.getDay()]; // Get the day of the week
+        var hours = serbiaTime.getHours();
+        var minutes = serbiaTime.getMinutes();
+        var formattedMinutes =
+            minutes < 10 ? "0" + minutes : minutes.toString(); // Ensuring minutes is treated as a string
+
+        var strTime = day + ", " + hours + ":" + formattedMinutes; // Correctly formatted time string with comma
+
+        document.getElementById("time1").textContent = strTime;
+    }
+
+    function isDST(date) {
+        var jan = new Date(date.getFullYear(), 0, 1); // Jan 1st of current year
+        var jul = new Date(date.getFullYear(), 6, 1); // Jul 1st of current year
+        return (
+            date.getTimezoneOffset() <
+            Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset())
+        );
+    }
+
+    setInterval(updateLocalTime, 1000); // Update the time display every second
+
+    (function () {
+        var button = document.getElementById("toggle-menu");
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            var menu = document.getElementById("main-menu");
+            menu.classList.toggle("is-open");
+        });
+    })();
+</script>

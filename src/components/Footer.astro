@@ -19,7 +19,9 @@
             </div>
             <div class="email">
                 <img src="/email3.svg" alt="email svg" loading="lazy" />
-                <p>info@enrutransl.com</p>
+                <p>
+                    <a href="mailto:info@enrutransl.com">info@enrutransl.com</a>
+                </p>
             </div>
             <div class="working-hours">
                 <img src="/clock.svg" alt="clock svg" loading="lazy" />
@@ -40,9 +42,14 @@
             <div class="social">
                 <img src="/whatsapp.svg" alt="whatsapp svg" loading="lazy" />
                 <img src="/telegram.svg" alt="telegram svg" loading="lazy" />
-                <img src="/linkedin.svg" alt="linkedin svg" loading="lazy" />
-                <img src="/twitter.svg" alt="twitter svg" loading="lazy" />
-                <img src="/facebook.svg" alt="facebook svg" loading="lazy" />
+                <img src="/signal.png" alt="signal png" loading="lazy" />
+            </div>
+
+            <p class="discuss1">Follow us on:</p>
+            <div class="social1">
+                <img src="/linkedin.svg" alt="whatsapp svg" loading="lazy" />
+                <img src="/facebook.svg" alt="telegram svg" loading="lazy" />
+                <img src="/x-logo.png" alt="x-logo png" loading="lazy" />
             </div>
         </div>
 
@@ -51,13 +58,13 @@
             <p><a href="/services/">Services</a></p>
             <p><a href="/pricing/">Pricing</a></p>
             <p><a href="/faq/">FAQ</a></p>
-            <p><a href="#aboutus">Blog</a></p>
+            <p><a href="/blog/">Blog</a></p>
             <p><a href="/contact/">Contact us</a></p>
         </div>
     </div>
 
     <div class="bottom">
-         <p><a href="/terms/">Terms of Service</a></p>
+        <p><a href="/terms/">Terms of Service</a></p>
         <p><a href="/privacy/">Privacy Policy</a></p>
         <p><a href="/cookie/">Cookies policy</a></p>
         <p class="copyr">Copyright © 2024 Eng Rus Translate.</p>
@@ -193,6 +200,16 @@
         color: darkblue;
     }
 
+    .discuss1 {
+        font-weight: 600;
+        font-size: small;
+        text-align: center;
+        padding: 1em;
+        color: darkblue;
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
     .footer-center {
         display: flex;
         flex-flow: column;
@@ -213,7 +230,22 @@
     .social img {
         width: 2em;
         padding: 0.3em;
-        font-weight: 500;
+        margin: 0.7em;
+    }
+
+    .social1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0.5em;
+        margin: 0;
+    }
+
+    .social1 img {
+        width: 2em;
+        height: 1.8em;
+        object-fit: contain;
+        padding: 0.3em;
         margin: 0.7em;
     }
 
@@ -240,7 +272,7 @@
 
     .bottom > p {
         margin: 0.5em;
-        font-size:small;
+        font-size: small;
     }
 
     .copyr {
@@ -372,6 +404,15 @@
             padding: 0;
         }
 
+        .discuss1 {
+            font-weight: 600;
+            font-size: small;
+            text-align: center;
+            padding: 1em;
+            color: darkblue;
+            margin-top: 2em;
+        }
+
         .social {
             display: flex;
             flex-direction: row;
@@ -383,6 +424,22 @@
         .social img {
             width: 2em;
             padding: 0.3em;
+        }
+
+        .social1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5em;
+            margin-top: 0;
+        }
+
+        .social1 img {
+            width: 2em;
+            height: 1.8em;
+            object-fit: contain;
+            padding: 0.3em;
+            margin: 0.7em;
         }
 
         .footer-right {
@@ -412,6 +469,7 @@
         }
     }
 </style>
+
 <script>
     function updateLocalTime() {
         var now = new Date();
