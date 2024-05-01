@@ -85,19 +85,16 @@ const description =
         frameborder="0"
         style="min-width:100%;max-width:100%;height:1530px;border:none;"
         scrolling="no"
-        loading="lazy"
     >
     </iframe>
     <script
-        src="https://form.jotform.com/s/umd/latest/for-form-embed-handler.js"
+        src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"
         async></script>
     <script>
-        window.addEventListener("load", function () {
-            window.jotformEmbedHandler(
-                "iframe[id='JotFormIFrame-241143507676053']",
-                "https://form.jotform.com/",
-            );
-        });
+        window.jotformEmbedHandler(
+            "iframe[id='JotFormIFrame-241143507676053'",
+            "https://form.jotform.com/",
+        );
     </script>
 
     <!-- <iframe
@@ -115,12 +112,14 @@ const description =
     </iframe>
     <script
         src="https://form.jotform.com/s/umd/latest/for-form-embed-handler.js"
-    ></script>
+        async></script>
     <script>
-        window.jotformEmbedHandler(
-            "iframe[id='JotFormIFrame-241143507676053'",
-            "https://form.jotform.com/",
-        );
+        window.addEventListener("load", function () {
+            window.jotformEmbedHandler(
+                "iframe[id='JotFormIFrame-241143507676053']",
+                "https://form.jotform.com/",
+            );
+        });
     </script> -->
 </BaseLayout>
 
