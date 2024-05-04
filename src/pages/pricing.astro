@@ -17,6 +17,19 @@ const description =
                     prices are fixed and will not change during the project</strong
                 >, allowing you to plan your budget with confidence.
             </p>
+            <p>
+                <strong>Please note</strong> that this page details pricing for our
+                translation and localization services (proofreading of our own translations
+                is already included in the price). Pricing for proofreading and revision
+                of third-party translations, translation quality assessment, and
+                Russian language tutoring can be found on our <a
+                    href="/faq#prices">FAQ page</a
+                >.
+            </p>
+            <p>
+                If you need a Certificate of Translation Accuracy, please read
+                <a href="/faq#certs">here</a>.
+            </p>
         </header>
 
         <main>
@@ -314,11 +327,9 @@ const description =
     .choose-service {
         display: flex;
         flex-flow: column;
-        align-items: center;
-        justify-content: center;
-        padding: 1em;
+        padding: 2em;
         width: 100%;
-        text-align: center;
+        text-align: justify;
     }
     /* 1st tier card */
     .pricing-tier1 {
@@ -645,6 +656,14 @@ const description =
             grid-row: 1/2;
         }
 
+        .choose-service {
+            display: flex;
+            flex-flow: column;
+            text-align: justify;
+            padding: 2em;
+            width: 100%;
+        }
+
         main {
             grid-column: 2/3;
         }
@@ -674,6 +693,7 @@ const description =
         header {
             grid-column: 1/4;
             grid-row: 1/2;
+            text-align: justify;
         }
 
         main {
