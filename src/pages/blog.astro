@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Professional English-Russian Translation Service	| Homepage";
+const description =
+    "EnRu Translations provides English-Russian translation services to help you reach your global clients.";
+---
+
+<BaseLayout description={description} title={title}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+    <main>
+        <ul>
+            <li><a href="/posts/post-1/">Post 1</a></li>
+            <li><a href="/posts/post-2/">Post 2</a></li>
+            <li><a href="/posts/post-3/">Post 3</a></li>
+        </ul>
+    </main>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
+<style>
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    @media (min-width: 36em) {
+        .top {
+            text-align: center;
+            margin: 1em;
+        }
+
+        .top1 {
+            background-color: rgb(8, 20, 187);
+            color: #f9f9f9;
+            font-weight: 600;
+        }
+    }
+</style>
