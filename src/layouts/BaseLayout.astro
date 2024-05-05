@@ -23,30 +23,8 @@ const { description, title }: Props = Astro.props;
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            rel="preload"
-            href="https://fonts.gstatic.com/s/inter/v8/UcCO3FwrfHqO2-POiBXbsbs1U_WG9Kku.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
-            rel="preload"
-            href="https://fonts.gstatic.com/s/inter/v8/UcCO3FwrfHqO2-POiBXbsbs1U_7G9Kku.woff2"
-            as="font"
-            type="font/woff2"
-            crossorigin
-        />
-        <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
             rel="stylesheet"
-            media="print"
-            onload="this.media='all'"
-        />
-        <link
-            href="../styles/global.css"
-            rel="stylesheet"
-            media="print"
-            onload="this.media='all'"
         />
 
         <title>{title}</title>
@@ -57,5 +35,7 @@ const { description, title }: Props = Astro.props;
         <slot />
         <!-- <CookieConsent /> -->
         <Footer />
+
+       
     </body>
 </html>
