@@ -39,6 +39,14 @@ const { description, title }: Props = Astro.props;
         <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
             rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
+        />
+        <link
+            href="../styles/global.css"
+            rel="stylesheet"
+            media="print"
+            onload="this.media='all'"
         />
 
         <title>{title}</title>
