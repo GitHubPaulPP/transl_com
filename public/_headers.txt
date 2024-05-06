@@ -5,3 +5,6 @@ https://enrutransl.com/*
 # Apply to `*.pages.dev`
 https://transl-com.pages.dev/*
   X-Robots-Tag: noindex, nofollow
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
