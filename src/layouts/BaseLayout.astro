@@ -7,9 +7,13 @@ import "../styles/global.css";
 export interface Props {
     title: string;
     description: string;
+    url?: string;
 }
 
-const { description, title }: Props = Astro.props;
+// const { description, title }: Props = Astro.props;
+const { description, title, url }: Props = Astro.props;
+const pageTitle = title ? `${title} - EnRu Translations` : "EnRu Translations";
+const canonicalUrl = url || "https://enrutransl.com";
 ---
 
 <!doctype html>
@@ -27,7 +31,8 @@ const { description, title }: Props = Astro.props;
             rel="stylesheet"
         />
 
-        <title>{title}</title>
+        <title>{pageTitle}</title>
+        <link rel="canonical" href={canonicalUrl} />
         <slot name="head" />
     </head>
     <body>
@@ -35,7 +40,5 @@ const { description, title }: Props = Astro.props;
         <slot />
         <!-- <CookieConsent /> -->
         <Footer />
-
-       
     </body>
 </html>
