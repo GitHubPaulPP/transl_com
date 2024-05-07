@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "Professional English-Russian Translation Service	| Homepage";
+const title =
+    "Privacy Policy | Professional English-Russian Translation Service";
 const description =
-    "EnRu Translations provides English-Russian translation services to help you reach your global clients.";
+    "Read about EnRu Translations' privacy policy for handling your personal data.";
+const url = "https://enrutransl.com/privacy/";
 ---
 
-<BaseLayout description={description} title={title}>
+<BaseLayout description={description} title={title} url={url}>
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
     <main>
         <section class="tos-section-head">
@@ -393,8 +395,7 @@ const description =
                 thoughtful human judgment and transparency.
             </p>
         </section>
-       
-       
+
         <form class="top" action="#top">
             <button class="top1" type="submit">Back to Top</button>
         </form>
