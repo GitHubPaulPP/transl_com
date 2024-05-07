@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: My Fourth Blog Post
 author: Astro Learner
 description: "This post will show up on its own!"
-url: "https://enrutransl.com/posts/post-4/" // Canonical URL of the post
+url: "https://enrutransl.com/posts/post-4/"
 image:
     url: "https://docs.astro.build/default-og-image.png"
     alt: "The word astro against an illustration of planets and stars."

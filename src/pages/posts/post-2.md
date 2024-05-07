@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownPostLayout.astro
 title: My Second Blog Post
 author: Astro Learner
 description: "After learning some Astro, I couldn't stop!"
-url: "https://enrutransl.com/posts/post-2/" // Canonical URL of the post
+url: "https://enrutransl.com/posts/post-2/"
 image:
     url: "https://docs.astro.build/assets/arc.webp"
     alt: "Thumbnail of Astro arcs."
