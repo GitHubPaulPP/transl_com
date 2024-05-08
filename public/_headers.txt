@@ -1,5 +1,5 @@
 # Apply to `enrutransl.com`
-https://enrutransl.com/*
+https://enrutransl.com/
   X-Robots-Tag: index, follow
 
 # Apply to `*.pages.dev`
