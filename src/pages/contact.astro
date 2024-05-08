@@ -133,36 +133,10 @@ const url = "https://enrutransl.com/contact/";
             );
         </script>
     </main>
-
-    <!-- <iframe
-        id="JotFormIFrame-241143507676053"
-        title="Contact us"
-        onload="window.parent.scrollTo(0,0)"
-        allowtransparency="true"
-        allow="geolocation; microphone; camera; fullscreen"
-        src="https://form.jotform.com/241143507676053"
-        frameborder="0"
-        style="min-width:100%;max-width:100%;height:1530px;border:none;"
-        scrolling="no"
-        loading="lazy"
-    >
-    </iframe>
-    <script
-        src="https://form.jotform.com/s/umd/latest/for-form-embed-handler.js"
-        async></script>
-    <script>
-        window.addEventListener("load", function () {
-            window.jotformEmbedHandler(
-                "iframe[id='JotFormIFrame-241143507676053']",
-                "https://form.jotform.com/",
-            );
-        });
-    </script> -->
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
 </BaseLayout>
-
-<form class="top" action="#top">
-    <button class="top1" type="submit">Back to Top</button>
-</form>
 
 <style>
     main {
@@ -365,6 +339,16 @@ const url = "https://enrutransl.com/contact/";
             grid-row: 3/4;
             width: 100%;
             min-height: 110em;
+        }
+        .top {
+            text-align: center;
+            margin: 1em;
+        }
+
+        .top1 {
+            background-color: rgb(8, 20, 187);
+            color: #f9f9f9;
+            font-weight: 600;
         }
     }
 </style>
