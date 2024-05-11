@@ -45,10 +45,10 @@
                 <img src="/header_logo.svg" alt="Logo" /></a
             >
             <div class="compname">
-                <h1>
+                <div class="header-title">
                     EnRu Translations
                     <span>English-to-Russian Translation Services</span>
-                </h1>
+                </div>
             </div>
         </div>
 
@@ -226,7 +226,7 @@
             align-items: center;
         }
 
-        h1 {
+        .header-title {
             position: relative;
             padding: 0;
             margin: 0;
@@ -238,12 +238,12 @@
             transition: all 0.4s ease 0s;
         }
 
-        h1 span {
+        .header-title span {
             display: block;
             font-size: 0.5em;
             line-height: 1.3;
         }
-        h1 em {
+        .header-title em {
             font-style: normal;
             font-weight: 600;
         }
@@ -252,14 +252,14 @@
             display: inline-block;
         }
 
-        .compname h1 {
+        .compname .header-title {
             text-align: center;
             color: #222;
             font-size: 1.2em;
             font-weight: 900;
             color: darkblue;
         }
-        .compname h1 span {
+        .compname .header-title span {
             line-height: 2em;
             /* padding-bottom: 15px; */
             text-transform: none;
@@ -269,8 +269,8 @@
             color: royalblue;
         }
 
-        .compname h1:after,
-        .compname h1:before {
+        .compname .header-title:after,
+        .compname .header-title:before {
             position: absolute;
             left: 0;
             bottom: 0;
@@ -281,7 +281,7 @@
             margin: auto;
             background-color: royalblue;
         }
-        .compname h1:before {
+        .compname .header-title:before {
             background-color: darkblue;
             left: 45px;
             width: 90px;
