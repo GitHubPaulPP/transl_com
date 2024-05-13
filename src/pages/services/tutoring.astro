@@ -1,0 +1,208 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const title = "Russian Proofreading Services";
+const description =
+    "Explore our Russian proofreading services to ensure accurate and polished translations.";
+const url = "https://enrutransl.com/services/proofreading/";
+---
+
+<BaseLayout description={description} title={title} url={url}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+
+    <header>
+        <img
+            src="/proofr.jpg"
+            alt="A person providing Russian proofreading services while sitting at a table"
+        />
+        <h1>Russian language tutoring</h1>
+    </header>
+
+    <main>
+        <p>
+            Are you ready to elevate your Russian language skills to new
+            heights? Our unique Russian language tutoring service is designed to
+            provide personalized, one-on-one sessions that cater directly to
+            your individual needs and goals. Whether you're looking to refine
+            your grammar, improve your accent, or become more fluent in
+            conversation, we are here to guide you every step of the way.
+        </p>
+        <p>
+            <strong> Tailored Learning Experience:</strong> Forget the one-size-fits-all
+            approach of traditional language classes. Our tutoring service emphasizes
+            a customized learning experience that builds on your current skills.
+            Through a combination of practice, targeted exercises, and real-world
+            conversation, we help you overcome challenges and achieve measurable
+            progress. Each session is crafted around your specific objectives, ensuring
+            that every minute spent is a step closer to mastering the Russian language.
+        </p>
+        <p>
+            <strong>Flexible and Convenient:</strong> Conducted via Zoom or Google
+            Meet, our tutoring sessions offer the ultimate convenience. Learn from
+            the comfort of your home, office, or any other location that suits you.
+            Flexible scheduling means you can fit learning into your busy life without
+            the stress of commuting or rigid class times. This adaptability makes
+            it easier than ever to commit to improving your Russian, regardless of
+            your current lifestyle or location.
+        </p>
+        <p>
+            <strong>Personalized approach:</strong> Choosing our service means gaining
+            access to a dedicated tutor from our team — a personal language coach
+            who is not only a native speaker but also a certified and licensed educator
+            skilled in modern teaching techniques. This coach can help you improve
+            a range of skills, including accent, grammar, and other essential aspects
+            of language learning. He will provide you with the encouragement, resources,
+            and expertise needed to boost your confidence and fluency in Russian.
+            Additionally, the interactive nature of our sessions ensures you receive
+            immediate feedback.
+        </p>
+        <p>
+            <strong>Take the Next Step:</strong> Imagine speaking Russian more clearly,
+            confidently, and correctly. With our personalized tutoring, this can
+            become your reality. Don't miss out on the opportunity to enhance your
+            language skills in ways that traditional classrooms simply can't match.
+            Contact us today to schedule your first session and start your journey
+            to becoming a proficient Russian speaker.
+        </p>
+        <p></p>
+
+        <p class="promise">Our quality promise to you at a glance:</p>
+        <ul class="custom-list">
+            <li>
+                Only <strong>native-speaker professionals</strong> work on your documents.
+            </li>
+            <li>
+                You get <strong> personal service</strong> with permanent contact
+                persons.
+            </li>
+            <li>
+                We offer <strong
+                    >absolute discretion and confidential treatment</strong
+                > of documents.
+            </li>
+        </ul>
+
+        <p class="note">We specialize in the following industries:</p>
+        <ul>
+            <li>Legal</li>
+            <li>Marketing</li>
+            <li>Business/E-Commerce</li>
+            <li>Finance</li>
+            <li>Investment/Securities</li>
+            <li>Blockchain and Cryptocurrency</li>
+            <li>Government/Politics</li>
+            <li>Information Technology</li>
+        </ul>
+    </main>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
+<style>
+    header {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        background-color: aliceblue;
+        padding: 1em;
+        margin: 1em;
+    }
+
+    header img {
+        width: 10em;
+    }
+
+    h1 {
+        text-align: center;
+        padding: 0.5em;
+        color: darkblue;
+        font-size: large;
+    }
+
+    p {
+        padding: 1em;
+        text-align: justify;
+    }
+
+    .promise {
+        color: darkblue;
+        font-weight: 600;
+    }
+
+    .note {
+        color: darkblue;
+        font-weight: 600;
+    }
+
+    .custom-list {
+        list-style: none;
+        margin-bottom: 2em; /* Ensures the list has no default margin */
+        padding-left: 1em; /* Removes default padding from the list */
+    }
+
+    .custom-list li {
+        position: relative;
+        padding-left: 2.3em; /* Provides space for the checkmark, scalable with font size */
+        margin-bottom: 1em; /* Optional: adds space between items */
+    }
+
+    .custom-list li::before {
+        content: "";
+        position: absolute;
+        left: 0; /* Positions the SVG at the beginning of the list item */
+        top: 50%; /* Centers the SVG vertically relative to the line height */
+        transform: translateY(
+            -50%
+        ); /* Ensures the SVG is perfectly centered no matter the line height */
+        width: 1.5em; /* Relative size to font makes it scalable */
+        height: 1.5em; /* Maintains aspect ratio */
+        background-image: url("/checklist.svg"); /* Uses SVG as a background image */
+        background-size: contain; /* Ensures the SVG fits the content box, adjust as 'cover' or 'contain' based on need */
+        background-repeat: no-repeat; /* Makes sure the SVG doesn't repeat */
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    /* Media queries for tablet */
+
+    @media (min-width: 36em) {
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            width: 100%;
+            height: 100%;
+            padding: 2em;
+        }
+
+        header {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            background-color: aliceblue;
+            padding: 1em;
+            margin: 1em;
+            border-radius: 10%;
+        }
+
+        header img {
+            width: 10em;
+        }
+
+        h1 {
+            font-size: x-large;
+        }
+    }
+</style>
