@@ -8,10 +8,11 @@ export interface Props {
     title: string;
     description: string;
     url?: string;
+    structuredData?: string; // New prop for structured data
 }
 
 // const { description, title }: Props = Astro.props;
-const { description, title, url }: Props = Astro.props;
+const { description, title, url, structuredData }: Props = Astro.props;
 const pageTitle = title ? `${title} - EnRu Translations` : "EnRu Translations";
 const canonicalUrl = url || "https://enrutransl.com";
 ---
@@ -55,6 +56,15 @@ const canonicalUrl = url || "https://enrutransl.com";
 
         <link rel="canonical" href={canonicalUrl} />
         <slot name="head" />
+
+        <!-- Structured Data -->
+        {structuredData && (
+            <script type="application/ld+json" is:inline>
+                {structuredData}
+            </script>
+        )}
+
+        
     </head>
 
     <body>
