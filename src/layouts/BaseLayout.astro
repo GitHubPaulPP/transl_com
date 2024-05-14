@@ -39,22 +39,27 @@ const canonicalUrl = url || "https://enrutransl.com";
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
         <meta name="msvalidate.01" content="0CC0BE2E65A071619D7921BB4A4C6DE6" />
-        <link rel="icon" type="image/svg+xml" href="/header_logo.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
+
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link rel="icon" type="image/svg+xml" href="/header_logo.svg" /><link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        /><link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        /><link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
             rel="stylesheet"
-        />
+        /><title>{pageTitle}</title></head
+    >
 
-        <title>{pageTitle}</title>
-        <link rel="canonical" href={canonicalUrl} />
-        <slot name="head" />
-    </head>
-    <body>
-        <Header />
-        <slot />
-        <!-- <CookieConsent /> -->
-        <Footer />
-    </body>
+    <link rel="canonical" href={canonicalUrl} />
+    <slot name="head" />
 </html>
+<body>
+    <Header />
+    <slot />
+    <!-- <CookieConsent /> -->
+    <Footer />
+</body>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enrutransl.com/sitemap-index.xml
