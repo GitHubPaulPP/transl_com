@@ -38,7 +38,12 @@ const structuredData = JSON.stringify({
 });
 ---
 
-<BaseLayout description={description} title={title} url={url}>
+<BaseLayout
+	description={description}
+	title={title}
+	url={url}
+	structuredData={structuredData}
+>
 	<!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
 	<main>
 		<section class="main_container">
