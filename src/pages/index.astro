@@ -1,50 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import StructuredData from "../components/StructuredData.astro";
 
 const title = "English-to-Russian Translation Services";
 const description =
 	"Ensure accuracy and cultural relevance with our professional English-to-Russian translation services for businesses.";
 const url = "https://enrutransl.com";
-
-const structuredData = JSON.stringify({
-	"@context": "https://schema.org",
-	"@graph": [
-		{
-			"@type": "WebSite",
-			url: url,
-			name: "EnRu Translations",
-		},
-		{
-			"@type": "Organization",
-			name: "EnRu Translations",
-			url: url,
-			logo: {
-				"@type": "ImageObject",
-				url: "https://enrutransl.com/header_logo.svg",
-			},
-			contactPoint: {
-				"@type": "ContactPoint",
-				contactType: "Customer Service",
-				email: "info@enrutransl.com",
-				url: "https://enrutransl.com/contact",
-			},
-			sameAs: [
-				"https://www.linkedin.com/company/enru-translations",
-				"https://www.facebook.com/enrutranslations",
-				"https://twitter.com/enrutranslations",
-			],
-		},
-	],
-});
 ---
 
-<BaseLayout
-	description={description}
-	title={title}
-	url={url}
-	structuredData={structuredData}
->
-	<!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+<BaseLayout description={description} title={title} url={url}>
+	<StructuredData slot="structured-data" />
 	<main>
 		<section class="main_container">
 			<div class="elevate">
