@@ -12,18 +12,23 @@ const url = "https://enrutransl.com";
 ---
 
 <BaseLayout description={description} title={title} url={url}>
-	<WebpageStructuredData slot="structured-data" description={description} />
-	<WebsiteStructuredData slot="structured-data" description={description} />
-	<OrganizationStructuredData
-		slot="structured-data"
-		description={description}
-	/>
-	<BreadcrumbStructuredData
-		slot="structured-data"
-		description={description}
-	/>
-
 	<main>
+		<WebpageStructuredData
+			slot="structured-data"
+			description={description}
+		/>
+		<WebsiteStructuredData
+			slot="structured-data"
+			description={description}
+		/>
+		<OrganizationStructuredData
+			slot="structured-data"
+			description={description}
+		/>
+		<BreadcrumbStructuredData
+			slot="structured-data"
+			description={description}
+		/>
 		<section class="main_container">
 			<div class="elevate">
 				<h1>
