@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WebpageStructuredData from "../components/WebpageStructuredData.astro";
-
+import WebsiteStructuredData from "../components/WebsiteStructuredData.astro";
+import OrganizationStructuredData from "../components/OrganizationStructuredData.astro";
+import BreadcrumbStructuredData from "../components/BreadcrumbStructuredData.astro";
 
 const title = "English-to-Russian Translation Services";
 const description =
@@ -11,7 +13,16 @@ const url = "https://enrutransl.com";
 
 <BaseLayout description={description} title={title} url={url}>
 	<WebpageStructuredData slot="structured-data" description={description} />
-	
+	<WebsiteStructuredData slot="structured-data" description={description} />
+	<OrganizationStructuredData
+		slot="structured-data"
+		description={description}
+	/>
+	<BreadcrumbStructuredData
+		slot="structured-data"
+		description={description}
+	/>
+
 	<main>
 		<section class="main_container">
 			<div class="elevate">
