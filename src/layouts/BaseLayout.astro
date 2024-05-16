@@ -44,20 +44,24 @@ const canonicalUrl = url || "https://enrutransl.com";
         <link rel="icon" type="image/svg+xml" href="/header_logo.svg" /><link
             rel="preconnect"
             href="https://fonts.googleapis.com"
-        /><link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossorigin
-        /><link
+        /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            as="style"
+        />
+        <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
             rel="stylesheet"
-        /><title>{pageTitle}</title>
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+
+        <title>{pageTitle}</title>
 
         <link rel="canonical" href={canonicalUrl} />
 
-        <slot name="structured-data"/>
-       
-
+        <slot name="structured-data" />
     </head>
 
     <body>
