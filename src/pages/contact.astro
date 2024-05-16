@@ -125,12 +125,19 @@ const url = "https://enrutransl.com/contact/";
         </iframe>
         <script
             src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"
-        ></script>
+            defer></script>
+
         <script>
-            window.jotformEmbedHandler(
-                "iframe[id='JotFormIFrame-241143507676053'",
-                "https://form.jotform.com/",
-            );
+            document.addEventListener("DOMContentLoaded", function () {
+                import("astro/zod").then((module) => {
+                    const { defaultErrorMap } = module;
+
+                    window.jotformEmbedHandler(
+                        "iframe[id='JotFormIFrame-241143507676053'",
+                        "https://form.jotform.com/",
+                    );
+                });
+            });
         </script>
     </main>
     <form class="top" action="#top">
