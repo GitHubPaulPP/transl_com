@@ -55,13 +55,11 @@ const canonicalUrl = url || "https://enrutransl.com";
             rel="stylesheet"
             onload="this.onload=null;this.rel='stylesheet'"
         />
+        <link rel="canonical" href={canonicalUrl} />
         <link rel="sitemap" href="/sitemap-index.xml" />
 
         <title>{pageTitle}</title>
-
-        <link rel="canonical" href={canonicalUrl} />
-
-        <slot name="structured-data" />
+        
     </head>
 
     <body>
