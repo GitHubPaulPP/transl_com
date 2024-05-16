@@ -37,12 +37,19 @@ const url = "https://enrutransl.com";
 			</div>
 
 			<div class="vector">
-				<img
-					class="hero-image"
-					src="/hero_image.jpg"
-					alt="Vector illustration of businesses expanding global reach with English-to-Russian translation"
-					loading="eager"
-				/>
+				<picture>
+					<source type="image/webp" srcset="/hero_image(1).webp" />
+
+					<source type="image/jpeg" srcset="/hero_image.jpg" />
+
+					<img
+						class="hero-image"
+						src="/hero_image.jpg"
+						alt="Vector illustration of businesses expanding global reach with English-to-Russian translation"
+						loading="eager"
+					/>
+				</picture>
+
 			</div>
 		</section>
 
