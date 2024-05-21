@@ -1,11 +1,85 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title =
-    "Terms of Service | Read our terms and conditions";
+const title = "Terms of Service | Read our terms and conditions";
 const description = "Review EnRu Translations' Terms of Service.";
 const url = "https://enrutransl.com/terms/";
 ---
+
+<style>
+    main {
+        padding: 1em;
+        margin-top: 2em;
+    }
+
+    .tos-section-head {
+        background-color: #f0f8ff; /* Alice Blue for section backgrounds */
+        border: 1px solid #003366; /* Dark Blue border */
+        padding: 0.5em;
+        margin-bottom: 1.5em;
+        border-radius: 5%;
+    }
+
+    .tos-section-head h1 {
+        color: #003366; /* Dark Blue for headers */
+        text-align: center;
+    }
+
+    .tos-section-head p {
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .tos-section {
+        background-color: #f0f8ff; /* Alice Blue for section backgrounds */
+        border: 1px solid #003366; /* Dark Blue border */
+        padding: 0.5em;
+        margin-bottom: 1.5em;
+        border-radius: 5%;
+    }
+
+    .tos-section h3 {
+        color: #003366; /* Dark Blue for headers */
+        text-align: center;
+    }
+
+    .tos-section p {
+        text-align: justify;
+    }
+
+    a {
+        color: #003366; /* Dark Blue for links */
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    @media (min-width: 36em) {
+        .top {
+            text-align: center;
+            margin: 1em;
+        }
+
+        .top1 {
+            background-color: rgb(8, 20, 187);
+            color: #f9f9f9;
+            font-weight: 600;
+        }
+    }
+</style>
 
 <BaseLayout description={description} title={title} url={url}>
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
@@ -286,78 +360,3 @@ const url = "https://enrutransl.com/terms/";
         <button class="top1" type="submit">Back to Top</button>
     </form>
 </BaseLayout>
-
-<style>
-    main {
-        padding: 1em;
-        margin-top: 2em;
-    }
-
-    .tos-section-head {
-        background-color: #f0f8ff; /* Alice Blue for section backgrounds */
-        border: 1px solid #003366; /* Dark Blue border */
-        padding: 0.5em;
-        margin-bottom: 1.5em;
-        border-radius: 5%;
-    }
-
-    .tos-section-head h1 {
-        color: #003366; /* Dark Blue for headers */
-        text-align: center;
-    }
-
-    .tos-section-head p {
-        text-align: center;
-        font-weight: 600;
-    }
-
-    .tos-section {
-        background-color: #f0f8ff; /* Alice Blue for section backgrounds */
-        border: 1px solid #003366; /* Dark Blue border */
-        padding: 0.5em;
-        margin-bottom: 1.5em;
-        border-radius: 5%;
-    }
-
-    .tos-section h3 {
-        color: #003366; /* Dark Blue for headers */
-        text-align: center;
-    }
-
-    .tos-section p {
-        text-align: justify;
-    }
-
-    a {
-        color: #003366; /* Dark Blue for links */
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    .top {
-        text-align: center;
-        margin: 1em;
-    }
-
-    .top1 {
-        background-color: rgb(8, 20, 187);
-        color: #f9f9f9;
-        font-weight: 600;
-    }
-
-    @media (min-width: 36em) {
-        .top {
-            text-align: center;
-            margin: 1em;
-        }
-
-        .top1 {
-            background-color: rgb(8, 20, 187);
-            color: #f9f9f9;
-            font-weight: 600;
-        }
-    }
-</style>

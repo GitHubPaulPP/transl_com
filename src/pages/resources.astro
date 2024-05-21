@@ -1,0 +1,51 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "About Us - Native Russian Translators";
+const description =
+    "Meet our team of native Russian translators at EnRu Translations. Discover our commitment to delivering high-quality translation services.";
+
+const url = "https://enrutransl.com/about/";
+---
+
+<style>
+    p {
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+
+    @media (min-width: 36em) {
+        .top {
+            text-align: center;
+            margin: 1em;
+        }
+
+        .top1 {
+            background-color: rgb(8, 20, 187);
+            color: #f9f9f9;
+            font-weight: 600;
+        }
+    }
+</style>
+
+<BaseLayout description={description} title={title} url={url}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+    <main>
+        <p>Coming Soon! Check back later for exciting updates.</p>
+    </main>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>

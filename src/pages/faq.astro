@@ -6,6 +6,105 @@ const description = "Frequently asked questions about EnRu Translations.";
 const url = "https://enrutransl.com/faq/";
 ---
 
+<style>
+    .faq-container {
+        width: 90%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+
+    .faq-section h3 {
+        color: darkblue;
+        margin-bottom: 0.5em;
+    }
+
+    .faq-question {
+        width: 100%;
+        padding: 0.7em;
+        text-align: left;
+        background-color: aliceblue;
+        color: darkblue;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        font-size: medium;
+        font-weight: 500;
+    }
+
+    .faq-question:hover,
+    .faq-question:focus {
+        background-color: #8bbff8;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 1.2em;
+        margin-top: 5px;
+        background-color: #f8f9fa;
+        border-left: 3px solid #007bff;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    .faq-answer p {
+        margin-bottom: 1em;
+    }
+
+    .top {
+        text-align: center;
+        margin: 1em;
+    }
+
+    .top1 {
+        background-color: rgb(8, 20, 187);
+        color: #f9f9f9;
+        font-weight: 600;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Query all the '.faq-question' elements
+        const questions = document.querySelectorAll(".faq-question");
+
+        // Add click event listeners to each question
+        questions.forEach((question) => {
+            question.addEventListener("click", () => {
+                const answer = question.nextElementSibling;
+                if (answer && answer instanceof HTMLElement) {
+                    answer.style.display =
+                        answer.style.display === "block" ? "none" : "block";
+                }
+            });
+        });
+
+        // Function to expand the section from URL hash
+        function expandSectionFromHash() {
+            const hash = window.location.hash;
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target && target instanceof HTMLElement) {
+                    const answerSection = target.closest(".faq-answer");
+                    if (answerSection && answerSection instanceof HTMLElement) {
+                        answerSection.style.display = "block";
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                        });
+                    }
+                }
+            }
+        }
+
+        // Execute on load to check for any hash present in the URL
+        expandSectionFromHash();
+
+        // Listen for hash changes in the URL to handle in-page navigation via back/forward browser buttons
+        window.addEventListener("hashchange", expandSectionFromHash, false);
+    });
+</script>
+
 <BaseLayout description={description} title={title} url={url}>
     <div class="faq-container">
         <h2>Frequently Asked Questions</h2>
@@ -742,102 +841,3 @@ const url = "https://enrutransl.com/faq/";
         <button class="top1" type="submit">Back to Top</button>
     </form>
 </BaseLayout>
-
-<style>
-    .faq-container {
-        width: 90%;
-        margin: auto;
-        font-family: Arial, sans-serif;
-    }
-
-    .faq-section h3 {
-        color: darkblue;
-        margin-bottom: 0.5em;
-    }
-
-    .faq-question {
-        width: 100%;
-        padding: 0.7em;
-        text-align: left;
-        background-color: aliceblue;
-        color: darkblue;
-        border: none;
-        outline: none;
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-        font-size: medium;
-        font-weight: 500;
-    }
-
-    .faq-question:hover,
-    .faq-question:focus {
-        background-color: #8bbff8;
-    }
-
-    .faq-answer {
-        display: none;
-        padding: 1.2em;
-        margin-top: 5px;
-        background-color: #f8f9fa;
-        border-left: 3px solid #007bff;
-        line-height: 1.5;
-        text-align: justify;
-    }
-
-    .faq-answer p {
-        margin-bottom: 1em;
-    }
-
-    .top {
-        text-align: center;
-        margin: 1em;
-    }
-
-    .top1 {
-        background-color: rgb(8, 20, 187);
-        color: #f9f9f9;
-        font-weight: 600;
-    }
-</style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Query all the '.faq-question' elements
-        const questions = document.querySelectorAll(".faq-question");
-
-        // Add click event listeners to each question
-        questions.forEach((question) => {
-            question.addEventListener("click", () => {
-                const answer = question.nextElementSibling;
-                if (answer && answer instanceof HTMLElement) {
-                    answer.style.display =
-                        answer.style.display === "block" ? "none" : "block";
-                }
-            });
-        });
-
-        // Function to expand the section from URL hash
-        function expandSectionFromHash() {
-            const hash = window.location.hash;
-            if (hash) {
-                const target = document.querySelector(hash);
-                if (target && target instanceof HTMLElement) {
-                    const answerSection = target.closest(".faq-answer");
-                    if (answerSection && answerSection instanceof HTMLElement) {
-                        answerSection.style.display = "block";
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                        });
-                    }
-                }
-            }
-        }
-
-        // Execute on load to check for any hash present in the URL
-        expandSectionFromHash();
-
-        // Listen for hash changes in the URL to handle in-page navigation via back/forward browser buttons
-        window.addEventListener("hashchange", expandSectionFromHash, false);
-    });
-</script>
