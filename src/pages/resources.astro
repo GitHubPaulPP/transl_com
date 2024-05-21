@@ -8,6 +8,17 @@ const description =
 const url = "https://enrutransl.com/about/";
 ---
 
+<BaseLayout description={description} title={title} url={url}>
+    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+    <main>
+        <p>Coming Soon! Check back later for exciting updates.</p>
+    </main>
+
+    <form class="top" action="#top">
+        <button class="top1" type="submit">Back to Top</button>
+    </form>
+</BaseLayout>
+
 <style>
     p {
         margin: 1em;
@@ -38,14 +49,3 @@ const url = "https://enrutransl.com/about/";
         }
     }
 </style>
-
-<BaseLayout description={description} title={title} url={url}>
-    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
-    <main>
-        <p>Coming Soon! Check back later for exciting updates.</p>
-    </main>
-
-    <form class="top" action="#top">
-        <button class="top1" type="submit">Back to Top</button>
-    </form>
-</BaseLayout>

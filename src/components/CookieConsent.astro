@@ -3,6 +3,16 @@
 // No external dependencies required
 ---
 
+<div id="cookieConsentContainer" class="cookie-consent-container">
+    <p>
+        This website may use cookies to enhance user experience. By using our
+        website, you consent to all cookies in accordance with our Cookie
+        Policy.
+    </p>
+    <button type="button" onclick="handleConsent(true)">Accept</button>
+    <button type="button" onclick="handleConsent(false)">Decline</button>
+</div>
+
 <style>
     .cookie-consent-container {
         position: fixed;
@@ -36,16 +46,6 @@
         background-color: #00796b;
     }
 </style>
-
-<div id="cookieConsentContainer" class="cookie-consent-container">
-    <p>
-        This website may use cookies to enhance user experience. By using our
-        website, you consent to all cookies in accordance with our Cookie
-        Policy.
-    </p>
-    <button type="button" onclick="handleConsent(true)">Accept</button>
-    <button type="button" onclick="handleConsent(false)">Decline</button>
-</div>
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", (event) => {
