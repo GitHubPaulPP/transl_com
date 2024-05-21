@@ -56,12 +56,15 @@ const canonicalUrl = url || "https://enrutransl.com";
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={description} />
         <meta name="msvalidate.01" content="0CC0BE2E65A071619D7921BB4A4C6DE6" />
-        <link rel="preload" href="/hero_image(1).webp" as="image" />
-        <link rel="icon" type="image/svg+xml" href="/header_logo.svg" />
         <link
-            rel="preconnect"
-            href="https://fonts.googleapis.com"
+            rel="preload"
+            fetchpriority="high"
+            href="/hero_image(1).webp"
+            as="image"
+            type="image/webp"
         />
+        <link rel="icon" type="image/svg+xml" href="/header_logo.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
         <link
@@ -69,7 +72,7 @@ const canonicalUrl = url || "https://enrutransl.com";
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
             as="style"
         />
-       
+
         <link rel="canonical" href={canonicalUrl} />
         <link rel="sitemap" href="/sitemap-index.xml" />
 
