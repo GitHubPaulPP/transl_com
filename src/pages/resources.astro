@@ -1,17 +1,53 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "About Us - Native Russian Translators";
+const title = "Resource Center";
 const description =
-    "Meet our team of native Russian translators at EnRu Translations. Discover our commitment to delivering high-quality translation services.";
+    "Welcome to our Resource Center. Here you'll find a wealth of information to help you expand your knowledge on various topics.";
 
 const url = "https://enrutransl.com/about/";
 ---
 
 <BaseLayout description={description} title={title} url={url}>
     <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
+
+    <header>
+        <h1>Resource Center</h1>
+
+        <p>
+            Welcome to our Resource Center. Here you'll find
+            information to help you expand your knowledge on various topics.
+        </p>
+    </header>
+
     <main>
-        <p>Coming Soon! Check back later for exciting updates.</p>
+        <section class="blog-card">
+            <picture>
+                <source srcset="/Post-1.webp" type="image/webp" />
+                <img
+                    src="/Post-1.jpg"
+                    alt="People discussing Russian localization"
+                />
+            </picture>
+
+            <div class="post-title">
+                <a href="/posts/post-1"
+                    ><h2>
+                        Russian Localization: Tap into a 114 Million Customer
+                        Base and Drive Global Sales Growth
+                    </h2>
+                </a>
+                <p>
+                    Did you know that Russian is spoken by over 258 million
+                    people worldwide, making it the 8th most spoken language
+                    globally? With the current geopolitical challenges,
+                    connecting directly...
+                </p>
+            </div>
+            <div class="post-date">
+                <p><i>June 25, 2024</i></p>
+            </div>
+        </section>
     </main>
 
     <form class="top" action="#top">
@@ -20,9 +56,44 @@ const url = "https://enrutransl.com/about/";
 </BaseLayout>
 
 <style>
-    p {
-        margin: 1em;
+    header {
+        text-align: justify;
+        padding: 2em;
+    }
+
+    .blog-card {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        border: 1px solid rgb(221, 216, 216);
+        border-radius: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-bottom: 2em;
+        box-shadow: 0.1em 0.1em 0.1em rgb(141, 199, 243);
+    }
+
+    .blog-card img {
+        width: 23cm;
+        margin-top: 0.5em;
+        border-radius: 2em;
+        object-fit: cover;
+        max-width: 100%;
+        padding: 0.5em;
+    }
+
+    .post-title {
         padding: 1em;
+        text-align: justify;
+    }
+
+    .post-date {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: end;
+        width: 100%;
+        padding: 1em;
+        border-top: 1px solid rgb(219, 213, 213);
     }
 
     .top {
