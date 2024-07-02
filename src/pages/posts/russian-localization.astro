@@ -481,6 +481,7 @@ const url = "https://enrutransl.com/posts/post-1/";
         padding: 0.5em;
         color: darkblue;
         line-height: 1.2;
+        font-size: large;
     }
 
     p {
@@ -489,17 +490,17 @@ const url = "https://enrutransl.com/posts/post-1/";
         line-height: 1.5;
     }
 
-    /* .blog-card {
+    .blog-card {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
         border: 1px solid rgb(221, 216, 216);
         border-radius: 2em;
-        margin-left: 2em;
-        margin-right: 2em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
         margin-bottom: 2em;
         box-shadow: 0.1em 0.1em 0.1em rgb(141, 199, 243);
-    } */
+    }
 
     .blog-card img {
         width: 23cm;
@@ -578,8 +579,15 @@ const url = "https://enrutransl.com/posts/post-1/";
             font-size: x-large;
         }
 
+        .blog-card {
+            display: block;
+            width: fit-content;
+            float: left;
+            margin-right: 2em;
+        }
+
         .blog-card img {
-            width: 100%;
+            width: 20em;
             margin-top: 0.5em;
             border-radius: 2em;
             object-fit: cover;
