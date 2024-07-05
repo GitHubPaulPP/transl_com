@@ -54,7 +54,7 @@ const url = "https://enrutransl.com/resources/";
                 <source srcset="/Best_dict.webp" type="image/webp" />
                 <img
                     src="/Best_dict.jpg"
-                    alt="People discussing Russian localization"
+                    alt="Best Russian Dictionary with a man sitting and reading"
                 />
             </picture>
 
@@ -72,6 +72,34 @@ const url = "https://enrutransl.com/resources/";
             </div>
             <div class="post-date">
                 <p><i>July 2, 2024</i></p>
+            </div>
+        </section>
+
+        <section class="blog-card">
+            <picture>
+                <source srcset="/Fight_YG.webp" type="image/webp" />
+                <img
+                    src="/Fight_YG.jpg"
+                    alt="Yandex Translate vs Google Translate fighting"
+                />
+            </picture>
+
+            <div class="post-title">
+                <a href="/posts/yandex-vs-google"
+                    ><h2>
+                        Yandex Translate vs Google Translate: Which is More
+                        Accurate for English-Russian Translations?
+                    </h2>
+                </a>
+                <p>
+                    When it comes to translating from English into Russian, both
+                    Yandex Translate and Google Translate have their strengths,
+                    but they also share some significant limitations. 🤔 Let's
+                    dive into ...
+                </p>
+            </div>
+            <div class="post-date">
+                <p><i>July 5, 2024</i></p>
             </div>
         </section>
     </main>
@@ -107,11 +135,14 @@ const url = "https://enrutransl.com/resources/";
         object-fit: cover;
         max-width: 100%;
         padding: 0.5em;
+        flex: 1;
     }
 
     .post-title {
         padding: 1em;
         text-align: justify;
+        /* height: 320px; */
+        flex: 1;
     }
 
     .post-date {
@@ -121,6 +152,7 @@ const url = "https://enrutransl.com/resources/";
         width: 100%;
         padding: 1em;
         border-top: 1px solid rgb(219, 213, 213);
+        
     }
 
     h2 {
@@ -150,16 +182,14 @@ const url = "https://enrutransl.com/resources/";
             text-align: start;
             font-size: large;
         }
+    }
 
-        .top {
-            text-align: center;
-            margin: 1em;
-        }
-
-        .top1 {
-            background-color: rgb(8, 20, 187);
-            color: #f9f9f9;
-            font-weight: 600;
+    @media (min-width: 62em) {
+        main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            width: 100%;
         }
     }
 </style>
