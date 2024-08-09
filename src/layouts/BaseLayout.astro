@@ -80,9 +80,19 @@ const canonicalUrl = url || "https://enrutransl.com";
     </head>
 
     <body>
-        <Header />
-        <slot />
-        <!-- <CookieConsent /> -->
-        <Footer />
+        <div class="page-container">
+            <Header />
+            <slot />
+            <!-- <CookieConsent /> -->
+            <Footer />
+        </div>
     </body>
 </html>
+
+<style>
+    .page-container {
+        max-width: 80rem; /* Set the max width of your layout */
+        margin: 0 auto; /* Center the container horizontally */
+        /* padding: 0 0.1em;  */
+    }
+</style>

@@ -2,11 +2,8 @@
 
 ---
 
-<header>
+<header class="header_main">
     <div class="above-logo">
-        <div class="phone">
-            <p><a href="tel:+381616323368">+381616323368</a></p>
-        </div>
         <div class="email">
             <p><a href="mailto:info@enrutransl.com">info@enrutransl.com</a></p>
         </div>
@@ -79,37 +76,36 @@
         font-size: small;
         font-weight: 500;
         padding: 1em;
-        background-color: aliceblue;
-    }
-
-    .phone {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        color: darkblue;
-        font-weight: 700;
+        background-color: #2e466e;
     }
 
     .email {
         grid-column: 1/2;
-        grid-row: 2/3;
-        color: darkblue;
+        grid-row: 1/2;
+        color: rgb(255, 255, 255);
         font-weight: 700;
+    }
+
+    .email a {
+        color: aliceblue;
     }
 
     .working-hours1 {
         grid-column: 2/3;
         grid-row: 1/4;
         text-align: end;
-        color: darkblue;
+        color: rgb(255, 255, 255);
         font-weight: 700;
     }
 
     .localtime {
-        color: darkblue;
+        color: rgb(255, 255, 255);
         font-weight: 500;
     }
 
     .social {
+        grid-column: 1/2;
+        grid-row: 3/4;
         width: 100%;
     }
 
@@ -121,6 +117,7 @@
     .topnav {
         overflow: hidden;
         position: relative;
+        background-color: #fff;
     }
     .logo img {
         width: 8em;
@@ -131,7 +128,7 @@
     }
 
     .slogan {
-        color: darkblue;
+        color: rgb(235, 54, 120);
         font-size: 0.7em;
         margin: 0;
         font-weight: bold;
@@ -185,22 +182,37 @@
         padding-left: 0;
         border: 1px solid #ccc;
         list-style: none;
-        color: #fff;
-        background-color: aliceblue;
+        box-shadow: inset 0px 1px 0px 0px #ffffff;
+        background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+        background-color: #ffffff;
+        border-radius: 6px;
+        border: 1px solid #dcdcdc;
     }
 
     .nav-menu > li + li {
         border-top: 1px solid #ccc;
     }
 
+    .nav-menu > li:hover {
+        background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+        background-color: #f6f6f6;
+    }
+
+    .nav-menu > li:active {
+        position: relative;
+        top: 1px;
+    }
+
     .nav-menu > li > a {
         display: block;
         padding: 0.8em 1em;
-        color: darkblue;
+        cursor: pointer;
+        color: #3a8a9e;
         font-weight: bold;
+        text-shadow: 0px 0.3px 0px #528ecc;
     }
 
-    @media (min-width: 36em) {
+    @media (min-width: 37.5em) {
         .menu-toggle {
             display: none;
         }
@@ -210,7 +222,7 @@
         }
     }
 
-    @media (min-width: 36em) {
+    @media (min-width: 37.5em) {
         .above-logo {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

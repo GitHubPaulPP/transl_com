@@ -13,10 +13,7 @@
                 <p>Novi Sad 21000,</p>
                 <p>Serbia</p>
             </div>
-            <div class="phone">
-                <img src="/phone.svg" alt="phone svg" loading="lazy" />
-                <p><a href="tel:+381616323368">+381616323368</a></p>
-            </div>
+
             <div class="email">
                 <img src="/email3.svg" alt="email svg" loading="lazy" />
                 <p>
@@ -113,7 +110,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: aliceblue;
+        background-color: #2e466e;
     }
 
     .footer-content {
@@ -138,7 +135,7 @@
         /* text-transform: uppercase; */
         font-size: larger;
         text-align: center;
-        color: darkblue;
+        color: white;
         width: 100%;
         font-weight: 900;
     }
@@ -160,27 +157,7 @@
         font-weight: 600;
         margin-left: 0.8em;
         font-size: small;
-        color: darkblue;
-    }
-
-    .phone {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 0.7em;
-        width: 100%;
-    }
-
-    .phone img {
-        width: 2.3em;
-    }
-
-    .phone > p {
-        font-weight: 600;
-        margin-left: 0.8em;
-        font-size: small;
-        color: darkblue;
+        color: white;
     }
 
     .email {
@@ -200,7 +177,10 @@
         font-weight: 600;
         margin-left: 0.7em;
         font-size: small;
-        color: darkblue;
+    }
+
+    .email a {
+        color: white;
     }
 
     .working-hours {
@@ -220,11 +200,7 @@
         font-weight: 600;
         margin-left: 0.9em;
         font-size: small;
-        color: darkblue;
-    }
-
-    .localtime {
-        color: rebeccapurple;
+        color: white;
     }
 
     .discuss {
@@ -233,7 +209,7 @@
         margin-bottom: 0;
         text-align: center;
         padding: 1em;
-        color: darkblue;
+        color: white;
     }
 
     .discuss1 {
@@ -241,7 +217,7 @@
         font-size: small;
         text-align: center;
         padding: 1em;
-        color: darkblue;
+        color: white;
         margin-top: 2em;
         margin-bottom: 0;
     }
@@ -297,6 +273,10 @@
         font-size: small;
     }
 
+    .footer-right a {
+        color: white;
+    }
+
     .bottom {
         display: flex;
         flex-direction: column;
@@ -309,16 +289,21 @@
     .bottom > p {
         margin: 0.5em;
         font-size: small;
+        color: white;
+    }
+
+    .bottom a {
+        color: white;
     }
 
     .copyr {
         font-weight: 800;
-        color: rebeccapurple;
+        color: white;
     }
 
     /* Media queries */
 
-    @media (min-width: 36em) {
+    @media (min-width: 37.5em) {
         .footer-content {
             display: flex;
             flex-direction: row;
@@ -342,7 +327,7 @@
             font-size: larger;
             margin-bottom: 1em;
             text-align: center;
-            color: darkblue;
+            color: #fff;
             width: 100%;
         }
 
@@ -445,7 +430,7 @@
             font-size: small;
             text-align: center;
             padding: 1em;
-            color: darkblue;
+            color: #fff;
             margin-top: 2em;
         }
 
