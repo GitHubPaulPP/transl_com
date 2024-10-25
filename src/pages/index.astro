@@ -1448,11 +1448,12 @@ const url = "https://enrutransl.com";
 	}
 
 	.vector {
-		margin-top: 1em;
+		display: none;
+		/* margin-top: 1em;
 		margin-bottom: 3em;
-		max-width: 90%;
+		max-width: 90%; */
 		animation: slideInFromRight 1.25s;
-		object-fit: cover;
+		/* object-fit: cover; */
 	}
 
 	@keyframes slideInFromRight {
@@ -1467,8 +1468,8 @@ const url = "https://enrutransl.com";
 	}
 
 	.vector img {
-		max-width: 100%;
-		height: auto;
+		/* max-width: 100%;
+		height: auto; */
 		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 	}
 
@@ -1646,6 +1647,7 @@ const url = "https://enrutransl.com";
 	}
 
 	.setapartimg {
+		display: none;
 		margin-bottom: 3em;
 		width: 90%;
 		image-orientation:;
@@ -2195,10 +2197,9 @@ const url = "https://enrutransl.com";
 		height: 100%;
 	}
 
-	.diff p{
+	.diff p {
 		line-height: 1.3;
 	}
-
 
 	.diff img {
 		width: 2em;
@@ -2409,24 +2410,33 @@ const url = "https://enrutransl.com";
 		}
 		/* section expand reach */
 		.main_container {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			padding: 1em;
+			display: flex;
+			flex-flow: row;
+			margin: 1.2em;
 		}
 
 		.elevate {
-			grid-column: 1/2;
 			display: flex;
 			flex-flow: column;
 			align-items: center;
-			margin-right: 0.5em;
-			line-height: 1.15;
-			max-width: 50em;
+			width: 100%;
 		}
 
 		.elevate > h1 {
-			font-size: x-large;
-			padding: 0.5em;
+			font-size: larger;
+			color: #1d3461;
+			font-weight: 900;
+			line-height: 1.2;
+			margin-top: 0;
+		}
+
+		.elevate p {
+			font-weight: 300;
+			font-size: large;
+			line-height: 1.5;
+			margin-top: 0;
+			margin-bottom: 1.5em;
+			
 		}
 
 		.crafted {
@@ -2436,14 +2446,17 @@ const url = "https://enrutransl.com";
 		}
 
 		.vector {
-			grid-column: 2/3;
-			padding: 0em;
-			margin-left: 1.8em;
+			display: block;
+			text-align: center;
+			flex: 0 0 50%;
+			max-width: 50%;
 		}
 
 		.vector img {
-			/* border-radius: 30%; */
-			width: 100%;
+			height: auto;
+			max-width: 100%;
+			vertical-align: middle;
+			border-style: none;
 		}
 
 		.trust-badge1 {
@@ -2531,6 +2544,7 @@ const url = "https://enrutransl.com";
 		}
 
 		.setapartimg {
+			display: block;
 			margin: 1em;
 			width: 100%;
 		}
@@ -2846,8 +2860,6 @@ const url = "https://enrutransl.com";
 
 		hr {
 			grid-column: 1/3;
-			
-			
 		}
 
 		.diff {
@@ -2926,9 +2938,9 @@ const url = "https://enrutransl.com";
 			padding: 3.5em;
 		}
 
-		.vector img {
+		/* .vector img {
 			max-width: 80%;
-		}
+		} */
 	}
 </style>
 

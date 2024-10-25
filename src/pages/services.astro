@@ -8,10 +8,32 @@ const url = "https://enrutransl.com/services/";
 ---
 
 <BaseLayout description={description} title={title} url={url}>
-    <!-- <link slot="head" rel="preload" href="hero_image.svg" as="image" /> -->
-   
-
-    
+    <main>
+        <section class="serv-hero">
+            <div class="row">
+                <div class="hero-content">
+                    <h1>Professional Translation Services</h1>
+                    <p class="sub-h1">
+                        Get your documents or text-based content translated in
+                        65+ languages by a professional translator for just <strong
+                            >$0.10 per word</strong
+                        > with <strong>24-hour delivery</strong>.
+                    </p>
+                    <div class="action">
+                        <a href="#" class="cta-button">Start Your Order</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img
+                        src="/services_hero.png"
+                        alt="Illustration of people holding documents"
+                        width="350"
+                        height="700"
+                    />
+                </div>
+            </div>
+        </section>
+    </main>
 
     <form class="top" action="#top">
         <button class="top1" type="submit">Back to Top</button>
@@ -19,8 +41,66 @@ const url = "https://enrutransl.com/services/";
 </BaseLayout>
 
 <style>
-    
-  
+    .row {
+        display: flex;
+        flex-wrap: row wrap;
+        margin: 1.2em;
+    }
+
+    .hero-content {
+        padding: 0.5em;
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: xx-large;
+        color: #1d3461;
+        font-weight: 900;
+        line-height: 1.2;
+    }
+
+    .sub-h1 {
+        font-weight: 300;
+        font-size: large;
+        line-height: 1.5;
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
+
+    .action {
+        display: flex;
+        flex-flow: column;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .cta-button {
+        min-width: 220px;
+        width: 100%;
+        font-size: larger;
+        line-height: 1.75;
+        padding: 0.3125em 1.5em;
+        border-radius: 0.5em;
+        background-color: #00bc5b;
+        border-color: #00bc5b;
+        color: #fff;
+        border: 1px solid transparent;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .hero-image {
+        display: none;
+        padding: 1em;
+        position: relative;
+        width: 100%;
+    }
 
     .top {
         text-align: center;
@@ -36,10 +116,29 @@ const url = "https://enrutransl.com/services/";
     /* Media queries for tablets */
 
     @media (min-width: 36em) {
-       
 
-      
+        .row:first-of-type{
+            align-items: center;
 
-      
+        }
+
+        .action{
+            display: inline-flex;
+            
+        }
+        
+        .hero-image {
+            text-align: center;
+            display: block;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        .hero-image img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+            border-style: none;
+        }
     }
 </style>
