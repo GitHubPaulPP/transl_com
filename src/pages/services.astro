@@ -20,12 +20,14 @@ const url = "https://enrutransl.com/services/";
                         > with <strong>24-hour delivery</strong>.
                     </p>
                     <div class="action">
-                        <a href="#" class="cta-button">Start Your Order</a>
+                        <a href="/contact#cont-form" class="cta-button"
+                            >Start Your Order</a
+                        >
                     </div>
                 </div>
                 <div class="hero-image">
                     <img
-                        src="/services_hero.png"
+                        src="/services-hero.svg"
                         alt="Illustration of people holding documents"
                         width="350"
                         height="700"
@@ -33,7 +35,146 @@ const url = "https://enrutransl.com/services/";
                 </div>
             </div>
         </section>
+        <section class="cont-satisf">
+            <div class="satisf">
+                <img
+                    class="satisf-img"
+                    src="/cup.svg"
+                    alt="cup svg"
+                    loading="lazy"
+                />
+                <h3>Guaranteed Quality</h3>
+                <p>
+                    We handle every project with meticulous care. Each
+                    translation undergoes a quality check to ensure it meets the
+                    highest standards of accuracy. If you're not completely
+                    satisfied, we'll revise it for free until it perfectly
+                    aligns with your needs.
+                </p>
+            </div>
+
+            <div class="satisf">
+                <img
+                    class="satisf-img"
+                    src="/delivery.svg"
+                    alt="delivery svg"
+                    loading="lazy"
+                />
+                <h3>On-Time Delivery</h3>
+                <p>
+                    We pride ourselves on our efficient workflow, which ensures
+                    that over 99.9% of our translations are delivered on time.
+                    In the rare event that we do miss a deadline, we will refund
+                    the full cost of your translation.
+                </p>
+            </div>
+
+            <div class="satisf">
+                <img
+                    class="satisf-img"
+                    src="/handshake.svg"
+                    alt="handshake svg"
+                    loading="lazy"
+                />
+                <h3>Pay After Delivery</h3>
+                <p>
+                    Our 'Pay After Delivery' model reflects our trust and
+                    commitment. You can pay within five days of the
+                    translation's delivery via bank transfer, Paypal, or
+                    Payoneer. <a href="/faq#pay-later">Learn more</a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div class="process-h2"><h2>OUR PROCESS</h2></div>
+
+            <div class="proc-container">
+                <div class="process">
+                    <img
+                        class="process-img"
+                        src="/start.svg"
+                        alt="start svg"
+                        loading="lazy"
+                    />
+                    <h3>Project Initiation</h3>
+                    <p>
+                        You reach out with your translation needs. We respond to
+                        gather all necessary details, including document types,
+                        target languages, and desired turnaround times. You also
+                        provide any other special requirements you want us to
+                        adhere to (glossaries, style guides, if any).
+                    </p>
+                </div>
+
+                <div class="process">
+                    <img
+                        class="process-img"
+                        src="/teamwork.svg"
+                        alt="work svg"
+                        loading="lazy"
+                    />
+                    <h3>Translation Process</h3>
+                    <p>
+                        We work diligently to render your documents accurately
+                        in the Russian language. The translation undergoes a
+                        series of reviews and revisions to correct any nuances
+                        and ensure the translation meets the specific industry
+                        and cultural standards. We perform final quality
+                        assurance checks to ensure top-quality, error-free
+                        deliverables.
+                    </p>
+                </div>
+
+                <div class="process">
+                    <img
+                        class="process-img"
+                        src="/delivery.svg"
+                        alt="delivery svg"
+                        loading="lazy"
+                    />
+                    <h3>Delivery</h3>
+                    <p>
+                        The completed translation is delivered to you via your
+                        chosen method. You review the deliverable and provide
+                        feedback. If revisions are required, we promptly make
+                        the necessary adjustments and resend the revised
+                        document at no additional cost.
+                    </p>
+                </div>
+
+                <div class="process">
+                    <img
+                        class="process-img"
+                        src="/finish.svg"
+                        alt="finish svg"
+                        loading="lazy"
+                    />
+                    <h3>Project Completion</h3>
+                    <p>
+                        Once you are fully satisfied with the translation, the
+                        project is considered complete. We appreciate and
+                        welcome your feedback to continuously improve our
+                        services. We are just an <a href="/contact/"
+                            >email away</a
+                        >.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Do you need assistance?</h2>
+            <p>
+                We are here to help you get a relevant quote for complex
+                business document translation, corporate website/software
+                localization, and any other translation-related projects.
+            </p>
+            <a href="/contact" class="cta-button1">Get a quote</a>
+        </div>
+    </section>
 
     <form class="top" action="#top">
         <button class="top1" type="submit">Back to Top</button>
@@ -82,8 +223,8 @@ const url = "https://enrutransl.com/services/";
         line-height: 1.75;
         padding: 0.3125em 1.5em;
         border-radius: 0.5em;
-        background-color: #00bc5b;
-        border-color: #00bc5b;
+        background-color: rgb(235, 54, 120);
+        border-color: rgb(235, 54, 120);
         color: #fff;
         border: 1px solid transparent;
         display: inline-block;
@@ -102,6 +243,82 @@ const url = "https://enrutransl.com/services/";
         width: 100%;
     }
 
+    .satisf {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: justify;
+        padding: 2em;
+    }
+
+    .satisf-img {
+        width: 2em;
+    }
+
+    .satisf p {
+        line-height: 1.3;
+        font-weight: 300;
+    }
+
+    .process-h2 {
+        text-align: center;
+    }
+
+    .process {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: justify;
+        padding: 2em;
+    }
+
+    .process-img {
+        width: 2em;
+    }
+
+    .process p {
+        line-height: 1.3;
+        font-weight: 300;
+    }
+
+    .cta-section {
+        background-color: #f4f8ff; /* Light background for contrast */
+        padding: 40px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 40px 0; /* Adds space between testimonials and footer */
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+        color: #1c2237; /* Dark blue for a professional look */
+        margin-bottom: 20px;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+        color: #4a4a4a; /* Slightly darker text for readability */
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-button1 {
+        background-color: rgb(235, 54, 120); /* Bright color for the button */
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #e68a00; /* Darker orange on hover */
+    }
+
     .top {
         text-align: center;
         margin: 1em;
@@ -116,17 +333,14 @@ const url = "https://enrutransl.com/services/";
     /* Media queries for tablets */
 
     @media (min-width: 36em) {
-
-        .row:first-of-type{
+        .row:first-of-type {
             align-items: center;
-
         }
 
-        .action{
+        .action {
             display: inline-flex;
-            
         }
-        
+
         .hero-image {
             text-align: center;
             display: block;
@@ -139,6 +353,37 @@ const url = "https://enrutransl.com/services/";
             max-width: 100%;
             vertical-align: middle;
             border-style: none;
+        }
+
+        .cont-satisf {
+            display: flex;
+            flex-flow: row;
+        }
+
+        .satisf {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            text-align: justify;
+            padding: 2em;
+            height: 100%;
+        }
+
+        .proc-container {
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        .process {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: justify;
+            flex: 0 2 50%;
+            padding: 2em;
+            height: 100%;
         }
     }
 </style>
