@@ -15,8 +15,8 @@ const url = "https://enrutransl.com/contact/";
             <h1>Have a question or want to get a quote?</h1>
 
             <p>
-                Please fill out the secure form below and our team will contact you
-                shortly.
+                Please fill out the secure form below and our team will contact
+                you shortly.
             </p>
 
             <p>Or send us an email to the address below.</p>
@@ -99,11 +99,18 @@ const url = "https://enrutransl.com/contact/";
 
         <section class="contact-section">
             <h2 id="cont-form">Send us a message</h2>
+
             <form
-                class="contact-form"
-                action="https://formsubmit.co/info@enrutransl.com"
+                action="https://api.web3forms.com/submit"
                 method="POST"
+                class="contact-form"
             >
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="e3bbd2be-a0d0-4d5f-a434-43c67dfbca0a"
+                />
+
                 <div class="form-group">
                     <input
                         type="text"
@@ -128,7 +135,15 @@ const url = "https://enrutransl.com/contact/";
                 <input type="text" name="subject" placeholder="Subject" />
                 <textarea name="message" placeholder="Message" required
                 ></textarea>
+                <input
+                    type="checkbox"
+                    name="botcheck"
+                    class="hidden"
+                    style="display: none;"
+                />
+
                 <button type="submit" class="submit-btn">Send Message</button>
+                <div id="result"></div>
             </form>
         </section>
     </main>
@@ -411,3 +426,4 @@ const url = "https://enrutransl.com/contact/";
         }
     }
 </style>
+
