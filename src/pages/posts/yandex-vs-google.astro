@@ -16,6 +16,25 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
         </h1>
         <p class="byline-date"><i>Published: July 5, 2024</i></p>
 
+        <div class="toc-container">
+            <h2>Contents</h2>
+            <ul class="toc">
+                <li><a href="#introduction">Introduction</a></li>
+                <li>
+                    <a href="#google-translate">Google Translate</a>
+                </li>
+                <li>
+                    <a href="#yandex-translate">Yandex Translate</a>
+                </li>
+                <li>
+                    <a href="#key-limitations">Key Limitations</a>
+                </li>
+                <li>
+                    <a href="#conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+
         <section class="blog-card">
             <picture>
                 <source srcset="/Fight_YG.webp" type="image/webp" />
@@ -26,13 +45,13 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
             </picture>
         </section>
 
-        <p>
+        <p id="introduction">
             When it comes to translating from English into Russian, both Yandex
             Translate and Google Translate have their strengths, but they also
             share some significant limitations. 🤔 Let's dive into some details:
         </p>
 
-        <h2>📚 Google Translate:</h2>
+        <h2 id="google-translate">📚 Google Translate:</h2>
 
         <p>
             Known for its extensive language support and seamless integration
@@ -44,7 +63,7 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
             sound awkward or unnatural to native speakers. 🗣️
         </p>
 
-        <h2>🏆 Yandex Translate:</h2>
+        <h2 id="yandex-translate">🏆 Yandex Translate:</h2>
         <p>
             As a tool developed in Russia, Yandex Translate is often praised for
             its handling of Russian language nuances. It can sometimes provide
@@ -55,7 +74,7 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
             sentences, it can falter with more complex or domain-specific
             content. 📄
         </p>
-        <h2>⚠️ Key Limitations:</h2>
+        <h2 id="key-limitations">⚠️ Key Limitations:</h2>
         <p>
             <i>Context and Nuance:</i> Both tools can miss the context leading to
             translations that might be technically correct but lack the intended
@@ -72,7 +91,7 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
             in potentially critical inaccuracies. ⚖️
         </p>
 
-        <h2>🤓 Conclusion:</h2>
+        <h2 id="conclusion">🤓 Conclusion:</h2>
 
         <p>
             While Yandex Translate and Google Translate are useful for quick,
@@ -90,16 +109,17 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
             standard. 🥇
         </p>
 
-        <div class="cta">
-            <p>
-                Think others could benefit from learning about our Yandex
-                Translate vs Google Translate review?
-            </p>
-            <p>
-                Share this article to provide insights. By sharing, you are
-                helping others.
-            </p>
-        </div>
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Do you need assistance?</h2>
+                <p>
+                    We are here to help you get a relevant quote for complex
+                    business document translation, corporate website/software
+                    localization, and any other translation-related projects.
+                </p>
+                <a href="/contact#cont-form" class="cta-button1">Get a quote</a>
+            </div>
+        </section>
     </main>
 
     <form class="top" action="#top">
@@ -205,6 +225,85 @@ const url = "https://enrutransl.com/posts/yandex-vs-google/";
         background-color: rgb(8, 20, 187);
         color: #f9f9f9;
         font-weight: 600;
+    }
+
+    /* Container styling for the Table of Contents */
+    .toc-container {
+        margin: 20px 0;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    /* Heading styling */
+    .toc-container h2 {
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    /* Unordered list styling */
+    .toc {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Individual list items */
+    .toc li {
+        margin-bottom: 8px;
+    }
+
+    /* Link styling */
+    .toc a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #0073e6;
+        transition: color 0.3s;
+    }
+
+    .toc a:hover {
+        color: #005bb5;
+    }
+
+    .cta-section {
+        background-color: #f4f8ff; /* Light background for contrast */
+        padding: 40px;
+        text-align: center;
+        border-radius: 8px;
+        margin: 40px 0; /* Adds space between testimonials and footer */
+    }
+
+    .cta-content h2 {
+        text-align: center;
+        font-size: 2rem;
+        color: #1c2237; /* Dark blue for a professional look */
+        margin-bottom: 20px;
+    }
+
+    .cta-content p {
+        font-size: 1.2rem;
+        color: #4a4a4a; /* Slightly darker text for readability */
+        margin-bottom: 30px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-button1 {
+        background-color: rgb(235, 54, 120); /* Bright color for the button */
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #e68a00; /* Darker orange on hover */
     }
 
     /* Media queries for tablet */
