@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "Contact Us | We are happy to hear from you";
+const title = "404 - Page Not Found";
 const description =
-    "Get in touch with EnRu Translations for your English-Russian translation needs.";
-const url = "https://enrutransl.com/contact/";
+    "The page you are looking for does not exist.";
+const url = "https://enrutransl.com/404/"; // Optional, or you can remove it if unnecessary.
 ---
 
 <BaseLayout description={description} title={title} url={url}>
@@ -25,7 +25,6 @@ const url = "https://enrutransl.com/contact/";
         border-radius: 10px;
         max-width: 500px;
         margin: 20px;
-        
     }
 
     /* Heading Style */
@@ -60,13 +59,12 @@ const url = "https://enrutransl.com/contact/";
 
     /* Responsive Adjustments */
     @media (min-width: 36em) {
+        main {
+            margin: auto;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
 
-       main{
-        margin: auto;
-        margin-top: 2em;
-        margin-bottom: 2em;
-       }
-        
         h1 {
             font-size: 2.5rem;
         }
