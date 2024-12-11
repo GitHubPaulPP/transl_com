@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Contact Us | We are happy to hear from you";
+const description =
+    "Get in touch with EnRu Translations for your English-Russian translation needs.";
+const url = "https://enrutransl.com/contact/";
+---
+
+<BaseLayout description={description} title={title} url={url}>
+    <main>
+        <h1>404 - Page Not Found</h1>
+        <p>The page you're looking for doesn't exist.</p>
+        <a href="/">Go back to the homepage</a>
+    </main>
+</BaseLayout>
+
+<style>
+    /* Centered Container */
+    main {
+        text-align: center;
+        padding: 20px;
+        background: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 500px;
+        margin: 20px;
+        
+    }
+
+    /* Heading Style */
+    h1 {
+        font-size: 3rem;
+        color: rgb(235, 54, 120);
+        margin-bottom: 10px;
+    }
+
+    /* Paragraph Style */
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #555;
+    }
+
+    /* Link/Button Style */
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: #0073e6;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+        background-color: #005bb5;
+    }
+
+    /* Responsive Adjustments */
+    @media (min-width: 36em) {
+
+       main{
+        margin: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+       }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            font-size: 0.9rem;
+        }
+    }
+</style>
