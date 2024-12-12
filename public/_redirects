@@ -13,3 +13,6 @@
 
 # Blog post redirect
 /posts/post-1/    /posts/russian-localization/    301
+
+/*    /404.html    404
+
