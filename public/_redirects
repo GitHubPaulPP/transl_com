@@ -1,18 +1,16 @@
-# Core pages redirects
-/about/    /    301
-/pricing/    /russian-translation-services/    301
-/faq/    /russian-translation-services/    301
-
-# Individual service pages to consolidated Services page
-/services/translation/    /russian-translation-services/    301
-/services/proofreading/    /russian-translation-services/    301
-/services/revision/    /russian-translation-services/    301
-/services/localization/    /russian-translation-services/    301
-/services/tqa/    /russian-translation-services/    301
-/services/tutoring/    /russian-translation-services/    301
-
 # Blog post redirect
-/posts/post-1/    /posts/russian-localization/    301
+
+/posts/russian-localization/    /posts/russian-localization-post/    301
+/posts/human-translation-services/      /posts/human-translation-post/   301
+/posts/marketing-translation-services/      /posts/marketing-translation-post/   301
+/posts/financial-translation-services/      /posts/financial-translation-post/   301
+
+
+
+# URLs change redirects
+/services/    /english-russian-translation-services/    301
+/russian-translation-services/      /english-russian-translation-services/    301
+
 
 
 
